@@ -1,0 +1,110 @@
+{
+  "version": 1,
+  "updatedAt": "2026-07-29T13:23:17.765Z",
+  "problems": {
+    "coupang/reverse-linked-list": {
+      "rounds": [
+        true,
+        true,
+        false
+      ],
+      "updatedAt": "2026-07-29T13:23:16.065Z"
+    },
+    "coupang/merge-two-sorted-lists": {
+      "rounds": [
+        true,
+        true,
+        false
+      ],
+      "updatedAt": "2026-07-29T13:23:17.765Z"
+    },
+    "coupang/linked-list-cycle": {
+      "rounds": [
+        true,
+        false,
+        false
+      ],
+      "updatedAt": "1970-01-01T00:00:00.000Z"
+    },
+    "coupang/intersection-of-two-linked-lists": {
+      "rounds": [
+        true,
+        false,
+        false
+      ],
+      "updatedAt": "1970-01-01T00:00:00.000Z"
+    },
+    "coupang/palindrome-linked-list": {
+      "rounds": [
+        true,
+        false,
+        false
+      ],
+      "updatedAt": "1970-01-01T00:00:00.000Z"
+    },
+    "coupang/middle-of-the-linked-list": {
+      "rounds": [
+        true,
+        false,
+        false
+      ],
+      "updatedAt": "1970-01-01T00:00:00.000Z"
+    },
+    "coupang/delete-node-in-a-linked-list": {
+      "rounds": [
+        true,
+        false,
+        false
+      ],
+      "updatedAt": "1970-01-01T00:00:00.000Z"
+    },
+    "coupang/remove-duplicates-from-sorted-list": {
+      "rounds": [
+        true,
+        false,
+        false
+      ],
+      "updatedAt": "1970-01-01T00:00:00.000Z"
+    },
+    "coupang/reverse-linked-list-ii": {
+      "rounds": [
+        true,
+        false,
+        false
+      ],
+      "updatedAt": "1970-01-01T00:00:00.000Z"
+    },
+    "coupang/linked-list-cycle-ii": {
+      "rounds": [
+        true,
+        false,
+        false
+      ],
+      "updatedAt": "1970-01-01T00:00:00.000Z"
+    },
+    "coupang/remove-nth-node-from-end-of-list": {
+      "rounds": [
+        true,
+        false,
+        false
+      ],
+      "updatedAt": "1970-01-01T00:00:00.000Z"
+    },
+    "coupang/add-two-numbers": {
+      "rounds": [
+        true,
+        false,
+        false
+      ],
+      "updatedAt": "1970-01-01T00:00:00.000Z"
+    },
+    "coupang/reorder-list": {
+      "rounds": [
+        true,
+        false,
+        false
+      ],
+      "updatedAt": "1970-01-01T00:00:00.000Z"
+    }
+  }
+}

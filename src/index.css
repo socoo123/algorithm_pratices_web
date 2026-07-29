@@ -1,0 +1,168 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+
+  /* Dracula palette */
+  --color-dracula-bg: #282a36;
+  --color-dracula-bg-dark: #21222c;
+  --color-dracula-current: #44475a;
+  --color-dracula-fg: #f8f8f2;
+  --color-dracula-comment: #6272a4;
+  --color-dracula-cyan: #8be9fd;
+  --color-dracula-green: #50fa7b;
+  --color-dracula-orange: #ffb86c;
+  --color-dracula-pink: #ff79c6;
+  --color-dracula-purple: #bd93f9;
+  --color-dracula-red: #ff5555;
+  --color-dracula-yellow: #f1fa8c;
+}
+
+@keyframes aurora-a {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(8%, -6%) scale(1.05);
+  }
+  66% {
+    transform: translate(-5%, 4%) scale(0.95);
+  }
+}
+
+@keyframes aurora-b {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(-10%, 8%) scale(1.08);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .aurora-blob-a {
+    animation: aurora-a 28s ease-in-out infinite;
+  }
+  .aurora-blob-b {
+    animation: aurora-b 22s ease-in-out infinite;
+  }
+  .aurora-blob-c {
+    animation: aurora-a 32s ease-in-out infinite reverse;
+  }
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background: #282a36;
+  color: #f8f8f2;
+  font-family:
+    system-ui,
+    -apple-system,
+    'Segoe UI',
+    'PingFang SC',
+    'Hiragino Sans GB',
+    'Microsoft YaHei',
+    sans-serif;
+}
+
+.prose-solution {
+  max-width: none;
+  line-height: 1.75;
+}
+
+.prose-solution .markdown-html > *:first-child {
+  margin-top: 0;
+}
+
+.prose-solution h1,
+.prose-solution h2,
+.prose-solution h3 {
+  color: #f8f8f2;
+  font-weight: 600;
+  margin: 1.25em 0 0.5em;
+}
+
+.prose-solution p,
+.prose-solution li {
+  color: #f8f8f2;
+}
+
+.prose-solution a {
+  color: #8be9fd;
+}
+
+.prose-solution pre {
+  overflow-x: auto;
+  border-radius: 0.75rem;
+  border: 1px solid #44475a;
+  background: #21222c !important;
+  padding: 1rem 0;
+  font-size: 0.875rem;
+}
+
+.prose-solution code {
+  font-family: var(--font-mono);
+}
+
+.prose-solution :not(pre) > code {
+  background: #44475a;
+  color: #ff79c6;
+  padding: 0.15em 0.35em;
+  border-radius: 0.25rem;
+  font-size: 0.9em;
+}
+
+.prose-solution table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.prose-solution th,
+.prose-solution td {
+  border: 1px solid #44475a;
+  padding: 0.5rem 0.75rem;
+}
+
+.prose-solution figure[data-rehype-pretty-code-figure] {
+  margin: 1.25rem 0;
+}
+
+.prose-solution [data-line-numbers] > .line::before {
+  counter-increment: line;
+  content: counter(line);
+  display: inline-block;
+  width: 1.25rem;
+  margin-right: 1rem;
+  text-align: right;
+  color: #6272a4;
+}
+
+.prose-solution [data-line-numbers] {
+  counter-reset: line;
+}
+
+/* Mermaid：深色德古拉画框，宽度受 max-w-xl 约束 */
+.mermaid-frame {
+  background: #21222c;
+}
+
+.mermaid-host svg {
+  display: block;
+  margin-inline: auto;
+  max-width: 100%;
+  height: auto !important;
+}
+
+.mermaid-host .nodeLabel,
+.mermaid-host .edgeLabel,
+.mermaid-host foreignObject div {
+  color: #f8f8f2 !important;
+}

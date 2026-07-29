@@ -1,0 +1,10 @@
+{
+  "banks": [
+    {
+      "id": "coupang",
+      "name": "Coupang 题库",
+      "description": "面向 Coupang 及一线大厂的高频 200 题，按标签分组、双维度评分。",
+      "totalCount": 200
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+import { Download, Upload } from 'lucide-react';
+import { Link, useLocation } from 'react-router-dom';
+import { countDirtyKeys, downloadProgress, parseImportedProgress } from '../lib/progress-store';
+import { useProgress } from '../hooks/useProgress';
+import { useRef } from 'react';
+
+export function SiteHeader({ subtitle }: { subtitle?: string }) {
+  const { progress, bundled, importProgress } = useProgress();
+  const dirty = countDirtyKeys(bundled, progress);
+  const fileRef = useRef<HTMLInputElement>(null);
+  const loc = useLocation();
+
+  return (
+    <header className="sticky top-0 z-50 border-b border-dracula-current/80 bg-dracula-bg/85 backdrop-blur-xl">
+      <div className="mx-auto flex max-w-[1600px] flex-wrap items-center justify-between gap-3 px-4 py-3 sm:px-6">
+        <div className="flex min-w-0 items-baseline gap-2">
+          <Link
+            to="/"
+            className="bg-gradient-to-r from-dracula-purple to-dracula-pink bg-clip-text text-lg font-semibold text-transparent sm:text-xl"
+          >
+            算法刷题进行时
+          </Link>
+          {subtitle && (
+            <>
+              <span className="text-dracula-comment">·</span>
+              <span className="truncate text-sm text-dracula-comment">{subtitle}</span>
+            </>
+          )}
+        </div>
+        <div className="flex items-center gap-2">
+          {dirty > 0 && (
+            <span className="hidden text-xs text-dracula-orange sm:inline">
+              本地有 {dirty} 条未提交 git 的改动
+            </span>
+          )}
+          <button
+            type="button"
+            onClick={() => downloadProgress(progress)}
+            className="inline-flex items-center gap-1.5 rounded-lg border border-dracula-current bg-dracula-bg-dark px-3 py-1.5 text-xs text-dracula-fg transition hover:border-dracula-purple/50 hover:bg-dracula-current/40"
+          >
+            <Download className="h-3.5 w-3.5" />
+            导出进度
+          </button>
+          <button
+            type="button"
+            onClick={() => fileRef.current?.click()}
+            className="inline-flex items-center gap-1.5 rounded-lg border border-dracula-current bg-dracula-bg-dark px-3 py-1.5 text-xs text-dracula-fg transition hover:border-dracula-purple/50 hover:bg-dracula-current/40"
+          >
+            <Upload className="h-3.5 w-3.5" />
+            导入进度
+          </button>
+          <input
+            ref={fileRef}
+            type="file"
+            accept="application/json,.json"
+            className="hidden"
+            onChange={async (e) => {
+              const f = e.target.files?.[0];
+              if (!f) return;
+              try {
+                const text = await f.text();
+                importProgress(parseImportedProgress(text));
+              } catch {
+                alert('无效的 progress.json');
+              }
+              e.target.value = '';
+            }}
+          />
+        </div>
+      </div>
+      {loc.pathname !== '/' && (
+        <div className="mx-auto max-w-[1600px] px-4 pb-2 sm:px-6">
+          <Link to="/" className="text-xs text-dracula-cyan/80 hover:text-dracula-cyan">
+            ← 返回首页
+          </Link>
+        </div>
+      )}
+    </header>
+  );
+}

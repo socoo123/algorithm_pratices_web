@@ -5,7 +5,7 @@ import { fileURLToPath } from 'node:url';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.join(__dirname, '..');
 const sourceDir = path.join('/Users/zy/ai_learn/algorithm-journey/coupang_interview');
-const targetDir = path.join(root, 'content/banks/coupang');
+const targetDir = path.join(root, 'content/banks/base');
 
 const FILES = [
   'README.md',

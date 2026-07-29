@@ -28,7 +28,7 @@ export interface Category {
   name: string;
   order: number;
   intro: string;
-  coupangTips: string[];
+  interviewTips: string[];
 }
 
 export interface DayPlan {

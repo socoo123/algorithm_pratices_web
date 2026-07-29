@@ -13,10 +13,10 @@ import type {
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.join(__dirname, '..');
-const bankId = 'coupang';
-const contentDir = path.join(root, 'content/banks/coupang');
-const solutionsDir = path.join(root, 'solutions/coupang');
-const outBankPath = path.join(root, 'src/data/banks/coupang.json');
+const bankId = 'base';
+const contentDir = path.join(root, 'content/banks/base');
+const solutionsDir = path.join(root, 'solutions/base');
+const outBankPath = path.join(root, 'src/data/banks/base.json');
 const outIndexPath = path.join(root, 'src/data/banks-index.json');
 const progressPath = path.join(root, 'src/data/progress.json');
 
@@ -53,7 +53,7 @@ function extractSection(content: string, startHeading: string, endHeadings: stri
 }
 
 function parseTips(content: string): string[] {
-  const section = extractSection(content, '## Coupang 高频提示', ['---', '## ']);
+  const section = extractSection(content, '## 面试高频提示', ['---', '## ']);
   return section
     .split('\n')
     .map((l) => l.trim())
@@ -93,7 +93,7 @@ function parseCategoryFile(
   }
 
   const intro = extractSection(content, '## 刷题建议', ['## 评分说明', '## 题目清单']);
-  const coupangTips = parseTips(content);
+  const interviewTips = parseTips(content);
 
   const category: Category = {
     id: meta.id,
@@ -101,7 +101,7 @@ function parseCategoryFile(
     name: meta.name,
     order: meta.order,
     intro,
-    coupangTips,
+    interviewTips,
   };
 
   const lines = content.split('\n');
@@ -209,8 +209,8 @@ function main() {
 
   const bank: Bank = {
     id: bankId,
-    name: 'Coupang 题库',
-    description: '面向 Coupang 及一线大厂的高频 200 题，按标签分组、双维度评分。',
+    name: '基础题库',
+    description: '一线大厂高频 200 题，按标签分组、双维度评分。',
     totalCount: 200,
   };
 

@@ -1,6 +1,6 @@
 # 算法刷题进行时
 
-一个本地使用的算法刷题网站。第一个题库是 **Coupang 题库**（200 题，按题型分类、已按难度排序）。
+一个本地使用的算法刷题网站。第一个题库是 **基础题库**（200 题，按题型分类、已按难度排序）。
 核心能力：表格化刷题打卡（第 1/2/3 遍）、每题备注、AI 题解挂链、**进度保存在仓库文件里，换电脑 clone 仓库即可恢复**。
 
 ---
@@ -25,7 +25,7 @@ npm run dev     # 启动网站
 
 ### 1. 刷题打卡
 
-打开「Coupang 题库」→ 左侧选分类 → 表格里勾选每题的 **第 1/2/3 遍**。
+打开「基础题库」→ 左侧选分类 → 表格里勾选每题的 **第 1/2/3 遍**。
 
 - 勾选后**自动保存**，不需要任何手动操作。
 - 进度保存在 `src/data/progress.json`（dev 模式下每次勾选自动写入该文件）。
@@ -44,11 +44,11 @@ npm run dev     # 启动网站
 2. 把 AI 输出的 markdown 保存为：
 
    ```
-   solutions/coupang/<slug>.md
+   solutions/base/<slug>.md
    ```
 
    **slug 就是 LeetCode 链接的最后一段**。例如 #78 子集的链接是
-   `https://leetcode.cn/problems/subsets/`，文件就存为 `solutions/coupang/subsets.md`。
+   `https://leetcode.cn/problems/subsets/`，文件就存为 `solutions/base/subsets.md`。
 
 3. 网页会自动检测到（dev server 监听该目录；没出现就刷新一下页面），
    表格「题解」列自动出现 **「题解」链接**，点进去看带代码高亮的排版。
@@ -88,8 +88,8 @@ git commit -m "刷题进度更新"
 ## 目录结构（只需要知道这几个）
 
 ```
-├── content/banks/coupang/     # 题单 markdown（网站数据的来源，一般不用动）
-├── solutions/coupang/         # ★ 你的 AI 题解放这里：<slug>.md
+├── content/banks/base/     # 题单 markdown（网站数据的来源，一般不用动）
+├── solutions/base/         # ★ 你的 AI 题解放这里：<slug>.md
 ├── src/data/progress.json     # ★ 你的刷题进度，记得 git commit
 └── src/data/banks/            # 自动生成的题库数据（构建产物，别手改）
 ```
@@ -111,7 +111,7 @@ git commit -m "刷题进度更新"
 在 `vite.config.ts` 里修改 `server.port`，或临时指定：`npm run dev -- --port 5801`。
 
 **Q：题单 md 改了想更新网站内容？**
-`content/banks/coupang/` 里改完后重启 `npm run dev` 即可（启动时自动重新解析）。
+`content/banks/base/` 里改完后重启 `npm run dev` 即可（启动时自动重新解析）。
 若要从源头 `algorithm-journey` 仓库重新同步，跑 `npm run sync:content`
 （会自动应用「移除会员题/剑指题」的替换规则，不会把已替换的题带回来）。
 

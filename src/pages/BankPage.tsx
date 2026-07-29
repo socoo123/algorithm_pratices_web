@@ -81,9 +81,9 @@ export function BankPage() {
             <Collapsible title="刷题建议">
               <div className="whitespace-pre-wrap leading-relaxed">{category.intro}</div>
             </Collapsible>
-            <Collapsible title="Coupang 高频提示">
+            <Collapsible title="面试高频提示">
               <ul className="list-disc space-y-1 pl-5">
-                {category.coupangTips.map((t) => (
+                {category.interviewTips.map((t) => (
                   <li key={t}>{t}</li>
                 ))}
               </ul>

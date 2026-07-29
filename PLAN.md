@@ -1,7 +1,7 @@
 # 算法刷题进行时 · 实现规划
 
 > 一个 React 静态刷题网站。网站名为 **「算法刷题进行时」**，按「题库」组织内容，
-> 第一个题库是 **Coupang 题库**（来自 `algorithm-journey/coupang_interview`，200 题），
+> 第一个题库是 **基础题库**（来自 `algorithm-journey/coupang_interview`，200 题），
 > 架构上支持以后追加新题库（如灵茶 300 题）。
 > 核心能力：正常的表格排版记录每题状态、进度持久化到仓库内 JSON（换机 clone 可恢复）、
 > 每题可关联 AI 生成的题解、界面超级漂亮。
@@ -52,7 +52,7 @@
 
 1. ★ / 🔥 按字符个数计数（1-5）。
 2. `链表.md` 已有若干 `- [x] 第 1 遍` 打卡记录 —— 首次构建必须导入为初始进度，不能丢。
-3. 每个文件头部的「刷题建议」和结尾的「Coupang 高频提示」保留，展示在分类页。
+3. 每个文件头部的「刷题建议」和结尾的「面试高频提示」保留，展示在分类页。
 4. README 的 Day 1-14 计划表解析为结构化数据，展示在题库页（次要位置，见 §6）。
 5. 同步后断言：内容中不再出现 `[会员]`、每题都有 `leetcode.cn/problems/<slug>/` 链接。
 
@@ -82,17 +82,17 @@
 algorithm_pratices_web/
 ├── content/
 │   └── banks/
-│       └── coupang/              # 从 algorithm-journey 同步来的 9 个 md（已应用替换，纳入 git）
+│       └── base/                 # 从 algorithm-journey 同步来的 9 个 md（已应用替换，纳入 git）
 ├── solutions/
-│   └── coupang/                  # AI 生成的题解，<slug>.md 命名约定（纳入 git）
+│   └── base/                     # AI 生成的题解，<slug>.md 命名约定（纳入 git）
 │       └── subsets.md            # 例：对应 #78 子集
 ├── scripts/
 │   ├── sync-content.ts           # 从源仓库拷贝 md + 应用 §1.1 替换表
-│   └── build-data.ts             # 解析 md → src/data/banks/coupang.json + 播种 progress.json
+│   └── build-data.ts             # 解析 md → src/data/banks/base.json + 播种 progress.json
 ├── src/
 │   ├── data/
 │   │   ├── banks/
-│   │   │   └── coupang.json      # 题库数据（构建产物，纳入 git）
+│   │   │   └── base.json         # 题库数据（构建产物，纳入 git）
 │   │   ├── banks-index.json      # 题库注册表（首页「题库列表」数据源）
 │   │   └── progress.json         # ★ 进度文件（纳入 git，核心资产）
 │   ├── types.ts                  # Bank / Category / Problem / ProgressFile 等
@@ -110,7 +110,7 @@ algorithm_pratices_web/
 │   │   ├── CategorySidebar.tsx   # 分类导航 + 各类进度
 │   │   └── ProgressBar.tsx / ProgressRing.tsx
 │   ├── pages/
-│   │   ├── HomePage.tsx          # /                 题库列表（第一块：Coupang 题库）
+│   │   ├── HomePage.tsx          # /                 题库列表（第一块：基础题库）
 │   │   ├── BankPage.tsx          # /bank/:bankId     分类侧栏 + 题目表格（主页面）
 │   │   ├── SolutionPage.tsx      # /bank/:bankId/solution/:slug
 │   │   └── NotFoundPage.tsx
@@ -128,7 +128,7 @@ algorithm_pratices_web/
 
 ### 4.1 两个脚本
 
-**`scripts/sync-content.ts`**（手动跑）：从 `algorithm-journey/coupang_interview` 拷贝 9 个 md 到 `content/banks/coupang/`，并按 §1.1 的替换表逐行替换 5 道题（替换题继承原题的位置、难度档位，★/🔥/考点按下表现成值写入）：
+**`scripts/sync-content.ts`**（手动跑）：从 `algorithm-journey/coupang_interview` 拷贝 9 个 md 到 `content/banks/base/`，并按 §1.1 的替换表逐行替换 5 道题（替换题继承原题的位置、难度档位，★/🔥/考点按下表现成值写入）：
 
 | 替换题 | 难度 | ★ | 🔥 | 核心考点 |
 |--------|------|---|----|----------|
@@ -138,7 +138,7 @@ algorithm_pratices_web/
 | #452 用最少数量的箭引爆气球 | Medium | ★★★★ | 🔥🔥🔥🔥 | 区间按右端点排序 + 贪心 |
 | #493 翻转对 | Hard | ★★★★ | 🔥🔥🔥 | 归并求逆序对扩展（2x 判定） |
 
-**`scripts/build-data.ts`**（`prebuild`/`predev` 自动跑）：解析 `content/banks/coupang/*.md` → `src/data/banks/coupang.json`；扫描 `solutions/coupang/` 标记 `hasSolution`；**仅当 `progress.json` 不存在时**用 md 中已有 `[x]` 播种初始进度。
+**`scripts/build-data.ts`**（`prebuild`/`predev` 自动跑）：解析 `content/banks/base/*.md` → `src/data/banks/base.json`；扫描 `solutions/base/` 标记 `hasSolution`；**仅当 `progress.json` 不存在时**用 md 中已有 `[x]` 播种初始进度。
 
 题目行正则（同步后已无会员题，格式统一）：
 
@@ -154,14 +154,14 @@ const ROUND_RE = /^\s+- \[( |x)\] 第 (\d) 遍$/;
 export type Difficulty = 'Easy' | 'Medium' | 'Hard';
 
 export interface Bank {              // 题库（首页的「块」）
-  id: string;                        // 'coupang'
-  name: string;                      // 'Coupang 题库'
-  description: string;               // '面向 Coupang 及一线大厂的高频 200 题'
+  id: string;                        // 'base'
+  name: string;                      // '基础题库'
+  description: string;               // '一线大厂高频 200 题'
   totalCount: number;                // 200
 }
 
 export interface Problem {
-  bankId: string;                    // 'coupang'
+  bankId: string;                    // 'base'
   slug: string;                      // LC url slug，题库内唯一主键，如 "subsets"
   number: string;                    // "78"
   title: string;                     // "子集"
@@ -181,12 +181,12 @@ export interface Category {
   name: string;                      // "链表"
   order: number;                     // README 表格顺序 1-8
   intro: string;                     // 「刷题建议」区块（markdown 片段）
-  coupangTips: string[];             // 「Coupang 高频提示」 bullets
+  interviewTips: string[];             // 「面试高频提示」 bullets
 }
 
 export interface DayPlan { day: number; task: string; count: string }
 
-export interface BankFile {          // src/data/banks/coupang.json
+export interface BankFile {          // src/data/banks/base.json
   bank: Bank;
   categories: Category[];
   problems: Problem[];               // 全局顺序 = 分类顺序 × 分类内顺序
@@ -282,15 +282,15 @@ function progressSaver(): Plugin {
 
 | 路径 | 页面 | 内容 |
 |------|------|------|
-| `/` | 首页 | 大标题「算法刷题进行时」+ 题库卡片列表。**第一块卡片：Coupang 题库**（200 题、总进度条、进入按钮）。未来新题库直接加卡片。 |
-| `/bank/coupang` | 题库页（主战场） | 左侧分类导航 + 右侧一张**正常的大表格**。顶部条显示该题库总进度。 |
-| `/bank/coupang/solution/:slug` | 题解页 | 渲染对应 md，代码高亮，顶部「返回题库」「去 LC 做题」。 |
+| `/` | 首页 | 大标题「算法刷题进行时」+ 题库卡片列表。**第一块卡片：基础题库**（200 题、总进度条、进入按钮）。未来新题库直接加卡片。 |
+| `/bank/base` | 题库页（主战场） | 左侧分类导航 + 右侧一张**正常的大表格**。顶部条显示该题库总进度。 |
+| `/bank/base/solution/:slug` | 题解页 | 渲染对应 md，代码高亮，顶部「返回题库」「去 LC 做题」。 |
 
 ### 6.2 题库页布局（核心页面）
 
 ```
 ┌──────────────────────────────────────────────────────────┐
-│ 顶栏：算法刷题进行时  ·  Coupang 题库        [导出/导入进度] │
+│ 顶栏：算法刷题进行时  ·  基础题库        [导出/导入进度] │
 ├──────────────┬───────────────────────────────────────────┤
 │ 左侧分类导航  │  分类标题 + 进度 (8/20)                      │
 │              │  ┌──────────────────────────────────────┐ │
@@ -300,7 +300,7 @@ function progressSaver(): Plugin {
 │ ▸ 栈与队列    │  │      |   |      |      |      | 题解  │ │
 │ ▸ 回溯        │  │  ...行...                            │ │
 │ ▸ 排序        │  └──────────────────────────────────────┘ │
-│ ▸ 动态规划    │  ▾ 刷题建议 / Coupang 高频提示（可折叠）     │
+│ ▸ 动态规划    │  ▾ 刷题建议 / 面试高频提示（可折叠）     │
 │ ▸ 其他        │  ▾ Day 1-14 计划（可折叠，次要信息）         │
 └──────────────┴───────────────────────────────────────────┘
 ```
@@ -324,7 +324,7 @@ function progressSaver(): Plugin {
   - 第 1 遍勾上 → 整行进入完成态（标题变暗、行首出现 2px 绿色完成条），后两遍可继续勾。
   - 备注与勾选走同一条持久化管道（localStorage + dev 落盘 + 导出导入），存入 `progress.json` 的 `note` 字段。
   - 行 hover 微高亮；表头 sticky；顶部小筛选条：全部/未完成/已完成 + 难度筛选 + 搜索（标题/题号/考点）。**默认排序永远为 md 原顺序**。
-  - 「刷题建议」「Coupang 高频提示」「Day 1-14 计划」做成表格下方的折叠区，默认收起，不抢表格的戏。
+  - 「刷题建议」「面试高频提示」「Day 1-14 计划」做成表格下方的折叠区，默认收起，不抢表格的戏。
 
 ### 6.3 视觉设计（超级漂亮的方向）
 
@@ -341,30 +341,30 @@ function progressSaver(): Plugin {
 
 ## 7. 题解系统
 
-- **约定**：`solutions/<bankId>/<slug>.md`（如 `solutions/coupang/subsets.md`），slug 与 LC url 一致。
+- **约定**：`solutions/<bankId>/<slug>.md`（如 `solutions/base/subsets.md`），slug 与 LC url 一致。
 - 文件顶部可选 frontmatter（`---\ntitle: 子集\n---`），没有也能渲染。
 - 构建脚本扫描对应目录写入 `hasSolution`；题解页通过 `import.meta.glob('/solutions/**/*.md', { as: 'raw', eager: true })` 打进 bundle，按 `bankId/slug` 查找渲染。**新增题解不需要改任何代码**。
 - 渲染：`react-markdown` + `remark-gfm` + **`rehype-pretty-code`（Shiki 内核，已确认选用）**：主题 `github-dark-default`，开启行号；自定义 pre 组件加「复制代码」按钮与语言标签。Shiki 按需加载语言（java / python / typescript / cpp / go / rust / bash / json / markdown）。
 - 「已经会了就不挂题解」= 不创建文件，表格自动显示 `—`。
 - 表格「复制 AI 提示词」按钮：复制
   `请详解 LeetCode #78 子集（https://leetcode.cn/problems/subsets/）：给出思路推导、Java 代码、复杂度分析，输出为 markdown。`，
-  生成后存为 `solutions/coupang/subsets.md`，重跑 `build-data`（dev server 监听 solutions 目录自动重生成），表格「题解」列自动点亮。
+  生成后存为 `solutions/base/subsets.md`，重跑 `build-data`（dev server 监听 solutions 目录自动重生成），表格「题解」列自动点亮。
 
 ---
 
 ## 8. 实施步骤（给实现模型的任务拆分）
 
 1. **M1 脚手架**：Vite react-ts → 装 Tailwind v4 / react-router / lucide-react / react-markdown 全家。
-2. **M2 数据管线**：`sync-content.ts`（拷贝 + §1.1 五处替换）→ `types.ts` + `build-data.ts`（解析、§4 校验断言、`[x]` 播种）→ 生成 `banks/coupang.json` / `banks-index.json` / `progress.json`。
+2. **M2 数据管线**：`sync-content.ts`（拷贝 + §1.1 五处替换）→ `types.ts` + `build-data.ts`（解析、§4 校验断言、`[x]` 播种）→ 生成 `banks/base.json` / `banks-index.json` / `progress.json`。
 3. **M3 进度系统**：`progress-store.ts`（加载/合并/localStorage/导入导出）+ `useProgress` Context + vite 写文件插件。
 4. **M4 UI**：AuroraBackground → SiteHeader → 首页（题库卡片）→ 题库页（侧栏 + ProblemTable + 筛选 + 复制提示词 + 备注行内编辑 + 折叠区）→ 题解页（Shiki 高亮）。
 5. **M5 收尾**：`npm run build` 验证；核对根目录 `README.md`（已随规划写好）与实际命令/行为一致，有出入则同步更新 README。
 
 **验收标准**：
-- `coupang.json` 恰好 200 题；无 `[会员]`；无剑指题号；8 个分类题数与源 README 一致；链表分类能看到从 md 导入的初始 `[x]` 进度。
+- `base.json` 恰好 200 题；无 `[会员]`；无剑指题号；8 个分类题数与源 README 一致；链表分类能看到从 md 导入的初始 `[x]` 进度。
 - dev 模式勾选/写备注后 `src/data/progress.json` 文件内容更新；清空 localStorage 刷新页面进度与备注仍在（来自文件）。
-- 在 `solutions/coupang/` 放一个 md，对应题目「题解」列出现链接且页面 Shiki 高亮（行号 + 主题）正常。
-- 首页第一块是「Coupang 题库」卡片；整站深色 Aurora 背景渲染正常。
+- 在 `solutions/base/` 放一个 md，对应题目「题解」列出现链接且页面 Shiki 高亮（行号 + 主题）正常。
+- 首页第一块是「基础题库」卡片；整站深色 Aurora 背景渲染正常。
 - `README.md` 中的每条命令可直接执行且行为与描述一致。
 
 ---
@@ -374,7 +374,7 @@ function progressSaver(): Plugin {
 1. **使用场景 = 纯本地**：`npm install && npm run dev` 是唯一主要使用方式，进度经 Vite 中间件自动落盘；导出/导入仅作保险。**README.md 使用教程已随本规划提前写好**（见根目录），实现须与其保持一致。
 2. **代码高亮 = Shiki**：经 `rehype-pretty-code` 接入（主题 `github-dark-default`、行号、复制按钮）。
 3. **备注字段 = 要**：`progress.json` 的 `ProblemProgress.note`，表格行内展开编辑，随进度一起持久化/导出。
-4. **下一个题库 = 灵茶第一期 300 题**（源：`algorithm-journey/灵茶problems/第一期刷题计划-300题.md`），**先刷完 Coupang 再做**。架构已按多题库预留（`content/banks/`、`bankId`、`banks-index.json`）；届时只需：新写该 md 格式的解析规则 → `content/banks/lingcha-300/` → 注册进 banks-index → 首页自动出现第二块卡片。**本期不实现**。
+4. **下一个题库 = 灵茶第一期 300 题**（源：`algorithm-journey/灵茶problems/第一期刷题计划-300题.md`），**先刷完基础题库再做**。架构已按多题库预留（`content/banks/`、`bankId`、`banks-index.json`）；届时只需：新写该 md 格式的解析规则 → `content/banks/lingcha-300/` → 注册进 banks-index → 首页自动出现第二块卡片。**本期不实现**。
 
 ---
 

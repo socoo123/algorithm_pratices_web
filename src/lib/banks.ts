@@ -1,9 +1,9 @@
 import banksIndex from '../data/banks-index.json';
-import coupangBank from '../data/banks/coupang.json';
+import baseBank from '../data/banks/base.json';
 import type { BankFile, BanksIndex } from '../types';
 
 const bankFiles: Record<string, BankFile> = {
-  coupang: coupangBank as BankFile,
+  base: baseBank as BankFile,
 };
 
 export function getBanksIndex(): BanksIndex {

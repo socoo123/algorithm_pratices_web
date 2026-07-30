@@ -3,8 +3,37 @@ import type { ProblemProgress, ProgressFile } from '../types';
 
 export const STORAGE_KEY = 'sft-progress';
 
+/** Old bankId → current bankId (keeps progress after renames). */
+const BANK_ID_ALIASES: Record<string, string> = {
+  coupang: 'base',
+};
+
 export function emptyProgressFile(): ProgressFile {
   return { version: 1, updatedAt: new Date().toISOString(), problems: {} };
+}
+
+/** Remap progress keys like `coupang/slug` → `base/slug`, merging conflicts by updatedAt. */
+export function migrateProgressKeys(file: ProgressFile): ProgressFile {
+  const problems: Record<string, ProblemProgress> = {};
+  let changed = false;
+  for (const [key, value] of Object.entries(file.problems)) {
+    const slash = key.indexOf('/');
+    if (slash === -1) {
+      problems[key] = value;
+      continue;
+    }
+    const bankId = key.slice(0, slash);
+    const rest = key.slice(slash + 1);
+    const mapped = BANK_ID_ALIASES[bankId];
+    const nextKey = mapped ? `${mapped}/${rest}` : key;
+    if (nextKey !== key) changed = true;
+    const existing = problems[nextKey];
+    if (!existing || Date.parse(value.updatedAt) >= Date.parse(existing.updatedAt)) {
+      problems[nextKey] = value;
+    }
+  }
+  if (!changed) return file;
+  return { ...file, problems };
 }
 
 export function mergeProgress(a: ProgressFile, b: ProgressFile): ProgressFile {
@@ -31,13 +60,22 @@ export function mergeProgress(a: ProgressFile, b: ProgressFile): ProgressFile {
 }
 
 export function loadInitialProgress(): ProgressFile {
-  const bundled = bundledProgress as unknown as ProgressFile;
+  const bundled = migrateProgressKeys(bundledProgress as unknown as ProgressFile);
   try {
     const raw = localStorage.getItem(STORAGE_KEY);
     if (!raw) return bundled;
     const local = JSON.parse(raw) as ProgressFile;
     if (local.version !== 1) return bundled;
-    return mergeProgress(bundled, local);
+    const migratedLocal = migrateProgressKeys(local);
+    const merged = migrateProgressKeys(mergeProgress(bundled, migratedLocal));
+    const needsRewrite =
+      migratedLocal !== local ||
+      Object.keys(local.problems).some((k) => k.startsWith('coupang/'));
+    if (needsRewrite) {
+      saveToLocalStorage(merged);
+      void persistToServer(merged);
+    }
+    return merged;
   } catch {
     return bundled;
   }

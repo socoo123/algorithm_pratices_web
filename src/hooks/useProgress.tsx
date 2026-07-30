@@ -10,6 +10,7 @@ import {
 import {
   loadInitialProgress,
   mergeProgress,
+  migrateProgressKeys,
   persistToServer,
   saveToLocalStorage,
 } from '../lib/progress-store';
@@ -97,7 +98,7 @@ export function ProgressProvider({ children }: { children: ReactNode }) {
 
   const importProgress = useCallback(
     (file: ProgressFile) => {
-      commit(mergeProgress(bundled, file));
+      commit(mergeProgress(bundled, migrateProgressKeys(file)));
     },
     [bundled, commit],
   );

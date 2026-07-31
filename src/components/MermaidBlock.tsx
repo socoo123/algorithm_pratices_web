@@ -1,68 +1,96 @@
 import { useEffect, useId, useRef, useState } from 'react';
+import { useTheme } from '../hooks/useTheme';
+import type { ThemeId } from '../lib/theme';
 
 /**
- * Mermaid 规范（德古拉深色页）：
- * - 直接画在深色底上，节点用 Current Line 底 + 彩色描边 + 浅色字
- * - 黄描边=起点 | 青=过程 | 绿=成功 | 红=收缩/否定 | 粉/紫=强调
- * - 特殊字符标签加双引号；渲染后按 viewBox 自适应宽度，避免巨图
+ * Mermaid：按当前主题初始化；节点深底+彩色描边在两种主题下都可读。
  */
 
-let mermaidPromise: Promise<typeof import('mermaid').default> | null = null;
+type MermaidApi = typeof import('mermaid').default;
 
-function loadMermaid() {
-  if (!mermaidPromise) {
-    mermaidPromise = import('mermaid').then((m) => {
-      const mermaid = m.default;
-      mermaid.initialize({
-        startOnLoad: false,
-        theme: 'dark',
-        securityLevel: 'loose',
-        fontFamily: 'ui-sans-serif, system-ui, "PingFang SC", "Microsoft YaHei", sans-serif',
-        themeVariables: {
-          darkMode: true,
-          background: 'transparent',
-          primaryColor: '#44475a',
-          primaryTextColor: '#f8f8f2',
-          primaryBorderColor: '#bd93f9',
-          secondaryColor: '#383a4a',
-          secondaryTextColor: '#f8f8f2',
-          secondaryBorderColor: '#8be9fd',
-          tertiaryColor: '#2d2f3b',
-          tertiaryTextColor: '#f8f8f2',
-          tertiaryBorderColor: '#6272a4',
-          lineColor: '#6272a4',
-          textColor: '#f8f8f2',
-          mainBkg: '#44475a',
-          nodeBorder: '#bd93f9',
-          clusterBkg: '#21222c',
-          clusterBorder: '#6272a4',
-          titleColor: '#f8f8f2',
-          edgeLabelBackground: '#282a36',
-          fontSize: '14px',
-        },
-        flowchart: {
-          curve: 'basis',
-          padding: 10,
-          htmlLabels: true,
-          nodeSpacing: 28,
-          rankSpacing: 36,
-          useMaxWidth: true,
-        },
-      });
-      return mermaid;
-    });
+let mermaidModule: MermaidApi | null = null;
+let initializedFor: ThemeId | null = null;
+
+function themeVariables(theme: ThemeId) {
+  if (theme === 'dracula') {
+    return {
+      darkMode: true,
+      background: 'transparent',
+      primaryColor: '#44475a',
+      primaryTextColor: '#f8f8f2',
+      primaryBorderColor: '#bd93f9',
+      secondaryColor: '#383a4a',
+      secondaryTextColor: '#f8f8f2',
+      secondaryBorderColor: '#8be9fd',
+      tertiaryColor: '#2d2f3b',
+      tertiaryTextColor: '#f8f8f2',
+      tertiaryBorderColor: '#6272a4',
+      lineColor: '#6272a4',
+      textColor: '#f8f8f2',
+      mainBkg: '#44475a',
+      nodeBorder: '#bd93f9',
+      clusterBkg: '#21222c',
+      clusterBorder: '#6272a4',
+      titleColor: '#f8f8f2',
+      edgeLabelBackground: '#282a36',
+      fontSize: '14px',
+    };
   }
-  return mermaidPromise;
+  return {
+    darkMode: false,
+    background: 'transparent',
+    primaryColor: '#3d3830',
+    primaryTextColor: '#f4efe4',
+    primaryBorderColor: '#4a6b5c',
+    secondaryColor: '#4a5560',
+    secondaryTextColor: '#f4efe4',
+    secondaryBorderColor: '#3a6b7c',
+    tertiaryColor: '#5a5248',
+    tertiaryTextColor: '#f4efe4',
+    tertiaryBorderColor: '#7a7268',
+    lineColor: '#7a7268',
+    textColor: '#2f2b26',
+    mainBkg: '#3d3830',
+    nodeBorder: '#4a6b5c',
+    clusterBkg: '#ebe4d6',
+    clusterBorder: '#d4cbb8',
+    titleColor: '#2f2b26',
+    edgeLabelBackground: '#f4efe4',
+    fontSize: '14px',
+  };
 }
 
-/** Make SVG scale to container instead of fixed huge pixel size. */
+async function getMermaid(theme: ThemeId): Promise<MermaidApi> {
+  if (!mermaidModule) {
+    mermaidModule = (await import('mermaid')).default;
+  }
+  if (initializedFor !== theme) {
+    mermaidModule.initialize({
+      startOnLoad: false,
+      theme: theme === 'dracula' ? 'dark' : 'base',
+      securityLevel: 'loose',
+      fontFamily: 'Outfit, "PingFang SC", "Microsoft YaHei", sans-serif',
+      themeVariables: themeVariables(theme),
+      flowchart: {
+        curve: 'basis',
+        padding: 10,
+        htmlLabels: true,
+        nodeSpacing: 28,
+        rankSpacing: 36,
+        useMaxWidth: true,
+      },
+    });
+    initializedFor = theme;
+  }
+  return mermaidModule;
+}
+
 function fitSvg(svg: SVGSVGElement) {
   svg.removeAttribute('height');
   svg.style.height = 'auto';
   svg.style.maxWidth = '100%';
   svg.style.width = '100%';
   svg.style.display = 'block';
-  // Prefer viewBox-based scaling
   if (!svg.getAttribute('viewBox') && svg.getAttribute('width')) {
     const w = parseFloat(svg.getAttribute('width') || '0');
     const h = parseFloat(svg.getAttribute('height') || '0');
@@ -73,6 +101,7 @@ function fitSvg(svg: SVGSVGElement) {
 }
 
 export function MermaidBlock({ chart }: { chart: string }) {
+  const { theme } = useTheme();
   const hostRef = useRef<HTMLDivElement>(null);
   const reactId = useId().replace(/:/g, '');
   const [failed, setFailed] = useState<string | null>(null);
@@ -82,7 +111,7 @@ export function MermaidBlock({ chart }: { chart: string }) {
     const id = `mmd-${reactId}-${Math.random().toString(36).slice(2, 8)}`;
     void (async () => {
       try {
-        const mermaid = await loadMermaid();
+        const mermaid = await getMermaid(theme);
         const { svg } = await mermaid.render(id, chart.trim());
         if (!cancelled && hostRef.current) {
           hostRef.current.innerHTML = svg;
@@ -97,7 +126,7 @@ export function MermaidBlock({ chart }: { chart: string }) {
     return () => {
       cancelled = true;
     };
-  }, [chart, reactId]);
+  }, [chart, reactId, theme]);
 
   if (failed) {
     return (

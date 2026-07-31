@@ -1,11 +1,13 @@
-import { Download, Upload } from 'lucide-react';
+import { Download, Moon, Sun, Upload } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 import { countDirtyKeys, downloadProgress, parseImportedProgress } from '../lib/progress-store';
 import { useProgress } from '../hooks/useProgress';
+import { useTheme } from '../hooks/useTheme';
 import { useRef } from 'react';
 
 export function SiteHeader({ subtitle }: { subtitle?: string }) {
   const { progress, bundled, importProgress } = useProgress();
+  const { theme, setTheme } = useTheme();
   const dirty = countDirtyKeys(bundled, progress);
   const fileRef = useRef<HTMLInputElement>(null);
   const loc = useLocation();
@@ -16,7 +18,7 @@ export function SiteHeader({ subtitle }: { subtitle?: string }) {
         <div className="flex min-w-0 items-baseline gap-2">
           <Link
             to="/"
-            className="bg-gradient-to-r from-dracula-purple to-dracula-pink bg-clip-text text-lg font-semibold text-transparent sm:text-xl"
+            className="bg-gradient-to-r from-dracula-purple to-dracula-cyan bg-clip-text text-lg font-semibold tracking-tight text-transparent sm:text-xl"
           >
             算法刷题进行时
           </Link>
@@ -33,6 +35,40 @@ export function SiteHeader({ subtitle }: { subtitle?: string }) {
               本地有 {dirty} 条未提交 git 的改动
             </span>
           )}
+          <div
+            className="inline-flex items-center rounded-lg border border-dracula-current bg-dracula-bg-dark p-0.5"
+            role="group"
+            aria-label="主题切换"
+          >
+            <button
+              type="button"
+              title="护眼米色"
+              aria-pressed={theme === 'parchment'}
+              onClick={() => setTheme('parchment')}
+              className={`inline-flex items-center gap-1 rounded-md px-2 py-1 text-xs transition ${
+                theme === 'parchment'
+                  ? 'bg-dracula-purple/20 text-dracula-purple'
+                  : 'text-dracula-comment hover:text-dracula-fg'
+              }`}
+            >
+              <Sun className="h-3.5 w-3.5" />
+              <span className="hidden sm:inline">护眼</span>
+            </button>
+            <button
+              type="button"
+              title="德古拉深色"
+              aria-pressed={theme === 'dracula'}
+              onClick={() => setTheme('dracula')}
+              className={`inline-flex items-center gap-1 rounded-md px-2 py-1 text-xs transition ${
+                theme === 'dracula'
+                  ? 'bg-dracula-purple/25 text-dracula-purple'
+                  : 'text-dracula-comment hover:text-dracula-fg'
+              }`}
+            >
+              <Moon className="h-3.5 w-3.5" />
+              <span className="hidden sm:inline">德古拉</span>
+            </button>
+          </div>
           <button
             type="button"
             onClick={() => downloadProgress(progress)}

@@ -11,7 +11,7 @@ export function HomePage() {
   return (
     <main className="mx-auto max-w-4xl px-4 py-12 sm:px-6 sm:py-16">
       <div className="mb-12 text-center">
-        <h1 className="bg-gradient-to-r from-dracula-purple via-dracula-pink to-dracula-cyan bg-clip-text text-4xl font-bold tracking-tight text-transparent sm:text-5xl">
+        <h1 className="bg-gradient-to-r from-dracula-purple via-dracula-cyan to-dracula-pink bg-clip-text text-4xl font-bold tracking-tight text-transparent sm:text-5xl">
           算法刷题进行时
         </h1>
         <p className="mt-4 text-dracula-comment">表格化打卡 · 进度随仓库走 · AI 题解可挂链</p>
@@ -27,7 +27,7 @@ export function HomePage() {
             <Link
               key={bank.id}
               to={`/bank/${bank.id}`}
-              className="group rounded-2xl border border-dracula-current bg-dracula-bg-dark/60 p-6 backdrop-blur-xl transition hover:-translate-y-0.5 hover:border-dracula-purple/50 hover:shadow-[0_0_40px_-12px_rgba(189,147,249,0.45)]"
+              className="bank-card group rounded-2xl border border-dracula-current bg-dracula-bg-dark/70 p-6 shadow-[0_8px_30px_-18px_rgba(47,43,38,0.28)] backdrop-blur-xl transition hover:-translate-y-0.5 hover:border-dracula-purple/45"
             >
               <div className="flex items-start justify-between gap-4">
                 <div>
@@ -40,7 +40,7 @@ export function HomePage() {
                     <ProgressBar value={done} max={total} />
                   </div>
                 </div>
-                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-dracula-purple/15 text-dracula-purple transition group-hover:bg-dracula-pink/20 group-hover:text-dracula-pink">
+                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-dracula-purple/12 text-dracula-purple transition group-hover:bg-dracula-cyan/15 group-hover:text-dracula-cyan">
                   <ArrowRight className="h-5 w-5" />
                 </span>
               </div>

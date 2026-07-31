@@ -5,10 +5,23 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>算法刷题进行时</title>
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem('sft-theme');
+          document.documentElement.setAttribute(
+            'data-theme',
+            t === 'dracula' ? 'dracula' : 'parchment',
+          );
+        } catch (e) {
+          document.documentElement.setAttribute('data-theme', 'parchment');
+        }
+      })();
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Outfit:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
   </head>

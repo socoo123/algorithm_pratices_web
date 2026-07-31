@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-30T00:44:54.061Z",
+  "updatedAt": "2026-07-30T13:32:22.572Z",
   "problems": {
     "base/reverse-linked-list": {
       "rounds": [
@@ -113,6 +113,22 @@
         false
       ],
       "updatedAt": "2026-07-30T00:44:54.061Z"
+    },
+    "base/binary-tree-inorder-traversal": {
+      "rounds": [
+        true,
+        false,
+        false
+      ],
+      "updatedAt": "2026-07-30T00:53:36.964Z"
+    },
+    "base/maximum-depth-of-binary-tree": {
+      "rounds": [
+        true,
+        false,
+        false
+      ],
+      "updatedAt": "2026-07-30T13:32:22.572Z"
     }
   }
 }

@@ -420,7 +420,7 @@
       "hint": "定长窗口入门",
       "categoryId": "sliding-window",
       "order": 2,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -2987,5 +2987,5 @@
       "count": "—"
     }
   ],
-  "generatedAt": "2026-07-30T00:33:50.505Z"
+  "generatedAt": "2026-07-30T13:27:03.359Z"
 }

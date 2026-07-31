@@ -1,9 +1,72 @@
 @import 'tailwindcss';
 
 @theme {
-  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+  --font-sans: 'Outfit', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', system-ui, sans-serif;
+  --font-mono: 'IBM Plex Mono', 'JetBrains Mono', ui-monospace, monospace;
 
-  /* Dracula palette */
+  /* Runtime-switched via [data-theme]; defaults = 护眼羊皮纸 */
+  --color-dracula-bg: #e9e2d4;
+  --color-dracula-bg-dark: #f4efe4;
+  --color-dracula-current: #d4cbb8;
+  --color-dracula-fg: #2f2b26;
+  --color-dracula-comment: #7a7268;
+  --color-dracula-cyan: #3a6b7c;
+  --color-dracula-green: #4f7a4e;
+  --color-dracula-orange: #b8783a;
+  --color-dracula-pink: #8b5a6b;
+  --color-dracula-purple: #4a6b5c;
+  --color-dracula-red: #a85a52;
+  --color-dracula-yellow: #9a7b2e;
+}
+
+/* 语义色：题解正文等用变量，随主题切换 */
+:root,
+[data-theme='parchment'] {
+  --theme-body: #e9e2d4;
+  --theme-fg: #2f2b26;
+  --theme-prose: #3d3830;
+  --theme-link: #3a6b7c;
+  --theme-link-hover: #4a6b5c;
+  --theme-border: #d4cbb8;
+  --theme-code-bg: #e3dbcc;
+  --theme-code-fg: #8b5a6b;
+  --theme-pre-bg: #2f2b26;
+  --theme-th-bg: #e3dbcc;
+  --theme-line-num: #7a7268;
+  --theme-mermaid-frame: #f4efe4;
+  --theme-edge-label: #2f2b26;
+  --theme-node-label: #f4efe4;
+  --theme-card-glow: rgba(74, 107, 92, 0.35);
+  --color-dracula-bg: #e9e2d4;
+  --color-dracula-bg-dark: #f4efe4;
+  --color-dracula-current: #d4cbb8;
+  --color-dracula-fg: #2f2b26;
+  --color-dracula-comment: #7a7268;
+  --color-dracula-cyan: #3a6b7c;
+  --color-dracula-green: #4f7a4e;
+  --color-dracula-orange: #b8783a;
+  --color-dracula-pink: #8b5a6b;
+  --color-dracula-purple: #4a6b5c;
+  --color-dracula-red: #a85a52;
+  --color-dracula-yellow: #9a7b2e;
+}
+
+[data-theme='dracula'] {
+  --theme-body: #282a36;
+  --theme-fg: #f8f8f2;
+  --theme-prose: #f8f8f2;
+  --theme-link: #8be9fd;
+  --theme-link-hover: #ff79c6;
+  --theme-border: #44475a;
+  --theme-code-bg: #44475a;
+  --theme-code-fg: #ff79c6;
+  --theme-pre-bg: #21222c;
+  --theme-th-bg: #21222c;
+  --theme-line-num: #6272a4;
+  --theme-mermaid-frame: #21222c;
+  --theme-edge-label: #f8f8f2;
+  --theme-node-label: #f8f8f2;
+  --theme-card-glow: rgba(189, 147, 249, 0.45);
   --color-dracula-bg: #282a36;
   --color-dracula-bg-dark: #21222c;
   --color-dracula-current: #44475a;
@@ -24,10 +87,10 @@
     transform: translate(0, 0) scale(1);
   }
   33% {
-    transform: translate(8%, -6%) scale(1.05);
+    transform: translate(4%, -3%) scale(1.03);
   }
   66% {
-    transform: translate(-5%, 4%) scale(0.95);
+    transform: translate(-3%, 2%) scale(0.98);
   }
 }
 
@@ -37,19 +100,29 @@
     transform: translate(0, 0) scale(1);
   }
   50% {
-    transform: translate(-10%, 8%) scale(1.08);
+    transform: translate(-5%, 4%) scale(1.04);
   }
 }
 
 @media (prefers-reduced-motion: no-preference) {
   .aurora-blob-a {
-    animation: aurora-a 28s ease-in-out infinite;
+    animation: aurora-a 48s ease-in-out infinite;
   }
   .aurora-blob-b {
-    animation: aurora-b 22s ease-in-out infinite;
+    animation: aurora-b 56s ease-in-out infinite;
   }
   .aurora-blob-c {
-    animation: aurora-a 32s ease-in-out infinite reverse;
+    animation: aurora-a 64s ease-in-out infinite reverse;
+  }
+
+  [data-theme='dracula'] .aurora-blob-a {
+    animation-duration: 28s;
+  }
+  [data-theme='dracula'] .aurora-blob-b {
+    animation-duration: 22s;
+  }
+  [data-theme='dracula'] .aurora-blob-c {
+    animation-duration: 32s;
   }
 }
 
@@ -61,21 +134,18 @@ body,
 
 body {
   margin: 0;
-  background: #282a36;
-  color: #f8f8f2;
-  font-family:
-    system-ui,
-    -apple-system,
-    'Segoe UI',
-    'PingFang SC',
-    'Hiragino Sans GB',
-    'Microsoft YaHei',
-    sans-serif;
+  background: var(--theme-body);
+  color: var(--theme-fg);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease;
 }
 
 .prose-solution {
   max-width: none;
-  line-height: 1.75;
+  line-height: 1.8;
 }
 
 .prose-solution .markdown-html > *:first-child {
@@ -85,25 +155,32 @@ body {
 .prose-solution h1,
 .prose-solution h2,
 .prose-solution h3 {
-  color: #f8f8f2;
+  color: var(--theme-fg);
   font-weight: 600;
+  letter-spacing: -0.01em;
   margin: 1.25em 0 0.5em;
 }
 
 .prose-solution p,
 .prose-solution li {
-  color: #f8f8f2;
+  color: var(--theme-prose);
 }
 
 .prose-solution a {
-  color: #8be9fd;
+  color: var(--theme-link);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+
+.prose-solution a:hover {
+  color: var(--theme-link-hover);
 }
 
 .prose-solution pre {
   overflow-x: auto;
   border-radius: 0.75rem;
-  border: 1px solid #44475a;
-  background: #21222c !important;
+  border: 1px solid var(--theme-border);
+  background: var(--theme-pre-bg) !important;
   padding: 1rem 0;
   font-size: 0.875rem;
 }
@@ -113,8 +190,8 @@ body {
 }
 
 .prose-solution :not(pre) > code {
-  background: #44475a;
-  color: #ff79c6;
+  background: var(--theme-code-bg);
+  color: var(--theme-code-fg);
   padding: 0.15em 0.35em;
   border-radius: 0.25rem;
   font-size: 0.9em;
@@ -127,8 +204,13 @@ body {
 
 .prose-solution th,
 .prose-solution td {
-  border: 1px solid #44475a;
+  border: 1px solid var(--theme-border);
   padding: 0.5rem 0.75rem;
+}
+
+.prose-solution th {
+  background: var(--theme-th-bg);
+  color: var(--theme-fg);
 }
 
 .prose-solution figure[data-rehype-pretty-code-figure] {
@@ -142,16 +224,15 @@ body {
   width: 1.25rem;
   margin-right: 1rem;
   text-align: right;
-  color: #6272a4;
+  color: var(--theme-line-num);
 }
 
 .prose-solution [data-line-numbers] {
   counter-reset: line;
 }
 
-/* Mermaid：深色德古拉画框，宽度受 max-w-xl 约束 */
 .mermaid-frame {
-  background: #21222c;
+  background: var(--theme-mermaid-frame);
 }
 
 .mermaid-host svg {
@@ -162,7 +243,17 @@ body {
 }
 
 .mermaid-host .nodeLabel,
+.mermaid-host .nodeLabel span,
+.mermaid-host .label foreignObject div {
+  color: var(--theme-node-label) !important;
+}
+
 .mermaid-host .edgeLabel,
-.mermaid-host foreignObject div {
-  color: #f8f8f2 !important;
+.mermaid-host .edgeLabel span,
+.mermaid-host .edgeLabel foreignObject div {
+  color: var(--theme-edge-label) !important;
+}
+
+.bank-card:hover {
+  box-shadow: 0 12px 36px -16px var(--theme-card-glow);
 }

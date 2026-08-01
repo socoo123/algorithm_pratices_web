@@ -490,7 +490,7 @@
       "hint": "对撞双指针（贪心缩边）",
       "categoryId": "sliding-window",
       "order": 7,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -2987,5 +2987,5 @@
       "count": "—"
     }
   ],
-  "generatedAt": "2026-07-30T13:27:03.359Z"
+  "generatedAt": "2026-08-01T14:49:12.558Z"
 }

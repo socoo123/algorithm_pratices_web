@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-30T13:32:22.572Z",
+  "updatedAt": "2026-08-01T08:56:04.017Z",
   "problems": {
     "base/reverse-linked-list": {
       "rounds": [
@@ -129,6 +129,22 @@
         false
       ],
       "updatedAt": "2026-07-30T13:32:22.572Z"
+    },
+    "base/maximum-average-subarray-i": {
+      "rounds": [
+        true,
+        false,
+        false
+      ],
+      "updatedAt": "2026-08-01T08:41:24.713Z"
+    },
+    "base/maximum-number-of-vowels-in-a-substring-of-given-length": {
+      "rounds": [
+        true,
+        false,
+        false
+      ],
+      "updatedAt": "2026-08-01T08:56:04.017Z"
     }
   }
 }

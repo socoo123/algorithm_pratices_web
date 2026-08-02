@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-01T08:56:04.017Z",
+  "updatedAt": "2026-08-02T08:24:36.347Z",
   "problems": {
     "base/reverse-linked-list": {
       "rounds": [
@@ -145,6 +145,62 @@
         false
       ],
       "updatedAt": "2026-08-01T08:56:04.017Z"
+    },
+    "base/contains-duplicate-ii": {
+      "rounds": [
+        true,
+        false,
+        false
+      ],
+      "updatedAt": "2026-08-01T09:56:39.932Z"
+    },
+    "base/squares-of-a-sorted-array": {
+      "rounds": [
+        true,
+        false,
+        false
+      ],
+      "updatedAt": "2026-08-01T10:01:54.825Z"
+    },
+    "base/longest-substring-without-repeating-characters": {
+      "rounds": [
+        true,
+        false,
+        false
+      ],
+      "updatedAt": "2026-08-01T14:32:33.498Z"
+    },
+    "base/container-with-most-water": {
+      "rounds": [
+        true,
+        false,
+        false
+      ],
+      "updatedAt": "2026-08-01T15:20:07.052Z"
+    },
+    "base/3sum": {
+      "rounds": [
+        true,
+        false,
+        false
+      ],
+      "updatedAt": "2026-08-01T15:34:04.834Z"
+    },
+    "base/minimum-size-subarray-sum": {
+      "rounds": [
+        true,
+        false,
+        false
+      ],
+      "updatedAt": "2026-08-02T08:13:23.463Z"
+    },
+    "base/find-all-anagrams-in-a-string": {
+      "rounds": [
+        true,
+        false,
+        false
+      ],
+      "updatedAt": "2026-08-02T08:24:36.347Z"
     }
   }
 }

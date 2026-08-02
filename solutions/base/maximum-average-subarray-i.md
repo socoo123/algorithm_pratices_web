@@ -100,12 +100,12 @@ flowchart TD
     E --> C
     C --> F["返回 maxSum / k"]
 
-    style A fill:#44475a,stroke:#f1fa8c,color:#f8f8f2
-    style B fill:#44475a,stroke:#8be9fd,color:#f8f8f2
-    style C fill:#44475a,stroke:#8be9fd,color:#f8f8f2
-    style D fill:#44475a,stroke:#ff79c6,color:#f8f8f2
-    style E fill:#44475a,stroke:#50fa7b,color:#f8f8f2
-    style F fill:#44475a,stroke:#50fa7b,color:#f8f8f2
+    style A fill:#2b2d3a,stroke:#f1fa8c,color:#f8f8f2
+    style B fill:#2b2d3a,stroke:#8be9fd,color:#f8f8f2
+    style C fill:#2b2d3a,stroke:#8be9fd,color:#f8f8f2
+    style D fill:#2b2d3a,stroke:#ff79c6,color:#f8f8f2
+    style E fill:#2b2d3a,stroke:#50fa7b,color:#f8f8f2
+    style F fill:#2b2d3a,stroke:#50fa7b,color:#f8f8f2
 ```
 
 窗口滑动示意（`k = 4`）：
@@ -120,16 +120,16 @@ flowchart LR
         b0["12"] --> b1["-5"] --> b2["-6"] --> b3["50"]
     end
 
-    style W0 fill:#282a36,stroke:#8be9fd,color:#f8f8f2
-    style W1 fill:#282a36,stroke:#50fa7b,color:#f8f8f2
-    style a0 fill:#44475a,stroke:#ff5555,color:#f8f8f2
-    style a1 fill:#44475a,stroke:#8be9fd,color:#f8f8f2
-    style a2 fill:#44475a,stroke:#8be9fd,color:#f8f8f2
-    style a3 fill:#44475a,stroke:#8be9fd,color:#f8f8f2
-    style b0 fill:#44475a,stroke:#8be9fd,color:#f8f8f2
-    style b1 fill:#44475a,stroke:#8be9fd,color:#f8f8f2
-    style b2 fill:#44475a,stroke:#8be9fd,color:#f8f8f2
-    style b3 fill:#44475a,stroke:#50fa7b,color:#f8f8f2
+    style W0 fill:#1e1f29,stroke:#8be9fd,color:#f8f8f2
+    style W1 fill:#1e1f29,stroke:#50fa7b,color:#f8f8f2
+    style a0 fill:#2b2d3a,stroke:#ff5555,color:#f8f8f2
+    style a1 fill:#2b2d3a,stroke:#8be9fd,color:#f8f8f2
+    style a2 fill:#2b2d3a,stroke:#8be9fd,color:#f8f8f2
+    style a3 fill:#2b2d3a,stroke:#8be9fd,color:#f8f8f2
+    style b0 fill:#2b2d3a,stroke:#8be9fd,color:#f8f8f2
+    style b1 fill:#2b2d3a,stroke:#8be9fd,color:#f8f8f2
+    style b2 fill:#2b2d3a,stroke:#8be9fd,color:#f8f8f2
+    style b3 fill:#2b2d3a,stroke:#50fa7b,color:#f8f8f2
 ```
 
 ### 3.3 关键问题（定长窗口）
@@ -258,10 +258,10 @@ flowchart LR
     S1 -->|"-12 +3"| S2["窗口和=42<br/>max=51"]
     S2 --> ANS["答案 51/4=12.75"]
 
-    style S0 fill:#44475a,stroke:#f1fa8c,color:#f8f8f2
-    style S1 fill:#44475a,stroke:#50fa7b,color:#f8f8f2
-    style S2 fill:#44475a,stroke:#8be9fd,color:#f8f8f2
-    style ANS fill:#44475a,stroke:#50fa7b,color:#f8f8f2
+    style S0 fill:#2b2d3a,stroke:#f1fa8c,color:#f8f8f2
+    style S1 fill:#2b2d3a,stroke:#50fa7b,color:#f8f8f2
+    style S2 fill:#2b2d3a,stroke:#8be9fd,color:#f8f8f2
+    style ANS fill:#2b2d3a,stroke:#50fa7b,color:#f8f8f2
 ```
 
 **再看一个极简例**：`nums = [5], k = 1`  

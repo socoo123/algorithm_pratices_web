@@ -113,13 +113,13 @@ flowchart TD
     E --> B
     F --> B
 
-    style A fill:#3d3830,stroke:#9a7b2e,color:#f4efe4
-    style B fill:#3d3830,stroke:#3a6b7c,color:#f4efe4
-    style C fill:#3d3830,stroke:#4f7a4e,color:#f4efe4
-    style D fill:#3d3830,stroke:#3a6b7c,color:#f4efe4
-    style E fill:#3d3830,stroke:#a85a52,color:#f4efe4
-    style F fill:#3d3830,stroke:#a85a52,color:#f4efe4
-    style Z fill:#3d3830,stroke:#4f7a4e,color:#f4efe4
+    style A fill:#2b2d3a,stroke:#f1fa8c,color:#f8f8f2
+    style B fill:#2b2d3a,stroke:#8be9fd,color:#f8f8f2
+    style C fill:#2b2d3a,stroke:#50fa7b,color:#f8f8f2
+    style D fill:#2b2d3a,stroke:#8be9fd,color:#f8f8f2
+    style E fill:#2b2d3a,stroke:#ff5555,color:#f8f8f2
+    style F fill:#2b2d3a,stroke:#ff5555,color:#f8f8f2
+    style Z fill:#2b2d3a,stroke:#50fa7b,color:#f8f8f2
 ```
 
 指针对撞示意：
@@ -129,10 +129,10 @@ flowchart LR
     L0(("L")) --> A0["1"] --> A1["8"] --> A2["6"] --> A3["2"] --> A4["5"] --> A5["4"] --> A6["8"] --> A7["3"] --> A8["7"]
     A8 --> R0(("R"))
 
-    style L0 fill:#3d3830,stroke:#3a6b7c,color:#f4efe4
-    style R0 fill:#3d3830,stroke:#8b5a6b,color:#f4efe4
-    style A1 fill:#3d3830,stroke:#4f7a4e,color:#f4efe4
-    style A8 fill:#3d3830,stroke:#4f7a4e,color:#f4efe4
+    style L0 fill:#2b2d3a,stroke:#8be9fd,color:#f8f8f2
+    style R0 fill:#2b2d3a,stroke:#ff79c6,color:#f8f8f2
+    style A1 fill:#2b2d3a,stroke:#50fa7b,color:#f8f8f2
+    style A8 fill:#2b2d3a,stroke:#50fa7b,color:#f8f8f2
 ```
 
 ### 3.3 关键推导问题（双指针）
@@ -243,10 +243,10 @@ flowchart LR
     S1 -->|"R--"| S2["继续夹逼…"]
     S2 --> ANS["答案 49"]
 
-    style S0 fill:#3d3830,stroke:#9a7b2e,color:#f4efe4
-    style S1 fill:#3d3830,stroke:#4f7a4e,color:#f4efe4
-    style S2 fill:#3d3830,stroke:#3a6b7c,color:#f4efe4
-    style ANS fill:#3d3830,stroke:#4f7a4e,color:#f4efe4
+    style S0 fill:#2b2d3a,stroke:#f1fa8c,color:#f8f8f2
+    style S1 fill:#2b2d3a,stroke:#50fa7b,color:#f8f8f2
+    style S2 fill:#2b2d3a,stroke:#8be9fd,color:#f8f8f2
+    style ANS fill:#2b2d3a,stroke:#50fa7b,color:#f8f8f2
 ```
 
 **极简例**：`[1,1]` → 一次计算面积 1，然后指针相遇，返回 1。

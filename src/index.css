@@ -33,9 +33,10 @@
   --theme-pre-bg: #2f2b26;
   --theme-th-bg: #e3dbcc;
   --theme-line-num: #7a7268;
-  --theme-mermaid-frame: #f4efe4;
-  --theme-edge-label: #2f2b26;
-  --theme-node-label: #f4efe4;
+  /* Mermaid 画布固定深墨，不随页面主题变 */
+  --theme-mermaid-frame: #1e1f29;
+  --theme-edge-label: #f8f8f2;
+  --theme-node-label: #f8f8f2;
   --theme-card-glow: rgba(74, 107, 92, 0.35);
   --color-dracula-bg: #e9e2d4;
   --color-dracula-bg-dark: #f4efe4;
@@ -63,7 +64,7 @@
   --theme-pre-bg: #21222c;
   --theme-th-bg: #21222c;
   --theme-line-num: #6272a4;
-  --theme-mermaid-frame: #21222c;
+  --theme-mermaid-frame: #1e1f29;
   --theme-edge-label: #f8f8f2;
   --theme-node-label: #f8f8f2;
   --theme-card-glow: rgba(189, 147, 249, 0.45);
@@ -231,8 +232,19 @@ body {
   counter-reset: line;
 }
 
+/*
+ * Mermaid：与页面主题解耦的深墨画布。
+ * 护眼主题正文色是深墨，会经 foreignObject 继承进节点 → 深字+深底看不清；
+ * 这里用更高优先级把图内文字锁成浅色。
+ */
 .mermaid-frame {
-  background: var(--theme-mermaid-frame);
+  background: #1e1f29 !important;
+  border-color: #44475a !important;
+  color: #f8f8f2 !important;
+}
+
+.mermaid-host {
+  color: #f8f8f2 !important;
 }
 
 .mermaid-host svg {
@@ -240,18 +252,33 @@ body {
   margin-inline: auto;
   max-width: 100%;
   height: auto !important;
+  color: #f8f8f2 !important;
 }
 
+.prose-solution .mermaid-host foreignObject,
+.prose-solution .mermaid-host foreignObject *,
+.mermaid-host foreignObject,
+.mermaid-host foreignObject *,
 .mermaid-host .nodeLabel,
-.mermaid-host .nodeLabel span,
-.mermaid-host .label foreignObject div {
-  color: var(--theme-node-label) !important;
+.mermaid-host .nodeLabel *,
+.mermaid-host .label,
+.mermaid-host .label *,
+.mermaid-host .cluster-label,
+.mermaid-host .cluster-label *,
+.mermaid-host .edgeLabel,
+.mermaid-host .edgeLabel * {
+  color: #f8f8f2 !important;
+  -webkit-text-fill-color: #f8f8f2 !important;
 }
 
-.mermaid-host .edgeLabel,
-.mermaid-host .edgeLabel span,
-.mermaid-host .edgeLabel foreignObject div {
-  color: var(--theme-edge-label) !important;
+.mermaid-host .edgeLabel rect,
+.mermaid-host .labelBkg {
+  fill: #1e1f29 !important;
+}
+
+.mermaid-host text,
+.mermaid-host tspan {
+  fill: #f8f8f2 !important;
 }
 
 .bank-card:hover {

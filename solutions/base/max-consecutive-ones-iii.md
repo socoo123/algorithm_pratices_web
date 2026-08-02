@@ -85,12 +85,12 @@ flowchart TD
     F -->|"是"| A
     F -->|"否"| G["返回 ans"]
 
-    style A fill:#44475a,stroke:#f1fa8c,color:#f8f8f2
-    style B fill:#44475a,stroke:#8be9fd,color:#f8f8f2
-    style C fill:#44475a,stroke:#8be9fd,color:#f8f8f2
-    style D fill:#44475a,stroke:#ff5555,color:#f8f8f2
-    style E fill:#44475a,stroke:#50fa7b,color:#f8f8f2
-    style G fill:#44475a,stroke:#50fa7b,color:#f8f8f2
+    style A fill:#2b2d3a,stroke:#f1fa8c,color:#f8f8f2
+    style B fill:#2b2d3a,stroke:#8be9fd,color:#f8f8f2
+    style C fill:#2b2d3a,stroke:#8be9fd,color:#f8f8f2
+    style D fill:#2b2d3a,stroke:#ff5555,color:#f8f8f2
+    style E fill:#2b2d3a,stroke:#50fa7b,color:#f8f8f2
+    style G fill:#2b2d3a,stroke:#50fa7b,color:#f8f8f2
 ```
 
 ### 3.3 关键推导问题（滑动窗口）
@@ -178,10 +178,10 @@ flowchart TD
     S5 --> S6["继续 right=6..9 全是1<br/>窗口 4..9，zero=2，长度6 ✅"]
     S6 --> S7["right=10 遇0 → zero=3<br/>收缩到 left=5，窗口5..10 长度6"]
 
-    style S0 fill:#44475a,stroke:#f1fa8c,color:#f8f8f2
-    style S3 fill:#44475a,stroke:#8be9fd,color:#f8f8f2
-    style S4 fill:#44475a,stroke:#ff5555,color:#f8f8f2
-    style S6 fill:#44475a,stroke:#50fa7b,color:#f8f8f2
+    style S0 fill:#2b2d3a,stroke:#f1fa8c,color:#f8f8f2
+    style S3 fill:#2b2d3a,stroke:#8be9fd,color:#f8f8f2
+    style S4 fill:#2b2d3a,stroke:#ff5555,color:#f8f8f2
+    style S6 fill:#2b2d3a,stroke:#50fa7b,color:#f8f8f2
 ```
 
 逐步轨迹（更精确）：

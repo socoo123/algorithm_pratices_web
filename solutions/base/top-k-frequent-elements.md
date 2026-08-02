@@ -89,12 +89,12 @@ flowchart TD
     H -->|是| B
     H -->|否| I["堆中 k 个即答案"]
 
-    style A fill:#44475a,stroke:#f1fa8c,color:#f8f8f2
-    style C fill:#44475a,stroke:#8be9fd,color:#f8f8f2
-    style E fill:#44475a,stroke:#8be9fd,color:#f8f8f2
-    style F fill:#44475a,stroke:#ff79c6,color:#f8f8f2
-    style G fill:#44475a,stroke:#ff5555,color:#f8f8f2
-    style I fill:#44475a,stroke:#50fa7b,color:#f8f8f2
+    style A fill:#2b2d3a,stroke:#f1fa8c,color:#f8f8f2
+    style C fill:#2b2d3a,stroke:#8be9fd,color:#f8f8f2
+    style E fill:#2b2d3a,stroke:#8be9fd,color:#f8f8f2
+    style F fill:#2b2d3a,stroke:#ff79c6,color:#f8f8f2
+    style G fill:#2b2d3a,stroke:#ff5555,color:#f8f8f2
+    style I fill:#2b2d3a,stroke:#50fa7b,color:#f8f8f2
 ```
 
 **为什么是小根堆？** 堆顶是「这 k 个里最弱的」。新来的只有打得过堆顶，才配换人进 Top-K。
@@ -113,10 +113,10 @@ flowchart LR
     B --> C["从 freq=n 扫到 1"]
     C --> D["凑满 k 个返回"]
 
-    style A fill:#44475a,stroke:#f1fa8c,color:#f8f8f2
-    style B fill:#44475a,stroke:#8be9fd,color:#f8f8f2
-    style C fill:#44475a,stroke:#8be9fd,color:#f8f8f2
-    style D fill:#44475a,stroke:#50fa7b,color:#f8f8f2
+    style A fill:#2b2d3a,stroke:#f1fa8c,color:#f8f8f2
+    style B fill:#2b2d3a,stroke:#8be9fd,color:#f8f8f2
+    style C fill:#2b2d3a,stroke:#8be9fd,color:#f8f8f2
+    style D fill:#2b2d3a,stroke:#50fa7b,color:#f8f8f2
 ```
 
 时间：`O(n)`（线性）。这是本题「最优解」面试加分项。

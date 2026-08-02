@@ -546,7 +546,7 @@
       "hint": "定长窗口判排列",
       "categoryId": "sliding-window",
       "order": 11,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -2987,5 +2987,5 @@
       "count": "—"
     }
   ],
-  "generatedAt": "2026-08-02T08:32:16.673Z"
+  "generatedAt": "2026-08-02T08:42:46.970Z"
 }

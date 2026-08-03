@@ -336,7 +336,7 @@
       "hint": "拆两链表再拼接",
       "categoryId": "linked-list",
       "order": 16,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -350,7 +350,7 @@
       "hint": "全部删除重复节点",
       "categoryId": "linked-list",
       "order": 17,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -560,7 +560,7 @@
       "hint": "变长窗口 + 替换 k 次",
       "categoryId": "sliding-window",
       "order": 12,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -588,7 +588,7 @@
       "hint": "三数之和升级",
       "categoryId": "sliding-window",
       "order": 14,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -602,7 +602,7 @@
       "hint": "三指针（荷兰国旗）",
       "categoryId": "sliding-window",
       "order": 15,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -882,7 +882,7 @@
       "hint": "后序求深度，更新直径",
       "categoryId": "binary-tree",
       "order": 5,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -2987,5 +2987,5 @@
       "count": "—"
     }
   ],
-  "generatedAt": "2026-08-02T08:42:46.970Z"
+  "generatedAt": "2026-08-03T00:40:32.589Z"
 }

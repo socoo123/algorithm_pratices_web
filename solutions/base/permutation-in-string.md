@@ -1,10 +1,10 @@
-# 字符串的排列（定长窗口 + 计数）
+# 字符串的排列（定长窗口 + cnts / debt）
 
 ## 一、问题描述
 
 给你两个字符串 `s1` 和 `s2`，写一个函数判断 `s2` 是否包含 `s1` 的**排列**作为子串。
 
-换句话说：`s2` 中是否存在某个长度为 `s1.length()` 的连续子串，它与 `s1` 互为**字母异位词**（字母相同、出现次数相同，顺序可不同）。
+换句话说：`s2` 中是否存在某个长度为 `s1.length()` 的连续子串，它与 `s1` 的字符**多重集合完全相同**（顺序可以不同）。
 
 > 🔗 LeetCode 567：https://leetcode.cn/problems/permutation-in-string/
 
@@ -13,7 +13,7 @@
 ```
 输入：s1 = "ab", s2 = "eidbaooo"
 输出：true
-解释：s2 包含子串 "ba"，它是 "ab" 的排列。
+解释：s2 包含子串 "ba"，是 "ab" 的排列。
 ```
 
 **示例 2**
@@ -21,13 +21,14 @@
 ```
 输入：s1 = "ab", s2 = "eidboaoo"
 输出：false
-解释：没有任何长度为 2 的子串是 "ab" 的异位词。
 ```
 
 **直观理解**
 
-在 `s2` 上找**任意一个**长度 = `|s1|` 的窗口，窗口内字母频次与 `s1` 完全一致即可返回 `true`。  
-和 [438. 找到字符串中所有字母异位词](https://leetcode.cn/problems/find-all-anagrams-in-a-string/) 几乎同题，只是本题只要「有没有」，不要「所有起点」。
+在 `s2` 上维持长度为 `|s1|` 的窗口；窗口内字符频次与 `s1` 完全一致 → `true`。  
+和 [438. 找到字符串中所有字母异位词](https://leetcode.cn/problems/find-all-anagrams-in-a-string/) 同骨架，本题只要「有没有」。
+
+与 class049「最小覆盖子串」同一套 **cnts + debt（欠债）** 模型，区别只是：本题窗口**长度固定**为 `|s1|`，`debt == 0` 即频次完全对齐（排列）。
 
 ---
 
@@ -35,19 +36,24 @@
 
 ### 直观思路
 
-枚举 `s2` 每个起点 `i`，取出 `s2[i .. i+|s1|-1]`，排序后与排序后的 `s1` 比较。
+枚举每个起点，把长度为 `m` 的子串排序后和排序后的 `s1` 比。
 
 ```java
-public boolean checkInclusion(String s1, String s2) {
-    int n = s2.length(), m = s1.length();
-    if (n < m) return false;
-    char[] target = s1.toCharArray();
-    Arrays.sort(target);
-    String key = new String(target);
-    for (int i = 0; i <= n - m; i++) {
-        char[] win = s2.substring(i, i + m).toCharArray();
+public static boolean checkInclusion(String s1, String s2) {
+    char[] t = s1.toCharArray();
+    Arrays.sort(t);
+    String key = String.valueOf(t);
+    int m = t.length;
+    char[] s = s2.toCharArray();
+    if (s.length < m) {
+        return false;
+    }
+    for (int i = 0; i <= s.length - m; i++) {
+        char[] win = Arrays.copyOfRange(s, i, i + m);
         Arrays.sort(win);
-        if (key.equals(new String(win))) return true;
+        if (key.equals(String.valueOf(win))) {
+            return true;
+        }
     }
     return false;
 }
@@ -55,13 +61,13 @@ public boolean checkInclusion(String s1, String s2) {
 
 ### 复杂度
 
-- **时间**：`O((n-m+1)·m log m)`，每个窗口排序。
-- **空间**：`O(m)`。
+- **时间**：`O((n-m+1)·m log m)`
+- **空间**：`O(m)`
 
 ### 🔴 瓶颈在哪里
 
-相邻窗口只差一头一尾，字母计数几乎一样，却每次重新排序。  
-`n`、`m` 到 `10⁴` 量级时偏慢，应**定长滑窗 + 差分更新计数**。
+相邻窗口只差一头一尾，却每次重新排序。  
+应改成：**定长滑窗 + cnts 增量更新**，用 `debt` 在 O(1) 判断是否对齐。
 
 ---
 
@@ -71,83 +77,118 @@ public boolean checkInclusion(String s1, String s2) {
 
 | 特征 | 说明 |
 |------|------|
-| 子串长度固定为 `\|s1\|` | **定长滑动窗口** |
-| 排列 = 频次相同 | 维护 26 个小写字母计数即可 |
-| 相邻窗口差 1 个字符 | `+进 −出`，O(1) 更新 |
-| 只要存在即可 | 一旦匹配立刻 `return true` |
+| 子串长度固定为 `\|s1\|` | **定长**滑动窗口（和 76 的变长不同） |
+| 排列 = 多重集合相等 | 用 `cnts` 净值描述「欠 / 盈」 |
+| 字符集有限 | `cnts[256]`，与 class049 一致 |
+| 只要存在即可 | `debt == 0` 立刻 `return true` |
 
-### 3.2 暴力 → 优化：窗口计数对齐
+### 3.2 暴力 → 优化：欠债模型 + 定长窗口
 
-1. 统计 `s1` 的频次数组 `need[26]`。
-2. 在 `s2` 上维护同样长度的窗口频次 `win[26]`。
-3. 先填满第一个窗口；之后每次右进一个、左出一个。
-4. 若 `win` 与 `need` 完全相等 → 返回 `true`；滑完仍无 → `false`。
+和最小覆盖子串（class049 Code03）一样：
 
-比较两个长度 26 的数组是 `O(26)=O(1)`。
+1. 把 `s1` 里每个字符记成**欠债**：`cnts[cha]--`，总债 `debt = s1.length()`。
+2. `cnts[c] < 0`：窗口里这个字符还不够（欠债）。  
+   `cnts[c] > 0`：窗口里这个字符多了（盈余）。  
+   `cnts[c] == 0`：这个字符刚好对齐。
+3. 右指针 `r` 纳入 `s2[r]`：若纳入前 `cnts[s2[r]] < 0`，说明还了一份债，`debt--`。
+4. 窗口长度一旦超过 `m = |s1|`，左指针 `l` 吐出 `s2[l]`：若吐出后 `cnts < 0`，说明又欠上了，`debt++`。
+5. **窗口长度恰好为 `m` 且 `debt == 0`** → 频次完全一致 → 找到排列。
+
+```
+初始化：对 s1 每个字符 cnts--，debt = |s1|
+
+for r 从 0 扫到 n-1：
+    纳入 s2[r]：若 cnts[s2[r]]++ 前 < 0 → debt--     ← 还债
+    若窗口长度 > m：
+        吐出 s2[l]：若 --cnts[s2[l]] 后 < 0 → debt++  ← 欠债
+        l++
+    若 debt == 0 → return true
+
+return false
+```
 
 ```mermaid
 flowchart TD
-    A["统计 s1 → need"] --> B["窗口长度 m = s1.length"]
-    B --> C["滑过 s2：维护 win"]
-    C --> D{"win 与 need 相同?"}
-    D -->|"是"| E["返回 true"]
-    D -->|"否"| F["右进一、左出一"]
-    F --> G{"还有窗口?"}
-    G -->|"是"| C
-    G -->|"否"| H["返回 false"]
+    A["s1 入 cnts 负, debt = m"] --> B["r 右扩：纳入 s2 r"]
+    B --> C{"cnts 增前 < 0 ?"}
+    C -->|"是"| D["debt-- 还债"]
+    C -->|"否"| E["不改 debt"]
+    D --> F{"长度 > m ?"}
+    E --> F
+    F -->|"是"| G["吐出 s2 l，可能 debt++"]
+    F -->|"否"| H{"debt == 0 ?"}
+    G --> H
+    H -->|"是"| I["返回 true"]
+    H -->|"否"| J{"还有字符?"}
+    J -->|"是"| B
+    J -->|"否"| K["返回 false"]
 
     style A fill:#2b2d3a,stroke:#f1fa8c,color:#f8f8f2
     style B fill:#2b2d3a,stroke:#8be9fd,color:#f8f8f2
     style C fill:#2b2d3a,stroke:#8be9fd,color:#f8f8f2
-    style D fill:#2b2d3a,stroke:#8be9fd,color:#f8f8f2
-    style E fill:#2b2d3a,stroke:#50fa7b,color:#f8f8f2
+    style D fill:#2b2d3a,stroke:#50fa7b,color:#f8f8f2
     style F fill:#2b2d3a,stroke:#ff79c6,color:#f8f8f2
-    style G fill:#2b2d3a,stroke:#8be9fd,color:#f8f8f2
-    style H fill:#2b2d3a,stroke:#ff5555,color:#f8f8f2
+    style G fill:#2b2d3a,stroke:#ff5555,color:#f8f8f2
+    style H fill:#2b2d3a,stroke:#8be9fd,color:#f8f8f2
+    style I fill:#2b2d3a,stroke:#50fa7b,color:#f8f8f2
+    style K fill:#2b2d3a,stroke:#ff5555,color:#f8f8f2
 ```
 
-### 3.3 更快一档：用 diff 代替整表比对
+### 3.3 关键推导问题（滑动窗口）
 
-维护 `diff`：当前有多少种字母的计数「未对齐」。
-
-常见写法：
-
-- `cnt[c]`：相对目标，还差 / 多拿了多少个 `c`（初始装入 `s1` 与首窗后的差值）。
-- 右端进入 `x`：`cnt[x]--`，若 `1→0` 则 `diff--`，若 `0→-1` 则 `diff++`。
-- 左端踢出 `y`：`cnt[y]++`，对称更新。
-- `diff == 0` 时窗口恰为 `s1` 的排列。
-
-面试讲清「定长 + 双数组」即可；要抠常数再上 `diff`。
+| 问题 | 答案 |
+|------|------|
+| 何时右扩？ | `r` 每次 +1，纳入 `s2[r]` |
+| 何时左缩？ | **长度 > m** 时强制吐出一个（定长），不是 `debt==0` 才缩 |
+| 为何 `debt==0` 就是排列？ | 窗口长度已是 `m`，总债清零 ⟺ 每个字符份数恰好对齐 |
+| 和 76 题差在哪？ | 76：`debt==0` 后还要**尽量缩**求最短；本题：长度锁死为 `m`，`debt==0` 即答案 |
 
 ### 3.4 一句话核心
 
-> **在 s2 上滑长度为 |s1| 的定长窗口，用计数表判断窗口是否为 s1 的排列；匹配则立刻返回 true。**
+> **s1 记欠债；在 s2 上滑长度为 m 的窗口：右扩还债、超长左吐可能再欠；debt 归零就是排列。**
 
 ---
 
 ## 四、代码实现详解
 
-### Java（逐行说明）
+### Java（与 class049 同风格）
 
 ```java
-class Solution {
-    public boolean checkInclusion(String s1, String s2) {
-        int n = s2.length(), m = s1.length();
-        if (n < m) return false;
+// 字符串的排列
+// 测试链接 : https://leetcode.cn/problems/permutation-in-string/
+public class Solution {
 
-        int[] need = new int[26];
-        int[] win = new int[26];
-        for (int i = 0; i < m; i++) {
-            need[s1.charAt(i) - 'a']++;
-            win[s2.charAt(i) - 'a']++;   // 先装第一个窗口 [0, m)
+    public static boolean checkInclusion(String s1, String s2) {
+        char[] str1 = s1.toCharArray();
+        char[] str2 = s2.toCharArray();
+        if (str2.length < str1.length) {
+            return false;
         }
-        if (Arrays.equals(need, win)) return true;
-
-        // i 是新进入窗口的右端下标；踢出的是 i - m
-        for (int i = m; i < n; i++) {
-            win[s2.charAt(i) - 'a']++;
-            win[s2.charAt(i - m) - 'a']--;
-            if (Arrays.equals(need, win)) return true;
+        // cnts[i] < 0 : 字符 i 还欠着（窗口内不够）
+        // cnts[i] > 0 : 字符 i 有盈余（窗口内多了）
+        // cnts[i] = 0 : 刚好对齐
+        int[] cnts = new int[256];
+        for (char cha : str1) {
+            cnts[cha]--;
+        }
+        // 总债务：还差多少「份」s1 中的字符没被窗口满足
+        int debt = str1.length;
+        for (int l = 0, r = 0; r < str2.length; r++) {
+            // 窗口右边界向右，给出字符；增前 < 0 说明还了一份债
+            if (cnts[str2[r]]++ < 0) {
+                debt--;
+            }
+            // 窗口长度超过 m，左边界必须吐出，保持定长
+            if (r - l + 1 > str1.length) {
+                // 吐出后 < 0：这份字符又欠上了
+                if (--cnts[str2[l++]] < 0) {
+                    debt++;
+                }
+            }
+            // 定长且债务清零 → 频次完全一致
+            if (debt == 0) {
+                return true;
+            }
         }
         return false;
     }
@@ -158,67 +199,48 @@ class Solution {
 
 | 变量 | 含义 |
 |------|------|
-| `need` | 模式串 `s1` 的字母频次 |
-| `win` | 当前长度为 `m` 的窗口频次 |
-| `i` | 滑动时新进入的字符下标 |
-| `i - m` | 刚好被踢出窗口的下标 |
+| `str1` / `str2` | `toCharArray()`，与课上代码一致 |
+| `cnts[256]` | 窗口净值：窗口内个数 − s1 中个数 |
+| `debt` | 尚未满足的 s1 字符**份数** |
+| `l, r` | 窗口左右端（含），长度 = `r - l + 1` |
 
-**循环不变式**：进入 `for` 的第 `i` 轮之前，`win` 对应子串 `s2[i-m .. i-1]`；更新后对应 `s2[i-m+1 .. i]`。
-
-### Java（diff 写法，少做 26 次比较）
+**两句关键写法（和 76 题相同）**
 
 ```java
-class Solution {
-    public boolean checkInclusion(String s1, String s2) {
-        int n = s2.length(), m = s1.length();
-        if (n < m) return false;
-
-        int[] cnt = new int[26]; // >0 还缺；<0 多拿
-        for (int i = 0; i < m; i++) {
-            cnt[s1.charAt(i) - 'a']++;
-            cnt[s2.charAt(i) - 'a']--;
-        }
-        int diff = 0;
-        for (int c : cnt) if (c != 0) diff++;
-        if (diff == 0) return true;
-
-        for (int i = m; i < n; i++) {
-            int in = s2.charAt(i) - 'a';
-            if (cnt[in] == 1) diff--;
-            else if (cnt[in] == 0) diff++;
-            cnt[in]--;
-
-            int out = s2.charAt(i - m) - 'a';
-            if (cnt[out] == -1) diff--;
-            else if (cnt[out] == 0) diff++;
-            cnt[out]++;
-
-            if (diff == 0) return true;
-        }
-        return false;
-    }
-}
+if (cnts[str2[r]]++ < 0) debt--;   // 用的是「增前」的值
+if (--cnts[str2[l++]] < 0) debt++; // 用的是「减后」的值
 ```
 
-### Python（双数组版）
+**循环不变式**：每轮结束时窗口为 `[l..r]`，长度 ≤ `m`；若长度为 `m`，则 `debt==0` ⟺ 窗口是 `s1` 的排列。
+
+### Python（同结构）
+
+Python 没有后缀 `++`，右扩改成「先加再判 `<= 0`」，与 Java「增前 `< 0`」等价；左吐「先减再判 `< 0`」不变。
 
 ```python
 class Solution:
     def checkInclusion(self, s1: str, s2: str) -> bool:
-        n, m = len(s2), len(s1)
+        str1, str2 = s1, s2
+        m, n = len(str1), len(str2)
         if n < m:
             return False
-        need = [0] * 26
-        win = [0] * 26
-        for i in range(m):
-            need[ord(s1[i]) - 97] += 1
-            win[ord(s2[i]) - 97] += 1
-        if need == win:
-            return True
-        for i in range(m, n):
-            win[ord(s2[i]) - 97] += 1
-            win[ord(s2[i - m]) - 97] -= 1
-            if need == win:
+        cnts = [0] * 256
+        for ch in str1:
+            cnts[ord(ch)] -= 1
+        debt = m
+        l = 0
+        for r in range(n):
+            code = ord(str2[r])
+            cnts[code] += 1
+            if cnts[code] <= 0:      # ≡ Java: cnts[c]++ < 0
+                debt -= 1
+            if r - l + 1 > m:
+                left = ord(str2[l])
+                cnts[left] -= 1
+                if cnts[left] < 0:   # ≡ Java: --cnts[c] < 0
+                    debt += 1
+                l += 1
+            if debt == 0:
                 return True
         return False
 ```
@@ -229,36 +251,25 @@ class Solution:
 
 `s1 = "ab"`，`s2 = "eidbaooo"`，`m = 2`。
 
-`need`: a:1, b:1
+初始化：`cnts['a']=-1, cnts['b']=-1`，`debt = 2`。
 
-| 窗口 | 子串 | win | 匹配? |
-|------|------|-----|-------|
-| [0,2) | ei | e1 i1 | ❌ |
-| [1,3) | id | i1 d1 | ❌ |
-| [2,4) | db | d1 b1 | ❌ |
-| [3,5) | ba | b1 a1 | ✅ → true |
+| r | 纳入 | debt 变化 | 长度>2？吐出 | 窗口 | debt | 结果 |
+|---|------|-----------|--------------|------|------|------|
+| 0 | e | — | 否 | e | 2 | |
+| 1 | i | — | 否 | ei | 2 | |
+| 2 | d | — | 吐 e | id | 2 | |
+| 3 | b | 还债 → 1 | 吐 i | db | 1 | |
+| 4 | a | 还债 → 0 | 吐 d | **ba** | **0** | ✅ true |
 
 ```mermaid
 flowchart LR
-    S0["窗口 ei / id / db<br/>不匹配"] -->|"滑"| S1["窗口 ba<br/>匹配 → true"]
+    S0["debt=2<br/>窗口 ei / id"] -->|"纳入 b,a 还债"| S1["窗口 ba<br/>debt=0 → true"]
 
     style S0 fill:#2b2d3a,stroke:#8be9fd,color:#f8f8f2
     style S1 fill:#2b2d3a,stroke:#50fa7b,color:#f8f8f2
 ```
 
-再看失败例：`s1 = "ab"`，`s2 = "eidboaoo"`。
-
-| 窗口 | 子串 | 匹配? |
-|------|------|-------|
-| [0,2) | ei | ❌ |
-| [1,3) | id | ❌ |
-| [2,4) | db | ❌ |
-| [3,5) | bo | ❌ |
-| [4,6) | oa | ❌ |
-| [5,7) | ao | ❌ |
-| [6,8) | oo | ❌ |
-
-全程无 `a` 与 `b` 同窗 → `false`。
+失败例 `s2 = "eidboaoo"`：滑完整段 `debt` 从未归零 → `false`。
 
 ---
 
@@ -267,31 +278,42 @@ flowchart LR
 | 方法 | 时间 | 空间 | 说明 |
 |------|------|------|------|
 | 每窗口排序 | `O(n·m log m)` | `O(m)` | 重复排序 |
-| 定长窗 + 双数组 | `O(n·Σ)`，Σ=26 | `O(Σ)` | equals 每次 O(26) |
-| 定长窗 + diff | `O(n)` | `O(Σ)` | 每次只改进出字符 |
+| 定长窗 + cnts/debt | **O(n)** | `O(256)` | `l、r` 各最多走 n 步；判断 O(1) |
 
 ---
 
 ## 七、方法对比与总结
 
-| | 排序比对 | 计数滑窗 |
-|--|----------|----------|
-| 想法 | 每个窗口排完再比 | 频次数组差分更新 |
-| 适用 | 理解题意 | **本题默认解** |
+| | 排序比对 | cnts + debt（课上风格） |
+|--|----------|-------------------------|
+| 想法 | 每个窗口排完再比 | 欠债模型，定长滑窗 |
+| 达标判定 | 排序后字符串相等 | `debt == 0` |
+| 适用 | 理解题意 | **与 class049 同一套** |
+
+**和 76. 最小覆盖子串的对照**
+
+| | 76 最小覆盖 | 567 字符串的排列 |
+|--|-------------|------------------|
+| 初始化 | `s1/t` 入 `cnts` 负，`debt=\|t\|` | 同 |
+| 右扩 | `cnts[s[r]]++ < 0` → `debt--` | 同 |
+| 左缩 | `debt==0` 后 `while` 去掉盈余 | **长度 > m 就吐一个**（定长） |
+| 答案 | 最短窗口子串 | `debt==0` 即 `true` |
 
 **易错点**
 
-1. `s2` 比 `s1` 短时直接返回 `false`。
-2. 踢出下标是 `i - m`（窗口右端到 `i` 时，旧左端是 `i-m`）。
-3. 只含小写字母才能开 `int[26]`；字符集扩大改用 `HashMap`。
-4. 别和「生成全排列再搜」搞混——那是指数级，本题用计数即可。
+1. `s2` 比 `s1` 短直接 `false`。
+2. 定长条件写 `r - l + 1 > str1.length`，吐完后长度才是 `m`。
+3. Java：`cnts[x]++ < 0` 看的是**增前**；`--cnts[x] < 0` 看的是**减后**。
+4. `debt` 按**字符份数**初始化为 `str1.length`，不是字符种类数。
 
-**模板（定长 + 计数 · 存在性）**
+**模板（定长 + 欠债）**
 
 ```java
-// 装第一个窗口 → 判断，命中则 return true
-// for i = m .. n-1:
-//   win[in]++ ; win[out]-- ; 命中则 return true
+// s1 入 cnts 负，debt = m
+// for l=0, r=0; r < n; r++:
+//   纳入 r，可能 debt--
+//   if 长度 > m: 吐出 l，可能 debt++
+//   if debt == 0: return true
 // return false
 ```
 
@@ -301,13 +323,20 @@ flowchart LR
 
 | 题目 | 关系 |
 |------|------|
-| [438. 找到字符串中所有字母异位词](https://leetcode.cn/problems/find-all-anagrams-in-a-string/) | 同模板：记录所有匹配起点，而不是提前返回 |
-| [76. 最小覆盖子串](https://leetcode.cn/problems/minimum-window-substring/) | **变长**窗口 + 计数，覆盖所需字符后收缩 |
-| [3. 无重复字符的最长子串](https://leetcode.cn/problems/longest-substring-without-repeating-characters/) | 变长窗口 + 字符集合/计数 |
-| [242. 有效的字母异位词](https://leetcode.cn/problems/valid-anagram/) | 整串比频次，无滑动 |
+| [76. 最小覆盖子串](https://leetcode.cn/problems/minimum-window-substring/) | class049 Code03：同一 cnts/debt，变长求最短 |
+| [438. 找到字符串中所有字母异位词](https://leetcode.cn/problems/find-all-anagrams-in-a-string/) | 同定长模板，`debt==0` 时收集 `l`，不要提前返回 |
+| [3. 无重复字符的最长子串](https://leetcode.cn/problems/longest-substring-without-repeating-characters/) | class049 Code02：变长 + `last[]` |
+| [209. 长度最小的子数组](https://leetcode.cn/problems/minimum-size-subarray-sum/) | class049 Code01：变长 + `sum` |
 
 **思想迁移**
 
-- 「长度固定 + 多重集合相等 + 只要存在」→ 定长滑窗 + 计数，命中即返。
-- 「长度固定 + 找出所有」→ 同模板，收集左端下标（438）。
-- 「最短且覆盖字符约束」→ 变长滑窗（76）。
+```
+覆盖 / 排列 / 异位词
+  ↓
+统一成 cnts 净值 + debt
+  ↓
+变长求最短 → 76（达标后缩盈余）
+定长判相等 → 567 / 438（长度锁 m，debt==0）
+```
+
+**记忆口诀**：s1 入 cnts 负，debt 记总债；右扩还债减，超长左吐加；债清窗定长，排列就找到。

@@ -21,6 +21,18 @@ function progressSaver(): Plugin {
       });
 
       server.middlewares.use('/api/progress', (req, res, next) => {
+        if (req.method === 'GET') {
+          try {
+            const raw = fs.readFileSync(progressPath, 'utf8');
+            res.setHeader('Content-Type', 'application/json');
+            res.statusCode = 200;
+            res.end(raw);
+          } catch {
+            res.statusCode = 404;
+            res.end('missing');
+          }
+          return;
+        }
         if (req.method !== 'POST') {
           res.statusCode = 405;
           res.end('only POST');
@@ -59,18 +71,36 @@ function dataWatcher(): Plugin {
     name: 'data-watcher',
     configureServer(server) {
       const rootDir = path.dirname(fileURLToPath(import.meta.url));
-      const regen = () => {
-        try {
-          execSync('npm run data', { cwd: rootDir, stdio: 'inherit' });
-          server.ws.send({ type: 'full-reload' });
-        } catch {
-          // keep server running; user can fix content and save again
-        }
+      let timer: ReturnType<typeof setTimeout> | null = null;
+      const regen = (needsFullReload: boolean) => {
+        if (timer) clearTimeout(timer);
+        timer = setTimeout(() => {
+          try {
+            execSync('npm run data', { cwd: rootDir, stdio: 'inherit' });
+            // content/banks 改了题单结构需要整页刷新；
+            // 仅 solutions 变更时只靠 JSON HMR + 当前题解模块更新，避免看题解时整页闪。
+            if (needsFullReload) {
+              server.ws.send({ type: 'full-reload' });
+            }
+          } catch {
+            // keep server running; user can fix content and save again
+          }
+        }, 200);
       };
       server.watcher.add(['content/banks/**', 'solutions/**']);
       server.watcher.on('change', (file) => {
-        if (file.includes(`${path.sep}content${path.sep}banks${path.sep}`) || file.includes(`${path.sep}solutions${path.sep}`)) {
-          regen();
+        const isContent = file.includes(`${path.sep}content${path.sep}banks${path.sep}`);
+        const isSolution = file.includes(`${path.sep}solutions${path.sep}`);
+        if (isContent || isSolution) {
+          regen(isContent);
+        }
+      });
+      server.watcher.on('add', (file) => {
+        const isContent = file.includes(`${path.sep}content${path.sep}banks${path.sep}`);
+        const isSolution = file.includes(`${path.sep}solutions${path.sep}`);
+        if (isContent || isSolution) {
+          // 新建题解要让表格出现「题解」链接：刷新 banks JSON 即可，不必整页重载
+          regen(isContent);
         }
       });
     },

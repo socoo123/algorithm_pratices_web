@@ -31,8 +31,11 @@ export function SiteHeader({ subtitle }: { subtitle?: string }) {
         </div>
         <div className="flex items-center gap-2">
           {dirty > 0 && (
-            <span className="hidden text-xs text-dracula-orange sm:inline">
-              本地有 {dirty} 条未提交 git 的改动
+            <span
+              className="hidden text-xs text-dracula-orange sm:inline"
+              title="浏览器进度与仓库里的 progress.json 不一致。用 npm run dev 勾选会自动写回文件，然后 git commit 该文件即可。"
+            >
+              有 {dirty} 题进度未写入 progress.json
             </span>
           )}
           <div

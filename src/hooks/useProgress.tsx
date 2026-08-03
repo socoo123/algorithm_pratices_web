@@ -2,12 +2,15 @@ import {
   createContext,
   useCallback,
   useContext,
+  useEffect,
   useMemo,
   useRef,
   useState,
   type ReactNode,
 } from 'react';
 import {
+  countDirtyKeys,
+  fetchServerProgress,
   loadInitialProgress,
   mergeProgress,
   migrateProgressKeys,
@@ -50,11 +53,34 @@ function upsert(
 }
 
 export function ProgressProvider({ children }: { children: ReactNode }) {
-  const bundled = bundledProgress as unknown as ProgressFile;
+  // Baseline for the dirty banner: starts as the imported file, then tracks
+  // whatever was last successfully written to src/data/progress.json (dev).
+  const [bundled, setBundled] = useState<ProgressFile>(
+    () => bundledProgress as unknown as ProgressFile,
+  );
   const [progress, setProgress] = useState<ProgressFile>(() => loadInitialProgress());
   const persistTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const progressRef = useRef(progress);
   progressRef.current = progress;
+
+  // Vite caches the imported progress.json; sync baseline from the real file on disk.
+  // If localStorage is ahead of the file, write it back so the dirty banner clears.
+  useEffect(() => {
+    let cancelled = false;
+    void (async () => {
+      const disk = await fetchServerProgress();
+      if (cancelled) return;
+      if (disk) setBundled(disk);
+      const baseline = disk ?? (bundledProgress as unknown as ProgressFile);
+      const current = progressRef.current;
+      if (countDirtyKeys(baseline, current) === 0) return;
+      const ok = await persistToServer(current);
+      if (!cancelled && ok) setBundled(current);
+    })();
+    return () => {
+      cancelled = true;
+    };
+  }, []);
 
   const commit = useCallback((next: ProgressFile) => {
     setProgress(next);
@@ -62,7 +88,9 @@ export function ProgressProvider({ children }: { children: ReactNode }) {
     saveToLocalStorage(next);
     if (persistTimer.current) clearTimeout(persistTimer.current);
     persistTimer.current = setTimeout(() => {
-      void persistToServer(next);
+      void persistToServer(next).then((ok) => {
+        if (ok) setBundled(next);
+      });
     }, 400);
   }, []);
 

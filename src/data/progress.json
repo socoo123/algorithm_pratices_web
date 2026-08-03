@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-02T08:24:36.347Z",
+  "updatedAt": "2026-08-03T00:21:30.308Z",
   "problems": {
     "base/reverse-linked-list": {
       "rounds": [
@@ -201,6 +201,79 @@
         false
       ],
       "updatedAt": "2026-08-02T08:24:36.347Z"
+    },
+    "base/permutation-in-string": {
+      "rounds": [
+        true,
+        false,
+        false
+      ],
+      "note": "欠债模型，吊得很",
+      "updatedAt": "2026-08-02T09:36:32.519Z"
+    },
+    "base/longest-repeating-character-replacement": {
+      "rounds": [
+        true,
+        false,
+        false
+      ],
+      "updatedAt": "2026-08-02T10:09:05.658Z"
+    },
+    "base/max-consecutive-ones-iii": {
+      "rounds": [
+        true,
+        false,
+        false
+      ],
+      "updatedAt": "2026-08-02T10:17:09.974Z"
+    },
+    "base/4sum": {
+      "rounds": [
+        true,
+        false,
+        false
+      ],
+      "updatedAt": "2026-08-02T13:08:02.222Z"
+    },
+    "base/copy-list-with-random-pointer": {
+      "rounds": [
+        true,
+        false,
+        false
+      ],
+      "updatedAt": "2026-08-02T14:02:58.178Z"
+    },
+    "base/add-two-numbers-ii": {
+      "rounds": [
+        true,
+        false,
+        false
+      ],
+      "updatedAt": "2026-08-02T14:03:32.744Z"
+    },
+    "base/symmetric-tree": {
+      "rounds": [
+        true,
+        false,
+        false
+      ],
+      "updatedAt": "2026-08-02T23:59:23.148Z"
+    },
+    "base/invert-binary-tree": {
+      "rounds": [
+        true,
+        false,
+        false
+      ],
+      "updatedAt": "2026-08-03T00:03:35.424Z"
+    },
+    "base/diameter-of-binary-tree": {
+      "rounds": [
+        true,
+        false,
+        false
+      ],
+      "updatedAt": "2026-08-03T00:21:30.308Z"
     }
   }
 }

@@ -85,15 +85,31 @@ export function saveToLocalStorage(file: ProgressFile): void {
   localStorage.setItem(STORAGE_KEY, JSON.stringify(file));
 }
 
-export async function persistToServer(file: ProgressFile): Promise<void> {
+/** Read on-disk progress.json via dev API (null outside `npm run dev`). */
+export async function fetchServerProgress(): Promise<ProgressFile | null> {
   try {
-    await fetch('/api/progress', {
+    const res = await fetch('/api/progress');
+    if (!res.ok) return null;
+    const data = (await res.json()) as ProgressFile;
+    if (data.version !== 1 || typeof data.problems !== 'object') return null;
+    return migrateProgressKeys(data);
+  } catch {
+    return null;
+  }
+}
+
+/** @returns true when the file was written (dev `/api/progress`). */
+export async function persistToServer(file: ProgressFile): Promise<boolean> {
+  try {
+    const res = await fetch('/api/progress', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(file),
     });
+    return res.ok;
   } catch {
     // preview / static — ignore
+    return false;
   }
 }
 

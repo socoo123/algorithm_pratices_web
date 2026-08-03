@@ -12,16 +12,16 @@ import { getBankFile } from '../lib/banks';
 import { copyText } from '../lib/format';
 import { NotFoundPage } from './NotFoundPage';
 
-const solutionModules = import.meta.glob('../../solutions/**/*.md', {
+/** Lazy loaders — only the opened slug is fetched; other .md saves won't remount this page. */
+const solutionLoaders = import.meta.glob('../../solutions/**/*.md', {
   query: '?raw',
   import: 'default',
-  eager: true,
-}) as Record<string, string>;
+}) as Record<string, () => Promise<string>>;
 
-function getSolutionMarkdown(bankId: string, slug: string): string | undefined {
+function resolveLoader(bankId: string, slug: string): (() => Promise<string>) | undefined {
   const key = `../../solutions/${bankId}/${slug}.md`;
-  if (solutionModules[key]) return solutionModules[key];
-  const hit = Object.entries(solutionModules).find(([k]) =>
+  if (solutionLoaders[key]) return solutionLoaders[key];
+  const hit = Object.entries(solutionLoaders).find(([k]) =>
     k.endsWith(`/solutions/${bankId}/${slug}.md`),
   );
   return hit?.[1];
@@ -62,7 +62,7 @@ function MarkdownChunk({ source }: { source: string }) {
 
   useEffect(() => {
     let cancelled = false;
-    setHtml(null);
+    // Keep previous HTML while re-parsing — avoids blank flash on HMR / remount.
     setError(null);
     void markdownToHtml(source)
       .then((out) => {
@@ -100,14 +100,39 @@ export function SolutionPage() {
   const { bankId = '', slug = '' } = useParams();
   const bankFile = getBankFile(bankId);
   const problem = bankFile?.problems.find((p) => p.slug === slug);
-  const md = useMemo(() => getSolutionMarkdown(bankId, slug), [bankId, slug]);
+  const routeKey = `${bankId}/${slug}`;
+  const loader = useMemo(() => resolveLoader(bankId, slug), [bankId, slug]);
+  const [md, setMd] = useState<string | null | undefined>(undefined);
+  const [loadedKey, setLoadedKey] = useState('');
   const segments = useMemo(() => (md ? splitMarkdown(md) : []), [md]);
 
+  useEffect(() => {
+    let cancelled = false;
+    if (!loader) {
+      setMd(null);
+      setLoadedKey(routeKey);
+      return;
+    }
+    void loader().then((text) => {
+      if (!cancelled) {
+        setMd(text);
+        setLoadedKey(routeKey);
+      }
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, [loader, routeKey]);
+
   if (!bankFile || !problem) return <NotFoundPage message="题目不存在" />;
-  if (!md) {
+  // Switching problems: wait for the matching slug. Same slug HMR keeps old md until new text arrives.
+  if (loadedKey !== routeKey || md === undefined) {
+    return <main className="px-4 py-16 text-center text-dracula-comment">排版中…</main>;
+  }
+  if (md === null) {
     return (
       <NotFoundPage
-        message={`题解文件未找到（solutions/${bankId}/${slug}.md）。已加载 ${Object.keys(solutionModules).length} 个题解。`}
+        message={`题解文件未找到（solutions/${bankId}/${slug}.md）。仓库内共 ${Object.keys(solutionLoaders).length} 个题解入口。`}
       />
     );
   }

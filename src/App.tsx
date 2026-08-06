@@ -1,9 +1,8 @@
 import { Component, lazy, Suspense, type ErrorInfo, type ReactNode } from 'react';
-import { BrowserRouter, Route, Routes, useMatch } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { AuroraBackground } from './components/AuroraBackground';
 import { SiteHeader } from './components/SiteHeader';
 import { ProgressProvider } from './hooks/useProgress';
-import { getBankFile } from './lib/banks';
 import { BankIndexRedirect, BankPage } from './pages/BankPage';
 import { HomePage } from './pages/HomePage';
 import { NotFoundPage } from './pages/NotFoundPage';
@@ -39,26 +38,10 @@ class AppErrorBoundary extends Component<{ children: ReactNode }, { error: Error
 }
 
 function AppShell() {
-  const bankMatch = useMatch({ path: '/bank/:bankId/*', end: false });
-  const bankId = bankMatch?.params.bankId;
-  const bank = bankId ? getBankFile(bankId) : undefined;
-  const solutionMatch = useMatch('/bank/:bankId/solution/:slug');
-  const categoryMatch = useMatch('/bank/:bankId/:categoryId');
-  const onSolution = Boolean(solutionMatch);
-  const categoryName =
-    categoryMatch && !onSolution && bank
-      ? bank.categories.find((c) => c.id === categoryMatch.params.categoryId)?.name
-      : undefined;
-  const subtitle = onSolution
-    ? `${bank?.bank.name ?? ''} · 题解`
-    : categoryName
-      ? `${bank?.bank.name ?? ''} · ${categoryName}`
-      : bank?.bank.name;
-
   return (
     <>
       <AuroraBackground />
-      <SiteHeader subtitle={subtitle} />
+      <SiteHeader />
       <AppErrorBoundary>
         <Suspense
           fallback={

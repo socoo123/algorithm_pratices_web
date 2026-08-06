@@ -1,0 +1,18 @@
+---
+description: 刷题站题解写作规范——对齐左程云 algorithm-journey 风格
+globs: solutions/**/*.md
+alwaysApply: false
+---
+
+# 题解写作（对齐左程云）
+
+生成或改写 `solutions/**/*.md` 时：
+
+1. **先查源码**：`/Users/zy/ai_learn/algorithm-journey` 里若有对应 `Code*.java`，主解必须与之同构，不要另起模板。
+2. **加载 skill**：遵循用户 Agent Skill `algorithm-tutorial`（八章结构 + 左程云 Java 规范）。
+3. **Java 习惯**：`public static`、头注释含「测试链接」、窗口用 `l`/`r`，定长用 `r-l+1 > X` 吐左。
+4. **讲解**：写清维护量、扩/缩条件、循环不变式；能标 class 编号则标（如 class049 / class034）。
+5. **落盘**：`solutions/{bankId}/{slug}.md`，并把题库 JSON 里 `hasSolution` 设为 `true`。
+6. **图表**：本站题解 Mermaid 可用深色节点样式，与现有 `solutions/base/*.md` 一致。
+
+反例：把课上的 `l/r + 超长吐左` 改成「先算第一个窗口再从 k 滑」且变量改成 `base/gain` 等与课上不一致的命名。

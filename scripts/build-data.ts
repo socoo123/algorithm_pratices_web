@@ -223,8 +223,27 @@ function main() {
   };
 
   fs.mkdirSync(path.dirname(outBankPath), { recursive: true });
-  fs.writeFileSync(outBankPath, `${JSON.stringify(bankFile, null, 2)}\n`, 'utf8');
-  fs.writeFileSync(outIndexPath, `${JSON.stringify({ banks: [bank] }, null, 2)}\n`, 'utf8');
+
+  // Skip rewrite when only generatedAt would change — avoids spurious Vite HMR / 题解页闪屏
+  const stable = (raw: string) => {
+    try {
+      const parsed = JSON.parse(raw) as { generatedAt?: string };
+      delete parsed.generatedAt;
+      return JSON.stringify(parsed);
+    } catch {
+      return '';
+    }
+  };
+  const nextBank = `${JSON.stringify(bankFile, null, 2)}\n`;
+  const nextIndex = `${JSON.stringify({ banks: [bank] }, null, 2)}\n`;
+  const prevBank = fs.existsSync(outBankPath) ? fs.readFileSync(outBankPath, 'utf8') : '';
+  const prevIndex = fs.existsSync(outIndexPath) ? fs.readFileSync(outIndexPath, 'utf8') : '';
+  if (stable(prevBank) !== stable(nextBank)) {
+    fs.writeFileSync(outBankPath, nextBank, 'utf8');
+  }
+  if (prevIndex !== nextIndex) {
+    fs.writeFileSync(outIndexPath, nextIndex, 'utf8');
+  }
 
   if (fs.existsSync(progressPath)) {
     JSON.parse(fs.readFileSync(progressPath, 'utf8')) as ProgressFile;

@@ -1,16 +1,63 @@
-import { Download, Moon, Sun, Upload } from 'lucide-react';
-import { Link, useLocation } from 'react-router-dom';
+import { ChevronRight, Download, Moon, Sun, Upload } from 'lucide-react';
+import { Link, useLocation, useMatch } from 'react-router-dom';
 import { countDirtyKeys, downloadProgress, parseImportedProgress } from '../lib/progress-store';
 import { useProgress } from '../hooks/useProgress';
 import { useTheme } from '../hooks/useTheme';
 import { useRef } from 'react';
+import { getBankFile } from '../lib/banks';
+
+type Crumb = { label: string; to?: string };
+
+function useBreadcrumbs(): Crumb[] {
+  const loc = useLocation();
+  const bankMatch = useMatch({ path: '/bank/:bankId/*', end: false });
+  const solutionMatch = useMatch('/bank/:bankId/solution/:slug');
+  const categoryMatch = useMatch('/bank/:bankId/:categoryId');
+
+  if (loc.pathname === '/') return [];
+
+  const crumbs: Crumb[] = [{ label: '首页', to: '/' }];
+  const bankId = bankMatch?.params.bankId;
+  const bankFile = bankId ? getBankFile(bankId) : undefined;
+
+  if (!bankId || !bankFile) {
+    crumbs.push({ label: '页面' });
+    return crumbs;
+  }
+
+  crumbs.push({ label: bankFile.bank.name, to: `/bank/${bankId}` });
+
+  if (solutionMatch) {
+    const problem = bankFile.problems.find((p) => p.slug === solutionMatch.params.slug);
+    const category = problem
+      ? bankFile.categories.find((c) => c.id === problem.categoryId)
+      : undefined;
+    if (category) {
+      crumbs.push({
+        label: category.name,
+        to: `/bank/${bankId}/${category.id}`,
+      });
+    }
+    crumbs.push({
+      label: problem ? `#${problem.number} ${problem.title}` : '题解',
+    });
+    return crumbs;
+  }
+
+  if (categoryMatch) {
+    const category = bankFile.categories.find((c) => c.id === categoryMatch.params.categoryId);
+    crumbs.push({ label: category?.name ?? categoryMatch.params.categoryId ?? '分类' });
+  }
+
+  return crumbs;
+}
 
 export function SiteHeader({ subtitle }: { subtitle?: string }) {
   const { progress, bundled, importProgress } = useProgress();
   const { theme, setTheme } = useTheme();
   const dirty = countDirtyKeys(bundled, progress);
   const fileRef = useRef<HTMLInputElement>(null);
-  const loc = useLocation();
+  const crumbs = useBreadcrumbs();
 
   return (
     <header className="sticky top-0 z-50 border-b border-dracula-current/80 bg-dracula-bg/85 backdrop-blur-xl">
@@ -107,12 +154,45 @@ export function SiteHeader({ subtitle }: { subtitle?: string }) {
           />
         </div>
       </div>
-      {loc.pathname !== '/' && (
-        <div className="mx-auto max-w-[1600px] px-4 pb-2 sm:px-6">
-          <Link to="/" className="text-xs text-dracula-cyan/80 hover:text-dracula-cyan">
-            ← 返回首页
-          </Link>
-        </div>
+      {crumbs.length > 0 && (
+        <nav
+          aria-label="面包屑"
+          className="mx-auto max-w-[1600px] px-4 pb-2.5 sm:px-6"
+        >
+          <ol className="flex min-w-0 flex-wrap items-center gap-x-1 gap-y-1 text-xs">
+            {crumbs.map((crumb, i) => {
+              const isLast = i === crumbs.length - 1;
+              return (
+                <li key={`${crumb.label}-${i}`} className="flex min-w-0 items-center gap-1">
+                  {i > 0 && (
+                    <ChevronRight
+                      className="h-3 w-3 shrink-0 text-dracula-comment/60"
+                      aria-hidden
+                    />
+                  )}
+                  {crumb.to && !isLast ? (
+                    <Link
+                      to={crumb.to}
+                      className="shrink-0 text-dracula-cyan/90 transition hover:text-dracula-cyan"
+                    >
+                      {crumb.label}
+                    </Link>
+                  ) : (
+                    <span
+                      className={`min-w-0 truncate ${
+                        isLast ? 'font-medium text-dracula-fg' : 'text-dracula-comment'
+                      }`}
+                      aria-current={isLast ? 'page' : undefined}
+                      title={crumb.label}
+                    >
+                      {crumb.label}
+                    </span>
+                  )}
+                </li>
+              );
+            })}
+          </ol>
+        </nav>
       )}
     </header>
   );

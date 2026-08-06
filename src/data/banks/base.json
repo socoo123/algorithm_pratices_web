@@ -364,7 +364,7 @@
       "hint": "分治 / 小根堆",
       "categoryId": "linked-list",
       "order": 18,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -378,7 +378,7 @@
       "hint": "归并排序（递归/迭代，O(1) 空间）",
       "categoryId": "linked-list",
       "order": 19,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -392,7 +392,7 @@
       "hint": "分组翻转 + 组间重连",
       "categoryId": "linked-list",
       "order": 20,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -616,7 +616,7 @@
       "hint": "窗口计数（每 right 贡献长度）",
       "categoryId": "sliding-window",
       "order": 16,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -644,7 +644,7 @@
       "hint": "定长窗口 + 抑制",
       "categoryId": "sliding-window",
       "order": 18,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -658,7 +658,7 @@
       "hint": "分治 / 窗口（字符种类数）",
       "categoryId": "sliding-window",
       "order": 19,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -2987,5 +2987,5 @@
       "count": "—"
     }
   ],
-  "generatedAt": "2026-08-03T00:40:32.589Z"
+  "generatedAt": "2026-08-05T12:53:50.119Z"
 }

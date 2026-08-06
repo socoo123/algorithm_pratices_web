@@ -1,6 +1,6 @@
 import { ExternalLink } from 'lucide-react';
 import { useEffect, useMemo, useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import rehypePrettyCode from 'rehype-pretty-code';
 import rehypeStringify from 'rehype-stringify';
 import remarkGfm from 'remark-gfm';
@@ -12,11 +12,13 @@ import { getBankFile } from '../lib/banks';
 import { copyText } from '../lib/format';
 import { NotFoundPage } from './NotFoundPage';
 
-/** Lazy loaders — only the opened slug is fetched; other .md saves won't remount this page. */
-const solutionLoaders = import.meta.glob('../../solutions/**/*.md', {
-  query: '?raw',
-  import: 'default',
-}) as Record<string, () => Promise<string>>;
+/** Production bundle only — avoided in DEV so Vite won't page-reload on solutions/*.md touches. */
+const solutionLoaders = import.meta.env.DEV
+  ? ({} as Record<string, () => Promise<string>>)
+  : (import.meta.glob('../../solutions/**/*.md', {
+      query: '?raw',
+      import: 'default',
+    }) as Record<string, () => Promise<string>>);
 
 function resolveLoader(bankId: string, slug: string): (() => Promise<string>) | undefined {
   const key = `../../solutions/${bankId}/${slug}.md`;
@@ -62,7 +64,6 @@ function MarkdownChunk({ source }: { source: string }) {
 
   useEffect(() => {
     let cancelled = false;
-    // Keep previous HTML while re-parsing — avoids blank flash on HMR / remount.
     setError(null);
     void markdownToHtml(source)
       .then((out) => {
@@ -86,7 +87,6 @@ function MarkdownChunk({ source }: { source: string }) {
   return (
     <div
       className="markdown-html"
-      // Local trusted tutorial markdown only
       dangerouslySetInnerHTML={{ __html: html }}
       onDoubleClick={(e) => {
         const pre = (e.target as HTMLElement).closest('pre');
@@ -96,75 +96,93 @@ function MarkdownChunk({ source }: { source: string }) {
   );
 }
 
+async function loadSolutionMd(bankId: string, slug: string): Promise<string | null> {
+  if (import.meta.env.DEV) {
+    const res = await fetch(`/api/solution/${bankId}/${slug}`, { cache: 'no-store' });
+    if (res.status === 404) return null;
+    if (!res.ok) throw new Error(`加载题解失败：${res.status}`);
+    return res.text();
+  }
+  const loader = resolveLoader(bankId, slug);
+  if (!loader) return null;
+  return loader();
+}
+
 export function SolutionPage() {
   const { bankId = '', slug = '' } = useParams();
   const bankFile = getBankFile(bankId);
   const problem = bankFile?.problems.find((p) => p.slug === slug);
   const routeKey = `${bankId}/${slug}`;
-  const loader = useMemo(() => resolveLoader(bankId, slug), [bankId, slug]);
   const [md, setMd] = useState<string | null | undefined>(undefined);
   const [loadedKey, setLoadedKey] = useState('');
+  const [fetchGen, setFetchGen] = useState(0);
   const segments = useMemo(() => (md ? splitMarkdown(md) : []), [md]);
 
   useEffect(() => {
     let cancelled = false;
-    if (!loader) {
-      setMd(null);
-      setLoadedKey(routeKey);
-      return;
-    }
-    void loader().then((text) => {
-      if (!cancelled) {
+    void loadSolutionMd(bankId, slug)
+      .then((text) => {
+        if (cancelled) return;
         setMd(text);
         setLoadedKey(routeKey);
-      }
-    });
+      })
+      .catch(() => {
+        if (cancelled) return;
+        setMd(null);
+        setLoadedKey(routeKey);
+      });
     return () => {
       cancelled = true;
     };
-  }, [loader, routeKey]);
+  }, [bankId, slug, routeKey, fetchGen]);
+
+  useEffect(() => {
+    const hot = import.meta.hot;
+    if (!hot) return;
+    const onUpdate = (data: { path?: string }) => {
+      const p = (data.path ?? '').replace(/\\/g, '/');
+      if (p === `solutions/${bankId}/${slug}.md`) {
+        setFetchGen((g) => g + 1);
+      }
+    };
+    hot.on('solutions-md-update', onUpdate);
+    return () => {
+      hot.off('solutions-md-update', onUpdate);
+    };
+  }, [bankId, slug]);
 
   if (!bankFile || !problem) return <NotFoundPage message="题目不存在" />;
-  // Switching problems: wait for the matching slug. Same slug HMR keeps old md until new text arrives.
   if (loadedKey !== routeKey || md === undefined) {
     return <main className="px-4 py-16 text-center text-dracula-comment">排版中…</main>;
   }
   if (md === null) {
     return (
-      <NotFoundPage
-        message={`题解文件未找到（solutions/${bankId}/${slug}.md）。仓库内共 ${Object.keys(solutionLoaders).length} 个题解入口。`}
-      />
+      <NotFoundPage message={`题解文件未找到（solutions/${bankId}/${slug}.md）。`} />
     );
   }
 
   return (
     <main className="mx-auto max-w-3xl px-4 py-8 sm:px-6">
-      <div className="mb-6 flex flex-wrap items-center gap-3">
-        <Link
-          to={`/bank/${bankId}/${problem.categoryId}`}
-          className="text-sm text-dracula-cyan hover:text-dracula-pink"
-        >
-          ← 返回{bankFile.categories.find((c) => c.id === problem.categoryId)?.name ?? '题库'}
-        </Link>
+      <div className="mb-6 flex flex-wrap items-center justify-between gap-3">
+        <h1 className="text-2xl font-semibold text-dracula-fg">
+          #{problem.number} {problem.title}
+        </h1>
         <a
           href={problem.url}
           target="_blank"
           rel="noreferrer"
-          className="inline-flex items-center gap-1 text-sm text-dracula-comment hover:text-dracula-fg"
+          className="inline-flex shrink-0 items-center gap-1 text-sm text-dracula-comment hover:text-dracula-fg"
         >
           去 LC 做题
           <ExternalLink className="h-3.5 w-3.5" />
         </a>
       </div>
-      <h1 className="mb-6 text-2xl font-semibold text-dracula-fg">
-        #{problem.number} {problem.title}
-      </h1>
       <article className="prose-solution space-y-3 rounded-2xl border border-dracula-current/70 bg-dracula-bg-dark/50 p-6 backdrop-blur-xl">
         {segments.map((seg, i) =>
           seg.type === 'mermaid' ? (
-            <MermaidBlock key={i} chart={seg.content} />
+            <MermaidBlock key={`m-${i}-${seg.content.slice(0, 24)}`} chart={seg.content} />
           ) : (
-            <MarkdownChunk key={i} source={seg.content} />
+            <MarkdownChunk key={`t-${i}-${seg.content.length}`} source={seg.content} />
           ),
         )}
         <p className="pt-2 text-xs text-dracula-comment">提示：双击代码块可复制</p>

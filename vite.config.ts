@@ -10,6 +10,47 @@ import { defineConfig } from 'vite';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const progressPath = path.join(__dirname, 'src/data/progress.json');
 
+function solutionApi(): Plugin {
+  return {
+    name: 'solution-api',
+    configureServer(server) {
+      // Serve solution markdown via HTTP so .md stays out of the Vite module graph.
+      // (import.meta.glob + ?raw causes full page reload whenever any solutions/*.md is touched.)
+      server.middlewares.use((req, res, next) => {
+        if (req.method !== 'GET' || !req.url?.startsWith('/api/solution/')) {
+          next();
+          return;
+        }
+        const rawPath = req.url.split('?')[0] ?? '';
+        const parts = rawPath.split('/').filter(Boolean); // api, solution, bankId, slug
+        const bankId = parts[2];
+        const slug = parts[3];
+        if (!bankId || !slug || parts.length !== 4) {
+          res.statusCode = 400;
+          res.end('bad path');
+          return;
+        }
+        if (!/^[a-z0-9-]+$/i.test(bankId) || !/^[a-z0-9-]+$/i.test(slug)) {
+          res.statusCode = 400;
+          res.end('bad id');
+          return;
+        }
+        const file = path.join(__dirname, 'solutions', bankId, `${slug}.md`);
+        try {
+          const text = fs.readFileSync(file, 'utf8');
+          res.setHeader('Content-Type', 'text/markdown; charset=utf-8');
+          res.setHeader('Cache-Control', 'no-store');
+          res.statusCode = 200;
+          res.end(text);
+        } catch {
+          res.statusCode = 404;
+          res.end('missing');
+        }
+      });
+    },
+  };
+}
+
 function progressSaver(): Plugin {
   return {
     name: 'progress-saver',
@@ -78,7 +119,7 @@ function dataWatcher(): Plugin {
           try {
             execSync('npm run data', { cwd: rootDir, stdio: 'inherit' });
             // content/banks 改了题单结构需要整页刷新；
-            // 仅 solutions 变更时只靠 JSON HMR + 当前题解模块更新，避免看题解时整页闪。
+            // solutions 增删只更新 banks JSON（hasSolution），不要 full-reload。
             if (needsFullReload) {
               server.ws.send({ type: 'full-reload' });
             }
@@ -90,30 +131,49 @@ function dataWatcher(): Plugin {
       server.watcher.add(['content/banks/**', 'solutions/**']);
       server.watcher.on('change', (file) => {
         const isContent = file.includes(`${path.sep}content${path.sep}banks${path.sep}`);
-        const isSolution = file.includes(`${path.sep}solutions${path.sep}`);
-        if (isContent || isSolution) {
-          regen(isContent);
-        }
+        // 正文改动不影响 hasSolution，不必重写 base.json（否则 generatedAt 变了整站 HMR）
+        // soft refresh 由 handleHotUpdate 发 solutions-md-update
+        if (isContent) regen(true);
       });
       server.watcher.on('add', (file) => {
         const isContent = file.includes(`${path.sep}content${path.sep}banks${path.sep}`);
-        const isSolution = file.includes(`${path.sep}solutions${path.sep}`);
-        if (isContent || isSolution) {
-          // 新建题解要让表格出现「题解」链接：刷新 banks JSON 即可，不必整页重载
-          regen(isContent);
-        }
+        const isSolution =
+          file.includes(`${path.sep}solutions${path.sep}`) && file.endsWith('.md');
+        if (isContent) regen(true);
+        else if (isSolution) regen(false);
       });
+      server.watcher.on('unlink', (file) => {
+        const isContent = file.includes(`${path.sep}content${path.sep}banks${path.sep}`);
+        const isSolution =
+          file.includes(`${path.sep}solutions${path.sep}`) && file.endsWith('.md');
+        if (isContent) regen(true);
+        else if (isSolution) regen(false);
+      });
+    },
+    handleHotUpdate({ file, server }) {
+      if (!file.includes(`${path.sep}solutions${path.sep}`) || !file.endsWith('.md')) {
+        return;
+      }
+      const rootDir = path.dirname(fileURLToPath(import.meta.url));
+      const rel = path.relative(rootDir, file).split(path.sep).join('/');
+      server.ws.send({
+        type: 'custom',
+        event: 'solutions-md-update',
+        data: { path: rel },
+      });
+      // 空数组：不走默认 HMR / 不 page reload
+      return [];
     },
   };
 }
 
 export default defineConfig({
-  plugins: [react(), tailwindcss(), progressSaver(), dataWatcher()],
+  plugins: [react(), tailwindcss(), solutionApi(), progressSaver(), dataWatcher()],
   server: {
     port: 5800,
     strictPort: true,
     watch: {
-      // progress.json is written on every checkbox click — never HMR on it
+      // progress.json：勾选时频繁写入，绝不能 HMR
       ignored: ['**/src/data/progress.json'],
     },
   },

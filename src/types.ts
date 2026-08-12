@@ -64,3 +64,26 @@ export interface ProblemProgress {
 export function progressKey(bankId: string, slug: string): string {
   return `${bankId}/${slug}`;
 }
+
+/** CLRS（算法导论）学习模块 */
+export interface ClrsPart {
+  id: string;
+  roman: string;
+  name: string;
+  order: number;
+}
+
+export interface ClrsChapter {
+  slug: string;
+  number: string;
+  title: string;
+  partId: string;
+  hasContent: boolean;
+}
+
+export interface ClrsIndex {
+  title: string;
+  subtitle: string;
+  parts: ClrsPart[];
+  chapters: ClrsChapter[];
+}

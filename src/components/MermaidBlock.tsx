@@ -137,7 +137,7 @@ export function MermaidBlock({ chart }: { chart: string }) {
 
   return (
     <div className="mermaid-frame my-4 overflow-x-auto rounded-xl border border-[#44475a] bg-[#1e1f29] px-3 py-4 text-[#f8f8f2]">
-      <div ref={hostRef} className="mermaid-host mx-auto w-full max-w-xl text-[#f8f8f2]" />
+      <div ref={hostRef} className="mermaid-host mx-auto w-full max-w-3xl text-[#f8f8f2]" />
     </div>
   );
 }

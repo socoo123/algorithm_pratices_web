@@ -298,6 +298,20 @@
     },
     {
       "bankId": "base",
+      "slug": "sort-list",
+      "number": "148",
+      "title": "排序链表",
+      "url": "https://leetcode.cn/problems/sort-list/",
+      "difficulty": "Medium",
+      "stars": 4,
+      "heat": 4,
+      "hint": "归并排序（递归/迭代，O(1) 空间）",
+      "categoryId": "linked-list",
+      "order": 14,
+      "hasSolution": true
+    },
+    {
+      "bankId": "base",
       "slug": "reorder-list",
       "number": "143",
       "title": "重排链表",
@@ -307,7 +321,7 @@
       "heat": 3,
       "hint": "中点 + 反转 + 合并三合一",
       "categoryId": "linked-list",
-      "order": 14,
+      "order": 15,
       "hasSolution": false
     },
     {
@@ -321,7 +335,7 @@
       "heat": 3,
       "hint": "栈 / 反转后相加",
       "categoryId": "linked-list",
-      "order": 15,
+      "order": 16,
       "hasSolution": false
     },
     {
@@ -335,7 +349,7 @@
       "heat": 3,
       "hint": "拆两链表再拼接",
       "categoryId": "linked-list",
-      "order": 16,
+      "order": 17,
       "hasSolution": true
     },
     {
@@ -349,7 +363,7 @@
       "heat": 3,
       "hint": "全部删除重复节点",
       "categoryId": "linked-list",
-      "order": 17,
+      "order": 18,
       "hasSolution": true
     },
     {
@@ -362,20 +376,6 @@
       "stars": 4,
       "heat": 4,
       "hint": "分治 / 小根堆",
-      "categoryId": "linked-list",
-      "order": 18,
-      "hasSolution": true
-    },
-    {
-      "bankId": "base",
-      "slug": "sort-list",
-      "number": "148",
-      "title": "排序链表",
-      "url": "https://leetcode.cn/problems/sort-list/",
-      "difficulty": "Hard",
-      "stars": 4,
-      "heat": 4,
-      "hint": "归并排序（递归/迭代，O(1) 空间）",
       "categoryId": "linked-list",
       "order": 19,
       "hasSolution": true
@@ -672,7 +672,7 @@
       "hint": "变长窗口（至多 2 种，同 340 模板）",
       "categoryId": "sliding-window",
       "order": 20,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -686,7 +686,7 @@
       "hint": "排序 + 双指针逼近",
       "categoryId": "sliding-window",
       "order": 21,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -700,7 +700,7 @@
       "hint": "状态切换窗口",
       "categoryId": "sliding-window",
       "order": 22,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -728,7 +728,7 @@
       "hint": "翻转窗口（同 424）",
       "categoryId": "sliding-window",
       "order": 24,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -2987,5 +2987,5 @@
       "count": "—"
     }
   ],
-  "generatedAt": "2026-08-05T12:53:50.119Z"
+  "generatedAt": "2026-08-10T23:27:18.874Z"
 }

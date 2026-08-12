@@ -1,0 +1,72 @@
+---
+description: 算法导论（CLRS 4e）学习模块——大纲、按需正文、书/笔记路径
+alwaysApply: true
+---
+
+# 算法导论学习模块
+
+站点并列模块（非题库）：首页入口 → `/clrs` 大纲 → `/clrs/:slug` 正文。
+
+## 权威来源与阅读顺序
+
+写 / 校对任何一章时：
+
+1. **PDF 为准**：`/Users/zy/Downloads/IntroductiontoAlgorithms4th.pdf`（第 4 版）。结构、定义、伪代码名、定理与复杂度以书为准。
+2. **正文草稿来源**：用户指定时，从 `/Users/zy/ai_learn/book_reading/IntroductionToAlgorithms` 对应章 **抄入** `content/clrs/{slug}.md`，再由本侧做**页面展示优化**（见下）。  
+   不要在读者可见正文里提「旧笔记 / 纠正某笔记」；读者只应看到书上的正确讲法。
+
+## 落盘与索引
+
+- 正文：`content/clrs/{slug}.md`（如 `06-heapsort.md`）
+- 索引：`src/data/clrs-index.json` —— 写完后把对应章 `hasContent` 设为 `true`
+- 辅助：`src/lib/clrs.ts`
+
+## 按需生成（重要）
+
+- **不要**批量生成 25 章；只写用户点名的章/主题（如「生成堆 / 第六章」）。
+- 未就绪章节在大纲显示「待写」。
+- 改某一节时只动对应 md。
+
+## 抄录后的页面优化（强制）
+
+另一 agent 产出的深度稿常带浅色 Material Mermaid / LaTeX。落站后必须改到与**题解**一致、可渲染：
+
+### Mermaid（与 `solutions/base/*.md` 同款）
+
+站点 `MermaidBlock` 强制浅色字 + 深底；**禁止**浅色填充 + 深色字（如 `#FFE082` / `#90CAF9` / `#1f1f1f`），否则对比度翻车。
+
+统一写成：
+
+```
+style X fill:#2b2d3a,stroke:#f1fa8c,color:#f8f8f2   // 起点 / 根
+style Y fill:#2b2d3a,stroke:#8be9fd,color:#f8f8f2   // 普通 / 处理
+style Z fill:#2b2d3a,stroke:#ff79c6,color:#f8f8f2   // 高亮 / 当前违规
+style W fill:#2b2d3a,stroke:#50fa7b,color:#f8f8f2   // 成功 / 结果
+style Bad fill:#2b2d3a,stroke:#ff5555,color:#f8f8f2 // 错误 / 丢弃
+style Sub fill:#161722,stroke:#8be9fd,color:#f8f8f2 // subgraph 容器
+```
+
+- 节点 `style` 逐个写清（不要依赖浅色 `classDef`）
+- subgraph 标题宜短；长句用 `<br/>`
+- 特殊字符标签一律双引号包起来
+
+### 数学与排版（站点无 KaTeX）
+
+**禁止**写出 `\(...\)`、`\[...\]`、`$...$`、`$$...$$`、`\Theta`、`\lg`、`\lfloor` 等源码字面量。
+
+一律用站内题解同款可读写法：
+
+- 复杂度：`` `O(n log n)` ``、`` `Θ(n²)` ``、`` `Ω(log n)` ``
+- 下取整：`⌊n/2⌋`（Unicode）
+- 比较：`≤` `≥`
+- 数组/下标：`` `A[1..n]` ``、`` `A.heap-size` ``
+
+自检：全文搜索 `\( `、`$$`、`\Theta`、`\lg`，命中则未完成。
+
+## 文风（抽丝剥茧 · 质量门槛）
+
+- 目标：读者看完应**彻底明白**，按书把概念讲透，不是提纲摘要。
+- 深度要够：动机 → 定义 → 操作拆解 → 正确性/不变式 → 复杂度（含证明直觉）→ 可运行代码 → 端到端逐步例子 → 易错点。
+- 伪代码对齐书名（如 `MAX-HEAPIFY`）+ Java（必要时附 Python）。
+- **题型推荐放文末**：真实 leetcode.cn 链接；可附 1 道精讲；无关题不进中段。
+- 索引混用 0/1-based 时必须显式说明。

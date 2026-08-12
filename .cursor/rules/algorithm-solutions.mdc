@@ -1,18 +1,17 @@
 ---
-description: 刷题站题解写作规范——对齐左程云 algorithm-journey 风格
+description: 刷题站题解写作——窗口/DP 对齐左程云，链表/树求简洁易懂
 globs: solutions/**/*.md
 alwaysApply: false
 ---
 
-# 题解写作（对齐左程云）
+# 题解写作规范
 
-生成或改写 `solutions/**/*.md` 时：
+生成或改写 `solutions/**/*.md` 时，遵循 Agent Skill `algorithm-tutorial`，并按题型分流：
 
-1. **先查源码**：`/Users/zy/ai_learn/algorithm-journey` 里若有对应 `Code*.java`，主解必须与之同构，不要另起模板。
-2. **加载 skill**：遵循用户 Agent Skill `algorithm-tutorial`（八章结构 + 左程云 Java 规范）。
-3. **Java 习惯**：`public static`、头注释含「测试链接」、窗口用 `l`/`r`，定长用 `r-l+1 > X` 吐左。
-4. **讲解**：写清维护量、扩/缩条件、循环不变式；能标 class 编号则标（如 class049 / class034）。
-5. **落盘**：`solutions/{bankId}/{slug}.md`，并把题库 JSON 里 `hasSolution` 设为 `true`。
-6. **图表**：本站题解 Mermaid 可用深色节点样式，与现有 `solutions/base/*.md` 一致。
+1. **滑动窗口 / 双指针 / 贪心 / 二分 / DP**：对齐 `/Users/zy/ai_learn/algorithm-journey` 课上模板（`l/r`、`cnts`/`debt`/`collect` 等）。
+2. **链表 / 树 / 图结构题**：不必照搬课上竞赛写法（全局变量、极致 O(1) 手工迭代）；主解写**简洁易懂**的默写版，繁琐优化可作可选附录。
+3. **落盘**：`solutions/{bankId}/{slug}.md`，题库 JSON 里 `hasSolution: true`。
+4. **图表**：与现有 `solutions/base/*.md` 深色 Mermaid 风格一致。
 
-反例：把课上的 `l/r + 超长吐左` 改成「先算第一个窗口再从 k 滑」且变量改成 `base/gain` 等与课上不一致的命名。
+反例（窗口题）：把课上 `l/r` 定长吐左改成另一套命名且与课上骨架不一致。  
+反例（链表题）：为对齐竞赛代码而把清晰的递归归并换成难读的全局 `start/end` 迭代当主解。

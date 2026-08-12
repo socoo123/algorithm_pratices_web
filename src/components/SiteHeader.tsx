@@ -5,6 +5,7 @@ import { useProgress } from '../hooks/useProgress';
 import { useTheme } from '../hooks/useTheme';
 import { useRef } from 'react';
 import { getBankFile } from '../lib/banks';
+import { getClrsChapter, getClrsIndex } from '../lib/clrs';
 
 type Crumb = { label: string; to?: string };
 
@@ -13,10 +14,25 @@ function useBreadcrumbs(): Crumb[] {
   const bankMatch = useMatch({ path: '/bank/:bankId/*', end: false });
   const solutionMatch = useMatch('/bank/:bankId/solution/:slug');
   const categoryMatch = useMatch('/bank/:bankId/:categoryId');
+  const clrsIndexMatch = useMatch('/clrs');
+  const clrsArticleMatch = useMatch('/clrs/:slug');
 
   if (loc.pathname === '/') return [];
 
   const crumbs: Crumb[] = [{ label: '首页', to: '/' }];
+
+  if (clrsIndexMatch || clrsArticleMatch) {
+    const clrs = getClrsIndex();
+    crumbs.push({ label: clrs.title, to: '/clrs' });
+    if (clrsArticleMatch?.params.slug) {
+      const ch = getClrsChapter(clrsArticleMatch.params.slug);
+      crumbs.push({
+        label: ch ? `Ch.${ch.number} ${ch.title}` : '章节',
+      });
+    }
+    return crumbs;
+  }
+
   const bankId = bankMatch?.params.bankId;
   const bankFile = bankId ? getBankFile(bankId) : undefined;
 

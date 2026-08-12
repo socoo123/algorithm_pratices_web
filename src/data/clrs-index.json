@@ -1,0 +1,219 @@
+{
+  "title": "算法导论学习",
+  "subtitle": "CLRS 第 4 版 · 体系化阅读，按章按需展开",
+  "parts": [
+    {
+      "id": "part-i",
+      "roman": "I",
+      "name": "基础",
+      "order": 1
+    },
+    {
+      "id": "part-ii",
+      "roman": "II",
+      "name": "排序与顺序统计量",
+      "order": 2
+    },
+    {
+      "id": "part-iii",
+      "roman": "III",
+      "name": "数据结构",
+      "order": 3
+    },
+    {
+      "id": "part-iv",
+      "roman": "IV",
+      "name": "高级设计与分析技术",
+      "order": 4
+    },
+    {
+      "id": "part-v",
+      "roman": "V",
+      "name": "高级数据结构",
+      "order": 5
+    },
+    {
+      "id": "part-vi",
+      "roman": "VI",
+      "name": "图算法",
+      "order": 6
+    }
+  ],
+  "chapters": [
+    {
+      "slug": "01-role-of-algorithms",
+      "number": "1",
+      "title": "算法在计算中的作用",
+      "partId": "part-i",
+      "hasContent": false
+    },
+    {
+      "slug": "02-getting-started",
+      "number": "2",
+      "title": "算法基础",
+      "partId": "part-i",
+      "hasContent": false
+    },
+    {
+      "slug": "03-characterizing-running-times",
+      "number": "3",
+      "title": "刻画运行时间",
+      "partId": "part-i",
+      "hasContent": false
+    },
+    {
+      "slug": "04-divide-and-conquer",
+      "number": "4",
+      "title": "分治策略",
+      "partId": "part-i",
+      "hasContent": false
+    },
+    {
+      "slug": "05-probabilistic-analysis",
+      "number": "5",
+      "title": "概率分析与随机算法",
+      "partId": "part-i",
+      "hasContent": false
+    },
+    {
+      "slug": "06-heapsort",
+      "number": "6",
+      "title": "堆排序",
+      "partId": "part-ii",
+      "hasContent": true
+    },
+    {
+      "slug": "07-quicksort",
+      "number": "7",
+      "title": "快速排序",
+      "partId": "part-ii",
+      "hasContent": false
+    },
+    {
+      "slug": "08-sorting-in-linear-time",
+      "number": "8",
+      "title": "线性时间排序",
+      "partId": "part-ii",
+      "hasContent": false
+    },
+    {
+      "slug": "09-medians-and-order-statistics",
+      "number": "9",
+      "title": "中位数与顺序统计量",
+      "partId": "part-ii",
+      "hasContent": false
+    },
+    {
+      "slug": "10-elementary-data-structures",
+      "number": "10",
+      "title": "基本数据结构",
+      "partId": "part-iii",
+      "hasContent": false
+    },
+    {
+      "slug": "11-hash-tables",
+      "number": "11",
+      "title": "哈希表",
+      "partId": "part-iii",
+      "hasContent": false
+    },
+    {
+      "slug": "12-binary-search-trees",
+      "number": "12",
+      "title": "二叉搜索树",
+      "partId": "part-iii",
+      "hasContent": false
+    },
+    {
+      "slug": "13-red-black-trees",
+      "number": "13",
+      "title": "红黑树",
+      "partId": "part-iii",
+      "hasContent": false
+    },
+    {
+      "slug": "14-dynamic-programming",
+      "number": "14",
+      "title": "动态规划",
+      "partId": "part-iv",
+      "hasContent": false
+    },
+    {
+      "slug": "15-greedy-algorithms",
+      "number": "15",
+      "title": "贪心算法",
+      "partId": "part-iv",
+      "hasContent": false
+    },
+    {
+      "slug": "16-amortized-analysis",
+      "number": "16",
+      "title": "摊还分析",
+      "partId": "part-iv",
+      "hasContent": false
+    },
+    {
+      "slug": "17-augmenting-data-structures",
+      "number": "17",
+      "title": "扩充数据结构",
+      "partId": "part-v",
+      "hasContent": false
+    },
+    {
+      "slug": "18-b-trees",
+      "number": "18",
+      "title": "B 树",
+      "partId": "part-v",
+      "hasContent": false
+    },
+    {
+      "slug": "19-disjoint-sets",
+      "number": "19",
+      "title": "不相交集合的数据结构",
+      "partId": "part-v",
+      "hasContent": false
+    },
+    {
+      "slug": "20-elementary-graph-algorithms",
+      "number": "20",
+      "title": "基本图算法",
+      "partId": "part-vi",
+      "hasContent": false
+    },
+    {
+      "slug": "21-minimum-spanning-trees",
+      "number": "21",
+      "title": "最小生成树",
+      "partId": "part-vi",
+      "hasContent": false
+    },
+    {
+      "slug": "22-single-source-shortest-paths",
+      "number": "22",
+      "title": "单源最短路径",
+      "partId": "part-vi",
+      "hasContent": false
+    },
+    {
+      "slug": "23-all-pairs-shortest-paths",
+      "number": "23",
+      "title": "所有结点对的最短路径",
+      "partId": "part-vi",
+      "hasContent": false
+    },
+    {
+      "slug": "24-maximum-flow",
+      "number": "24",
+      "title": "最大流",
+      "partId": "part-vi",
+      "hasContent": false
+    },
+    {
+      "slug": "25-maximum-bipartite-matching",
+      "number": "25",
+      "title": "最大二分图匹配",
+      "partId": "part-vi",
+      "hasContent": false
+    }
+  ]
+}

@@ -14,42 +14,77 @@ function solutionApi(): Plugin {
   return {
     name: 'solution-api',
     configureServer(server) {
-      // Serve solution markdown via HTTP so .md stays out of the Vite module graph.
-      // (import.meta.glob + ?raw causes full page reload whenever any solutions/*.md is touched.)
+      // Serve markdown via HTTP so .md stays out of the Vite module graph.
       server.middlewares.use((req, res, next) => {
-        if (req.method !== 'GET' || !req.url?.startsWith('/api/solution/')) {
+        if (req.method !== 'GET' || !req.url) {
           next();
           return;
         }
         const rawPath = req.url.split('?')[0] ?? '';
-        const parts = rawPath.split('/').filter(Boolean); // api, solution, bankId, slug
-        const bankId = parts[2];
-        const slug = parts[3];
-        if (!bankId || !slug || parts.length !== 4) {
-          res.statusCode = 400;
-          res.end('bad path');
+
+        // /api/solution/:bankId/:slug
+        if (rawPath.startsWith('/api/solution/')) {
+          const parts = rawPath.split('/').filter(Boolean);
+          const bankId = parts[2];
+          const slug = parts[3];
+          if (!bankId || !slug || parts.length !== 4) {
+            res.statusCode = 400;
+            res.end('bad path');
+            return;
+          }
+          if (!/^[a-z0-9-]+$/i.test(bankId) || !/^[a-z0-9-]+$/i.test(slug)) {
+            res.statusCode = 400;
+            res.end('bad id');
+            return;
+          }
+          const file = path.join(__dirname, 'solutions', bankId, `${slug}.md`);
+          try {
+            const text = fs.readFileSync(file, 'utf8');
+            res.setHeader('Content-Type', 'text/markdown; charset=utf-8');
+            res.setHeader('Cache-Control', 'no-store');
+            res.statusCode = 200;
+            res.end(text);
+          } catch {
+            res.statusCode = 404;
+            res.end('missing');
+          }
           return;
         }
-        if (!/^[a-z0-9-]+$/i.test(bankId) || !/^[a-z0-9-]+$/i.test(slug)) {
-          res.statusCode = 400;
-          res.end('bad id');
+
+        // /api/clrs/:slug
+        if (rawPath.startsWith('/api/clrs/')) {
+          const parts = rawPath.split('/').filter(Boolean);
+          const slug = parts[2];
+          if (!slug || parts.length !== 3) {
+            res.statusCode = 400;
+            res.end('bad path');
+            return;
+          }
+          if (!/^[a-z0-9-]+$/i.test(slug)) {
+            res.statusCode = 400;
+            res.end('bad id');
+            return;
+          }
+          const file = path.join(__dirname, 'content', 'clrs', `${slug}.md`);
+          try {
+            const text = fs.readFileSync(file, 'utf8');
+            res.setHeader('Content-Type', 'text/markdown; charset=utf-8');
+            res.setHeader('Cache-Control', 'no-store');
+            res.statusCode = 200;
+            res.end(text);
+          } catch {
+            res.statusCode = 404;
+            res.end('missing');
+          }
           return;
         }
-        const file = path.join(__dirname, 'solutions', bankId, `${slug}.md`);
-        try {
-          const text = fs.readFileSync(file, 'utf8');
-          res.setHeader('Content-Type', 'text/markdown; charset=utf-8');
-          res.setHeader('Cache-Control', 'no-store');
-          res.statusCode = 200;
-          res.end(text);
-        } catch {
-          res.statusCode = 404;
-          res.end('missing');
-        }
+
+        next();
       });
     },
   };
 }
+
 
 function progressSaver(): Plugin {
   return {
@@ -151,14 +186,18 @@ function dataWatcher(): Plugin {
       });
     },
     handleHotUpdate({ file, server }) {
-      if (!file.includes(`${path.sep}solutions${path.sep}`) || !file.endsWith('.md')) {
+      const isSolutionMd =
+        file.includes(`${path.sep}solutions${path.sep}`) && file.endsWith('.md');
+      const isClrsMd =
+        file.includes(`${path.sep}content${path.sep}clrs${path.sep}`) && file.endsWith('.md');
+      if (!isSolutionMd && !isClrsMd) {
         return;
       }
       const rootDir = path.dirname(fileURLToPath(import.meta.url));
       const rel = path.relative(rootDir, file).split(path.sep).join('/');
       server.ws.send({
         type: 'custom',
-        event: 'solutions-md-update',
+        event: isClrsMd ? 'clrs-md-update' : 'solutions-md-update',
         data: { path: rel },
       });
       // 空数组：不走默认 HMR / 不 page reload

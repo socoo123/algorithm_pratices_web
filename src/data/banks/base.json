@@ -126,7 +126,7 @@
       "hint": "三指针翻转，链表地基",
       "categoryId": "linked-list",
       "order": 1,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -140,7 +140,7 @@
       "hint": "双指针穿针引线 / dummy",
       "categoryId": "linked-list",
       "order": 2,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -154,7 +154,7 @@
       "hint": "快慢指针判环",
       "categoryId": "linked-list",
       "order": 3,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -168,7 +168,7 @@
       "hint": "长度差对齐 / 双指针浪漫法",
       "categoryId": "linked-list",
       "order": 4,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -182,7 +182,7 @@
       "hint": "找中点 + 后半反转 + 比对",
       "categoryId": "linked-list",
       "order": 5,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -196,7 +196,7 @@
       "hint": "快慢指针找中点",
       "categoryId": "linked-list",
       "order": 6,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -210,7 +210,7 @@
       "hint": "后继节点覆盖（脑筋急转弯）",
       "categoryId": "linked-list",
       "order": 7,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -224,7 +224,7 @@
       "hint": "保留一个的去重",
       "categoryId": "linked-list",
       "order": 8,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -238,7 +238,7 @@
       "hint": "区间反转 [left,right]",
       "categoryId": "linked-list",
       "order": 9,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -252,7 +252,7 @@
       "hint": "快慢指针找入口（数学）",
       "categoryId": "linked-list",
       "order": 10,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -266,7 +266,7 @@
       "hint": "快慢指针 + dummy",
       "categoryId": "linked-list",
       "order": 11,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -280,7 +280,7 @@
       "hint": "哈希表 / 原地穿插法",
       "categoryId": "linked-list",
       "order": 12,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -294,7 +294,7 @@
       "hint": "逆序链表模拟加法 + 进位",
       "categoryId": "linked-list",
       "order": 13,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -322,7 +322,7 @@
       "hint": "中点 + 反转 + 合并三合一",
       "categoryId": "linked-list",
       "order": 15,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -336,7 +336,7 @@
       "hint": "栈 / 反转后相加",
       "categoryId": "linked-list",
       "order": 16,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -406,7 +406,7 @@
       "hint": "同向双指针（覆盖填位）",
       "categoryId": "sliding-window",
       "order": 1,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -434,7 +434,7 @@
       "hint": "定长窗口",
       "categoryId": "sliding-window",
       "order": 3,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -448,7 +448,7 @@
       "hint": "窗口判重复（距离 ≤ k）",
       "categoryId": "sliding-window",
       "order": 4,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -462,7 +462,7 @@
       "hint": "对撞双指针（负数平方）",
       "categoryId": "sliding-window",
       "order": 5,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -476,7 +476,7 @@
       "hint": "变长窗口 + 字符计数",
       "categoryId": "sliding-window",
       "order": 6,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -504,7 +504,7 @@
       "hint": "排序 + 双指针 + 去重",
       "categoryId": "sliding-window",
       "order": 8,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -518,7 +518,7 @@
       "hint": "变长窗口求最短",
       "categoryId": "sliding-window",
       "order": 9,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -630,7 +630,7 @@
       "hint": "两端取 k 张的窗口",
       "categoryId": "sliding-window",
       "order": 17,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -714,7 +714,7 @@
       "hint": "窗口 + 代价预算",
       "categoryId": "sliding-window",
       "order": 23,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -742,7 +742,7 @@
       "hint": "变长窗口（含一个 0 的窗口）",
       "categoryId": "sliding-window",
       "order": 25,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -756,7 +756,7 @@
       "hint": "窗口封神题 + 计数匹配",
       "categoryId": "sliding-window",
       "order": 26,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -770,7 +770,7 @@
       "hint": "双指针 / 单调栈 / DP 三解",
       "categoryId": "sliding-window",
       "order": 27,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -784,7 +784,7 @@
       "hint": "桶分组 / 有序窗口",
       "categoryId": "sliding-window",
       "order": 28,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -798,7 +798,7 @@
       "hint": "恰好 K = 至多 K − 至多 K−1",
       "categoryId": "sliding-window",
       "order": 29,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -812,7 +812,7 @@
       "hint": "滑窗 + 枚举",
       "categoryId": "sliding-window",
       "order": 30,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -826,7 +826,7 @@
       "hint": "递归 + 栈迭代",
       "categoryId": "binary-tree",
       "order": 1,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -840,7 +840,7 @@
       "hint": "后序递归 max(左,右)+1",
       "categoryId": "binary-tree",
       "order": 2,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -854,7 +854,7 @@
       "hint": "两子树镜像递归比对",
       "categoryId": "binary-tree",
       "order": 3,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -868,7 +868,7 @@
       "hint": "前序交换左右子树",
       "categoryId": "binary-tree",
       "order": 4,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -896,7 +896,7 @@
       "hint": "递归 + 栈迭代",
       "categoryId": "binary-tree",
       "order": 6,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -910,7 +910,7 @@
       "hint": "递归 + 双栈/单栈迭代",
       "categoryId": "binary-tree",
       "order": 7,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -924,7 +924,7 @@
       "hint": "后序求高度 + 提前剪枝",
       "categoryId": "binary-tree",
       "order": 8,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -938,7 +938,7 @@
       "hint": "枚举起点 + sameTree",
       "categoryId": "binary-tree",
       "order": 9,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -952,7 +952,7 @@
       "hint": "前序 + 目标值递减",
       "categoryId": "binary-tree",
       "order": 10,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -966,7 +966,7 @@
       "hint": "利用 BST 性质",
       "categoryId": "binary-tree",
       "order": 11,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -980,7 +980,7 @@
       "hint": "两树同步递归比对",
       "categoryId": "binary-tree",
       "order": 12,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -994,7 +994,7 @@
       "hint": "二分取中点为根",
       "categoryId": "binary-tree",
       "order": 13,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -1008,7 +1008,7 @@
       "hint": "BFS 按层模板",
       "categoryId": "binary-tree",
       "order": 14,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -1022,7 +1022,7 @@
       "hint": "前序定根 + 中序分左右",
       "categoryId": "binary-tree",
       "order": 15,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -1036,7 +1036,7 @@
       "hint": "后序分情况递归",
       "categoryId": "binary-tree",
       "order": 16,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -1050,7 +1050,7 @@
       "hint": "中序递增 / 区间递归",
       "categoryId": "binary-tree",
       "order": 17,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -1064,7 +1064,7 @@
       "hint": "中序第 k 个",
       "categoryId": "binary-tree",
       "order": 18,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -1078,7 +1078,7 @@
       "hint": "前缀和 + 回溯",
       "categoryId": "binary-tree",
       "order": 19,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -1092,7 +1092,7 @@
       "hint": "层序 + 方向翻转",
       "categoryId": "binary-tree",
       "order": 20,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -1106,7 +1106,7 @@
       "hint": "层序取每层末尾",
       "categoryId": "binary-tree",
       "order": 21,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -1120,7 +1120,7 @@
       "hint": "后序定根 + 中序分左右",
       "categoryId": "binary-tree",
       "order": 22,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -1134,7 +1134,7 @@
       "hint": "前序传递累积值",
       "categoryId": "binary-tree",
       "order": 23,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -1148,7 +1148,7 @@
       "hint": "层序 + 反转",
       "categoryId": "binary-tree",
       "order": 24,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -1162,7 +1162,7 @@
       "hint": "已满树，next 串联",
       "categoryId": "binary-tree",
       "order": 25,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -1176,7 +1176,7 @@
       "hint": "前序 / 后序调整指针",
       "categoryId": "binary-tree",
       "order": 26,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -1190,7 +1190,7 @@
       "hint": "回溯收集路径",
       "categoryId": "binary-tree",
       "order": 27,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -1204,7 +1204,7 @@
       "hint": "一般树，BFS 串联",
       "categoryId": "binary-tree",
       "order": 28,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -1218,7 +1218,7 @@
       "hint": "后序，单分支贡献值",
       "categoryId": "binary-tree",
       "order": 29,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -1232,7 +1232,7 @@
       "hint": "前序/层序 + # 占位",
       "categoryId": "binary-tree",
       "order": 30,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -1246,7 +1246,7 @@
       "hint": "栈匹配（地基）",
       "categoryId": "stack-queue",
       "order": 1,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -1260,7 +1260,7 @@
       "hint": "双栈 in/out 倒数据",
       "categoryId": "stack-queue",
       "order": 2,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -1274,7 +1274,7 @@
       "hint": "单调栈 + map",
       "categoryId": "stack-queue",
       "order": 3,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -1288,7 +1288,7 @@
       "hint": "单队列旋转",
       "categoryId": "stack-queue",
       "order": 4,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -1302,7 +1302,7 @@
       "hint": "辅助栈同步最小值",
       "categoryId": "stack-queue",
       "order": 5,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -1316,7 +1316,7 @@
       "hint": "单调栈入门",
       "categoryId": "stack-queue",
       "order": 6,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -1344,7 +1344,7 @@
       "hint": "快速选择 / 小根堆",
       "categoryId": "stack-queue",
       "order": 8,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -1358,7 +1358,7 @@
       "hint": "栈求值",
       "categoryId": "stack-queue",
       "order": 9,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -1372,7 +1372,7 @@
       "hint": "栈 / 递归下降",
       "categoryId": "stack-queue",
       "order": 10,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -1386,7 +1386,7 @@
       "hint": "循环数组单调栈",
       "categoryId": "stack-queue",
       "order": 11,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -1400,7 +1400,7 @@
       "hint": "数组 + size/l/r 回绕",
       "categoryId": "stack-queue",
       "order": 12,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -1414,7 +1414,7 @@
       "hint": "栈模拟碰撞",
       "categoryId": "stack-queue",
       "order": 13,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -1428,7 +1428,7 @@
       "hint": "栈模拟",
       "categoryId": "stack-queue",
       "order": 14,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -1442,7 +1442,7 @@
       "hint": "栈计分",
       "categoryId": "stack-queue",
       "order": 15,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -1456,7 +1456,7 @@
       "hint": "双端 l/r 回绕",
       "categoryId": "stack-queue",
       "order": 16,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -1470,7 +1470,7 @@
       "hint": "单调栈封神题",
       "categoryId": "stack-queue",
       "order": 17,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -1484,7 +1484,7 @@
       "hint": "单调队列（封神）",
       "categoryId": "stack-queue",
       "order": 18,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -1498,7 +1498,7 @@
       "hint": "大小双堆",
       "categoryId": "stack-queue",
       "order": 19,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -1512,7 +1512,7 @@
       "hint": "84 升级（逐行柱状图）",
       "categoryId": "stack-queue",
       "order": 20,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -1526,7 +1526,7 @@
       "hint": "每元素要/不要",
       "categoryId": "backtracking",
       "order": 1,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -1540,7 +1540,7 @@
       "hint": "swap 交换法",
       "categoryId": "backtracking",
       "order": 2,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -1946,7 +1946,7 @@
       "hint": "DP 入门 f(n)=f(n-1)+f(n-2)",
       "categoryId": "dp",
       "order": 1,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -2987,5 +2987,5 @@
       "count": "—"
     }
   ],
-  "generatedAt": "2026-08-10T23:27:18.874Z"
+  "generatedAt": "2026-08-23T03:28:11.537Z"
 }

@@ -4,12 +4,15 @@ import { ProgressBar } from '../components/ProgressBar';
 import { useProgress } from '../hooks/useProgress';
 import { getBankFile, getBanksIndex } from '../lib/banks';
 import { countClrsReady, getClrsIndex } from '../lib/clrs';
+import { countEssaysReady, getEssayIndex } from '../lib/essays';
 
 export function HomePage() {
   const { isRound1Done } = useProgress();
   const index = getBanksIndex();
   const clrs = getClrsIndex();
   const { ready: clrsReady, total: clrsTotal } = countClrsReady();
+  const essays = getEssayIndex();
+  const { ready: essaysReady, total: essaysTotal } = countEssaysReady();
 
   return (
     <main className="mx-auto max-w-4xl px-4 py-12 sm:px-6 sm:py-16">
@@ -59,26 +62,46 @@ export function HomePage() {
 
       <section>
         <h2 className="mb-4 text-sm font-medium uppercase tracking-wide text-dracula-comment">
-          体系化阅读
+          阅读与解析
         </h2>
-        <Link
-          to="/clrs"
-          className="bank-card group flex items-start justify-between gap-4 rounded-2xl border border-dracula-current bg-dracula-bg-dark/70 p-6 shadow-[0_8px_30px_-18px_rgba(47,43,38,0.28)] backdrop-blur-xl transition hover:-translate-y-0.5 hover:border-dracula-cyan/45"
-        >
-          <div>
-            <h3 className="text-xl font-semibold text-dracula-fg">{clrs.title}</h3>
-            <p className="mt-2 text-sm text-dracula-comment">{clrs.subtitle}</p>
-            <p className="mt-3 font-mono text-xs text-dracula-comment">
-              已写 {clrsReady}/{clrsTotal} 章
-            </p>
-            <div className="mt-2 max-w-md">
-              <ProgressBar value={clrsReady} max={clrsTotal} />
+        <div className="grid gap-4 sm:grid-cols-2">
+          <Link
+            to="/clrs"
+            className="bank-card group flex items-start justify-between gap-4 rounded-2xl border border-dracula-current bg-dracula-bg-dark/70 p-6 shadow-[0_8px_30px_-18px_rgba(47,43,38,0.28)] backdrop-blur-xl transition hover:-translate-y-0.5 hover:border-dracula-cyan/45"
+          >
+            <div>
+              <h3 className="text-xl font-semibold text-dracula-fg">{clrs.title}</h3>
+              <p className="mt-2 text-sm text-dracula-comment">{clrs.subtitle}</p>
+              <p className="mt-3 font-mono text-xs text-dracula-comment">
+                已写 {clrsReady}/{clrsTotal} 章
+              </p>
+              <div className="mt-2 max-w-md">
+                <ProgressBar value={clrsReady} max={clrsTotal} />
+              </div>
             </div>
-          </div>
-          <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-dracula-cyan/12 text-dracula-cyan transition group-hover:bg-dracula-purple/15 group-hover:text-dracula-purple">
-            <ArrowRight className="h-5 w-5" />
-          </span>
-        </Link>
+            <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-dracula-cyan/12 text-dracula-cyan transition group-hover:bg-dracula-purple/15 group-hover:text-dracula-purple">
+              <ArrowRight className="h-5 w-5" />
+            </span>
+          </Link>
+          <Link
+            to="/essays"
+            className="bank-card group flex items-start justify-between gap-4 rounded-2xl border border-dracula-current bg-dracula-bg-dark/70 p-6 shadow-[0_8px_30px_-18px_rgba(47,43,38,0.28)] backdrop-blur-xl transition hover:-translate-y-0.5 hover:border-dracula-pink/45"
+          >
+            <div>
+              <h3 className="text-xl font-semibold text-dracula-fg">{essays.title}</h3>
+              <p className="mt-2 text-sm text-dracula-comment">{essays.subtitle}</p>
+              <p className="mt-3 font-mono text-xs text-dracula-comment">
+                已写 {essaysReady}/{essaysTotal} 篇
+              </p>
+              <div className="mt-2 max-w-md">
+                <ProgressBar value={essaysReady} max={essaysTotal} />
+              </div>
+            </div>
+            <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-dracula-pink/12 text-dracula-pink transition group-hover:bg-dracula-cyan/15 group-hover:text-dracula-cyan">
+              <ArrowRight className="h-5 w-5" />
+            </span>
+          </Link>
+        </div>
       </section>
     </main>
   );

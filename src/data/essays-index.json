@@ -1,0 +1,20 @@
+{
+  "title": "专门的算法解析",
+  "subtitle": "有意思但不一定主流的解法，或大算法里值得单独展开的小分支",
+  "articles": [
+    {
+      "slug": "morris-traversal",
+      "title": "Morris 遍历",
+      "hint": "O(1) 额外空间的二叉树遍历",
+      "order": 1,
+      "hasContent": true
+    },
+    {
+      "slug": "skip-list",
+      "title": "跳表",
+      "hint": "用多层链表近似平衡树",
+      "order": 2,
+      "hasContent": true
+    }
+  ]
+}

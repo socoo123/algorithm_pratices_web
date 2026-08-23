@@ -5,6 +5,7 @@ import { SiteHeader } from './components/SiteHeader';
 import { ProgressProvider } from './hooks/useProgress';
 import { BankIndexRedirect, BankPage } from './pages/BankPage';
 import { ClrsIndexPage } from './pages/ClrsIndexPage';
+import { EssaysIndexPage } from './pages/EssaysIndexPage';
 import { HomePage } from './pages/HomePage';
 import { NotFoundPage } from './pages/NotFoundPage';
 
@@ -14,6 +15,10 @@ const SolutionPage = lazy(() =>
 
 const ClrsArticlePage = lazy(() =>
   import('./pages/ClrsArticlePage').then((m) => ({ default: m.ClrsArticlePage })),
+);
+
+const EssaysArticlePage = lazy(() =>
+  import('./pages/EssaysArticlePage').then((m) => ({ default: m.EssaysArticlePage })),
 );
 
 class AppErrorBoundary extends Component<{ children: ReactNode }, { error: Error | null }> {
@@ -57,6 +62,8 @@ function AppShell() {
             <Route path="/" element={<HomePage />} />
             <Route path="/clrs" element={<ClrsIndexPage />} />
             <Route path="/clrs/:slug" element={<ClrsArticlePage />} />
+            <Route path="/essays" element={<EssaysIndexPage />} />
+            <Route path="/essays/:slug" element={<EssaysArticlePage />} />
             <Route path="/bank/:bankId" element={<BankIndexRedirect />} />
             <Route path="/bank/:bankId/solution/:slug" element={<SolutionPage />} />
             <Route path="/bank/:bankId/:categoryId" element={<BankPage />} />

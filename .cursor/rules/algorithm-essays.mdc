@@ -1,0 +1,22 @@
+---
+description: 专门的算法解析模块——首页入口、目录、按需正文
+alwaysApply: true
+---
+
+# 专门的算法解析
+
+站点并列模块（非题库、非 CLRS）：首页入口 → `/essays` 目录 → `/essays/:slug` 正文。
+
+用来放**有意思但不一定主流**的解法，或大算法里值得单独展开的小分支（如 Morris 遍历、跳表）。想到再补，不要批量生成。
+
+## 落盘
+
+- 正文：`content/essays/{slug}.md`
+- 索引：`src/data/essays-index.json` —— 用户点名新条目时追加；写完正文后把对应项 `hasContent` 设为 `true`
+- 辅助：`src/lib/essays.ts`
+
+## 谁来写正文
+
+默认**用户自己输入** markdown。只有用户明确说「写 / 生成某篇」时才代写。
+
+代写时展示规范与 CLRS / 题解相同：深色 Mermaid、站点无 KaTeX（不要 `$$` / `\Theta` / `\lg`）。

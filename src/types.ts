@@ -87,3 +87,18 @@ export interface ClrsIndex {
   parts: ClrsPart[];
   chapters: ClrsChapter[];
 }
+
+/** 专门的算法解析（非主流解法 / 大算法里的小分支） */
+export interface EssayEntry {
+  slug: string;
+  title: string;
+  hint: string;
+  order: number;
+  hasContent: boolean;
+}
+
+export interface EssayIndex {
+  title: string;
+  subtitle: string;
+  articles: EssayEntry[];
+}

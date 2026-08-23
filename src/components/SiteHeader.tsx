@@ -6,6 +6,7 @@ import { useTheme } from '../hooks/useTheme';
 import { useRef } from 'react';
 import { getBankFile } from '../lib/banks';
 import { getClrsChapter, getClrsIndex } from '../lib/clrs';
+import { getEssay, getEssayIndex } from '../lib/essays';
 
 type Crumb = { label: string; to?: string };
 
@@ -16,6 +17,8 @@ function useBreadcrumbs(): Crumb[] {
   const categoryMatch = useMatch('/bank/:bankId/:categoryId');
   const clrsIndexMatch = useMatch('/clrs');
   const clrsArticleMatch = useMatch('/clrs/:slug');
+  const essaysIndexMatch = useMatch('/essays');
+  const essaysArticleMatch = useMatch('/essays/:slug');
 
   if (loc.pathname === '/') return [];
 
@@ -28,6 +31,18 @@ function useBreadcrumbs(): Crumb[] {
       const ch = getClrsChapter(clrsArticleMatch.params.slug);
       crumbs.push({
         label: ch ? `Ch.${ch.number} ${ch.title}` : '章节',
+      });
+    }
+    return crumbs;
+  }
+
+  if (essaysIndexMatch || essaysArticleMatch) {
+    const essays = getEssayIndex();
+    crumbs.push({ label: essays.title, to: '/essays' });
+    if (essaysArticleMatch?.params.slug) {
+      const article = getEssay(essaysArticleMatch.params.slug);
+      crumbs.push({
+        label: article?.title ?? '解析',
       });
     }
     return crumbs;

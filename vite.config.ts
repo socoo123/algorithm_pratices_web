@@ -79,6 +79,34 @@ function solutionApi(): Plugin {
           return;
         }
 
+        // /api/essays/:slug
+        if (rawPath.startsWith('/api/essays/')) {
+          const parts = rawPath.split('/').filter(Boolean);
+          const slug = parts[2];
+          if (!slug || parts.length !== 3) {
+            res.statusCode = 400;
+            res.end('bad path');
+            return;
+          }
+          if (!/^[a-z0-9-]+$/i.test(slug)) {
+            res.statusCode = 400;
+            res.end('bad id');
+            return;
+          }
+          const file = path.join(__dirname, 'content', 'essays', `${slug}.md`);
+          try {
+            const text = fs.readFileSync(file, 'utf8');
+            res.setHeader('Content-Type', 'text/markdown; charset=utf-8');
+            res.setHeader('Cache-Control', 'no-store');
+            res.statusCode = 200;
+            res.end(text);
+          } catch {
+            res.statusCode = 404;
+            res.end('missing');
+          }
+          return;
+        }
+
         next();
       });
     },
@@ -190,14 +218,21 @@ function dataWatcher(): Plugin {
         file.includes(`${path.sep}solutions${path.sep}`) && file.endsWith('.md');
       const isClrsMd =
         file.includes(`${path.sep}content${path.sep}clrs${path.sep}`) && file.endsWith('.md');
-      if (!isSolutionMd && !isClrsMd) {
+      const isEssayMd =
+        file.includes(`${path.sep}content${path.sep}essays${path.sep}`) && file.endsWith('.md');
+      if (!isSolutionMd && !isClrsMd && !isEssayMd) {
         return;
       }
       const rootDir = path.dirname(fileURLToPath(import.meta.url));
       const rel = path.relative(rootDir, file).split(path.sep).join('/');
+      const event = isEssayMd
+        ? 'essays-md-update'
+        : isClrsMd
+          ? 'clrs-md-update'
+          : 'solutions-md-update';
       server.ws.send({
         type: 'custom',
-        event: isClrsMd ? 'clrs-md-update' : 'solutions-md-update',
+        event,
         data: { path: rel },
       });
       // 空数组：不走默认 HMR / 不 page reload

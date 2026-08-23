@@ -17,7 +17,7 @@ export function ClrsIndexPage() {
         <h1 className="text-3xl font-bold tracking-tight text-dracula-fg">{index.title}</h1>
         <p className="mt-2 text-dracula-comment">{index.subtitle}</p>
         <p className="mt-3 font-mono text-xs text-dracula-comment">
-          已写 {ready}/{total} 章 · 未就绪显示「待写」，点名后再生成正文
+          已写 {ready}/{total} 章
         </p>
       </header>
 

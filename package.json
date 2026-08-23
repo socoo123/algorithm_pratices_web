@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "sync:content": "tsx scripts/sync-content.ts",
+    "generate:lingcha": "python3 scripts/generate-lingcha.py",
     "data": "tsx scripts/build-data.ts",
     "predev": "npm run data",
     "prebuild": "npm run data",

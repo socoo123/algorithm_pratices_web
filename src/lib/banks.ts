@@ -1,10 +1,15 @@
 import banksIndex from '../data/banks-index.json';
-import baseBank from '../data/banks/base.json';
 import type { BankFile, BanksIndex } from '../types';
 
-const bankFiles: Record<string, BankFile> = {
-  base: baseBank as BankFile,
-};
+const modules = import.meta.glob('../data/banks/*.json', { eager: true }) as Record<
+  string,
+  { default: BankFile }
+>;
+
+const bankFiles: Record<string, BankFile> = {};
+for (const mod of Object.values(modules)) {
+  bankFiles[mod.default.bank.id] = mod.default;
+}
 
 export function getBanksIndex(): BanksIndex {
   return banksIndex as BanksIndex;

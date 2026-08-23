@@ -1554,7 +1554,7 @@
       "hint": "元素可重复用",
       "categoryId": "backtracking",
       "order": 3,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -1568,7 +1568,7 @@
       "hint": "左右括号计数剪枝",
       "categoryId": "backtracking",
       "order": 4,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -1582,7 +1582,7 @@
       "hint": "多叉决策树",
       "categoryId": "backtracking",
       "order": 5,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -1596,7 +1596,7 @@
       "hint": "网格 DFS + 回溯",
       "categoryId": "backtracking",
       "order": 6,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -1610,7 +1610,7 @@
       "hint": "排序 + 分组去重",
       "categoryId": "backtracking",
       "order": 7,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -1624,7 +1624,7 @@
       "hint": "swap + 同层剪枝去重",
       "categoryId": "backtracking",
       "order": 8,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -1638,7 +1638,7 @@
       "hint": "元素只能用一次 + 去重",
       "categoryId": "backtracking",
       "order": 9,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -1652,7 +1652,7 @@
       "hint": "C(n,k)",
       "categoryId": "backtracking",
       "order": 10,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -1666,7 +1666,7 @@
       "hint": "切分点回溯 + 回文判断",
       "categoryId": "backtracking",
       "order": 11,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -1680,7 +1680,7 @@
       "hint": "1-9 选 k 个和为 n",
       "categoryId": "backtracking",
       "order": 12,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -1694,7 +1694,7 @@
       "hint": "分段回溯",
       "categoryId": "backtracking",
       "order": 13,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -1708,7 +1708,7 @@
       "hint": "经典棋盘回溯 + 剪枝",
       "categoryId": "backtracking",
       "order": 14,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -1722,7 +1722,7 @@
       "hint": "棋盘回溯",
       "categoryId": "backtracking",
       "order": 15,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -1736,7 +1736,7 @@
       "hint": "逆向双指针，从尾部填充",
       "categoryId": "sorting",
       "order": 1,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -1750,7 +1750,7 @@
       "hint": "Boyer-Moore 投票 / 排序中位数",
       "categoryId": "sorting",
       "order": 2,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -1764,7 +1764,7 @@
       "hint": "排序后取两端",
       "categoryId": "sorting",
       "order": 3,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -1778,7 +1778,7 @@
       "hint": "手写归并 / 快排 / 堆排",
       "categoryId": "sorting",
       "order": 4,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -1792,7 +1792,7 @@
       "hint": "排序 + 合并（地基）",
       "categoryId": "sorting",
       "order": 5,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -1806,7 +1806,7 @@
       "hint": "区间按右端点排序 + 贪心",
       "categoryId": "sorting",
       "order": 6,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -1820,7 +1820,7 @@
       "hint": "自定义字符串比较",
       "categoryId": "sorting",
       "order": 7,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -1834,7 +1834,7 @@
       "hint": "排序 + 贪心插入",
       "categoryId": "sorting",
       "order": 8,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -1848,7 +1848,7 @@
       "hint": "排序 / 计数",
       "categoryId": "sorting",
       "order": 9,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -1862,7 +1862,7 @@
       "hint": "区间处理",
       "categoryId": "sorting",
       "order": 10,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -1876,7 +1876,7 @@
       "hint": "桶排序",
       "categoryId": "sorting",
       "order": 11,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -1890,7 +1890,7 @@
       "hint": "快速选择 / 堆",
       "categoryId": "sorting",
       "order": 12,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -1904,7 +1904,7 @@
       "hint": "排序 + 交错放置",
       "categoryId": "sorting",
       "order": 13,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -1918,7 +1918,7 @@
       "hint": "归并求逆序对 / 树状数组",
       "categoryId": "sorting",
       "order": 14,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -1932,7 +1932,7 @@
       "hint": "归并求逆序对扩展（2x 判定）",
       "categoryId": "sorting",
       "order": 15,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -1960,7 +1960,7 @@
       "hint": "一次交易",
       "categoryId": "dp",
       "order": 2,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -1974,7 +1974,7 @@
       "hint": "爬楼梯带代价",
       "categoryId": "dp",
       "order": 3,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -1988,7 +1988,7 @@
       "hint": "简单线性",
       "categoryId": "dp",
       "order": 4,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -2002,7 +2002,7 @@
       "hint": "相邻不能取",
       "categoryId": "dp",
       "order": 5,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -2016,7 +2016,7 @@
       "hint": "分情况转移",
       "categoryId": "dp",
       "order": 6,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -2030,7 +2030,7 @@
       "hint": "完全背包 / 串匹配",
       "categoryId": "dp",
       "order": 7,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -2044,7 +2044,7 @@
       "hint": "Kadane 算法",
       "categoryId": "dp",
       "order": 8,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -2058,7 +2058,7 @@
       "hint": "无限次交易",
       "categoryId": "dp",
       "order": 9,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -2072,7 +2072,7 @@
       "hint": "二分优化 O(nlogn)",
       "categoryId": "dp",
       "order": 10,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -2086,7 +2086,7 @@
       "hint": "二维 DP 地基",
       "categoryId": "dp",
       "order": 11,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -2156,7 +2156,7 @@
       "hint": "0-1 背包",
       "categoryId": "dp",
       "order": 16,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -2170,7 +2170,7 @@
       "hint": "完全背包求最少",
       "categoryId": "dp",
       "order": 17,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -2184,7 +2184,7 @@
       "hint": "网格 DP 入门",
       "categoryId": "dp",
       "order": 18,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -2198,7 +2198,7 @@
       "hint": "网格求最小",
       "categoryId": "dp",
       "order": 19,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -2212,7 +2212,7 @@
       "hint": "dp[i][j]=min(三邻)+1",
       "categoryId": "dp",
       "order": 20,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -2240,7 +2240,7 @@
       "hint": "环形（分两段）",
       "categoryId": "dp",
       "order": 22,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -2254,7 +2254,7 @@
       "hint": "维护最大最小",
       "categoryId": "dp",
       "order": 23,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -2268,7 +2268,7 @@
       "hint": "状态机",
       "categoryId": "dp",
       "order": 24,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -2282,7 +2282,7 @@
       "hint": "状态机",
       "categoryId": "dp",
       "order": 25,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -2296,7 +2296,7 @@
       "hint": "0-1 背包组合",
       "categoryId": "dp",
       "order": 26,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -2310,7 +2310,7 @@
       "hint": "完全背包组合数",
       "categoryId": "dp",
       "order": 27,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -2338,7 +2338,7 @@
       "hint": "含障碍",
       "categoryId": "dp",
       "order": 29,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -2352,7 +2352,7 @@
       "hint": "变形网格",
       "categoryId": "dp",
       "order": 30,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -2464,7 +2464,7 @@
       "hint": "三方向网格",
       "categoryId": "dp",
       "order": 38,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -2987,5 +2987,5 @@
       "count": "—"
     }
   ],
-  "generatedAt": "2026-08-23T03:28:11.537Z"
+  "generatedAt": "2026-08-23T13:36:39.933Z"
 }

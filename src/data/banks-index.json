@@ -5,6 +5,18 @@
       "name": "基础题库",
       "description": "一线大厂高频 200 题，按标签分组、双维度评分。",
       "totalCount": 200
+    },
+    {
+      "id": "lingcha-1",
+      "name": "灵茶一期",
+      "description": "灵茶题单第一档 300 题（已去重基础题库），补齐滑窗 / 二分 / 数据结构 / DP 等核心模板。",
+      "totalCount": 300
+    },
+    {
+      "id": "lingcha-2",
+      "name": "灵茶二期",
+      "description": "灵茶题单第二档 300 题：补图论面试考点，并按难度与优先级下探各专题。",
+      "totalCount": 300
     }
   ]
 }

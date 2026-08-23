@@ -88,7 +88,7 @@ export function BankPage() {
                 ))}
               </ul>
             </Collapsible>
-            <Collapsible title="Day 1–14 刷题计划">
+            <Collapsible title="刷题计划">
               <div className="overflow-x-auto">
                 <table className="w-full text-left text-sm">
                   <thead>

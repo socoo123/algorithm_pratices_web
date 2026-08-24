@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-23T03:41:16.176Z",
+  "updatedAt": "2026-08-24T13:30:03.494Z",
   "problems": {
     "base/reverse-linked-list": {
       "rounds": [
@@ -402,6 +402,30 @@
         false
       ],
       "updatedAt": "2026-08-23T03:41:16.176Z"
+    },
+    "base/maximize-the-confusion-of-an-exam": {
+      "rounds": [
+        true,
+        false,
+        false
+      ],
+      "updatedAt": "2026-08-24T13:29:57.781Z"
+    },
+    "base/longest-subarray-of-1s-after-deleting-one-element": {
+      "rounds": [
+        true,
+        false,
+        false
+      ],
+      "updatedAt": "2026-08-24T13:29:58.465Z"
+    },
+    "base/balanced-binary-tree": {
+      "rounds": [
+        true,
+        false,
+        false
+      ],
+      "updatedAt": "2026-08-24T13:30:03.494Z"
     }
   }
 }

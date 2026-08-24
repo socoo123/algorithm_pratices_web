@@ -2100,7 +2100,7 @@
       "hint": "经典 DP 封神",
       "categoryId": "dp",
       "order": 12,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -2114,7 +2114,7 @@
       "hint": "区间 / 中心扩散",
       "categoryId": "dp",
       "order": 13,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -2128,7 +2128,7 @@
       "hint": "区间 DP",
       "categoryId": "dp",
       "order": 14,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -2142,7 +2142,7 @@
       "hint": "计数回文",
       "categoryId": "dp",
       "order": 15,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -2226,7 +2226,7 @@
       "hint": "树形 DP 经典",
       "categoryId": "dp",
       "order": 21,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -2324,7 +2324,7 @@
       "hint": "完全背包 / BFS",
       "categoryId": "dp",
       "order": 28,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -2366,7 +2366,7 @@
       "hint": "卡特兰数",
       "categoryId": "dp",
       "order": 31,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -2380,7 +2380,7 @@
       "hint": "三指针",
       "categoryId": "dp",
       "order": 32,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -2394,7 +2394,7 @@
       "hint": "拆分最大化",
       "categoryId": "dp",
       "order": 33,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -2408,7 +2408,7 @@
       "hint": "排列数 DP",
       "categoryId": "dp",
       "order": 34,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -2422,7 +2422,7 @@
       "hint": "LCS 换皮",
       "categoryId": "dp",
       "order": 35,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -2436,7 +2436,7 @@
       "hint": "编辑距离变体",
       "categoryId": "dp",
       "order": 36,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -2450,7 +2450,7 @@
       "hint": "二维费用背包",
       "categoryId": "dp",
       "order": 37,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -2478,7 +2478,7 @@
       "hint": "计数 DP",
       "categoryId": "dp",
       "order": 39,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -2492,7 +2492,7 @@
       "hint": "LIS 变体",
       "categoryId": "dp",
       "order": 40,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -2506,7 +2506,7 @@
       "hint": "区间 DP",
       "categoryId": "dp",
       "order": 41,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -2520,7 +2520,7 @@
       "hint": "区间 DP",
       "categoryId": "dp",
       "order": 42,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -2534,7 +2534,7 @@
       "hint": "序列 DP",
       "categoryId": "dp",
       "order": 43,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -2548,7 +2548,7 @@
       "hint": "最多 2 次",
       "categoryId": "dp",
       "order": 44,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -2562,7 +2562,7 @@
       "hint": "最多 k 次（通式）",
       "categoryId": "dp",
       "order": 45,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -2576,7 +2576,7 @@
       "hint": "区间 DP 封神",
       "categoryId": "dp",
       "order": 46,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -2590,7 +2590,7 @@
       "hint": "三状态树形 DP",
       "categoryId": "dp",
       "order": 47,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -2604,7 +2604,7 @@
       "hint": "计数 DP",
       "categoryId": "dp",
       "order": 48,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -2618,7 +2618,7 @@
       "hint": "逆向 DP",
       "categoryId": "dp",
       "order": 49,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -2632,7 +2632,7 @@
       "hint": "区间 DP",
       "categoryId": "dp",
       "order": 50,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -2646,7 +2646,7 @@
       "hint": "哈希表",
       "categoryId": "misc",
       "order": 1,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -2660,7 +2660,7 @@
       "hint": "二分模板",
       "categoryId": "misc",
       "order": 2,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -2674,7 +2674,7 @@
       "hint": "小根堆维护 K",
       "categoryId": "misc",
       "order": 3,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -2688,7 +2688,7 @@
       "hint": "二分找边界",
       "categoryId": "misc",
       "order": 4,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -2702,7 +2702,7 @@
       "hint": "旋转数组二分",
       "categoryId": "misc",
       "order": 5,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -2716,7 +2716,7 @@
       "hint": "维护最远可达",
       "categoryId": "misc",
       "order": 6,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -2730,7 +2730,7 @@
       "hint": "最少跳跃次数",
       "categoryId": "misc",
       "order": 7,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -2744,7 +2744,7 @@
       "hint": "区间调度贪心",
       "categoryId": "misc",
       "order": 8,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -2758,7 +2758,7 @@
       "hint": "DFS/BFS/并查集",
       "categoryId": "misc",
       "order": 9,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -2772,7 +2772,7 @@
       "hint": "拓扑排序 / 环检测",
       "categoryId": "misc",
       "order": 10,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -2786,7 +2786,7 @@
       "hint": "前缀和 + 哈希",
       "categoryId": "misc",
       "order": 11,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -2800,7 +2800,7 @@
       "hint": "哈希 + 双向链表",
       "categoryId": "misc",
       "order": 12,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -2814,7 +2814,7 @@
       "hint": "旋转二分",
       "categoryId": "misc",
       "order": 13,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -2828,7 +2828,7 @@
       "hint": "二分爬坡",
       "categoryId": "misc",
       "order": 14,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -2842,7 +2842,7 @@
       "hint": "贪心 / 总和判定",
       "categoryId": "misc",
       "order": 15,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -2856,7 +2856,7 @@
       "hint": "拓扑排序求顺序",
       "categoryId": "misc",
       "order": 16,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -2870,7 +2870,7 @@
       "hint": "并查集",
       "categoryId": "misc",
       "order": 17,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -2884,7 +2884,7 @@
       "hint": "堆 / 二分",
       "categoryId": "misc",
       "order": 18,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -2898,7 +2898,7 @@
       "hint": "二分封神题",
       "categoryId": "misc",
       "order": 19,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "base",
@@ -2912,7 +2912,7 @@
       "hint": "两次遍历贪心",
       "categoryId": "misc",
       "order": 20,
-      "hasSolution": false
+      "hasSolution": true
     }
   ],
   "dayPlan": [
@@ -2987,5 +2987,5 @@
       "count": "—"
     }
   ],
-  "generatedAt": "2026-08-23T13:36:39.933Z"
+  "generatedAt": "2026-08-24T14:09:29.794Z"
 }

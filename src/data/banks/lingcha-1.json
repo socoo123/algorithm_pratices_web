@@ -981,7 +981,7 @@
       "hint": "1161分 · §0.1 枚举右，维护左",
       "categoryId": "data-structure",
       "order": 1,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -995,7 +995,7 @@
       "hint": "1168分 · §0.1 枚举右，维护左",
       "categoryId": "data-structure",
       "order": 2,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -1037,7 +1037,7 @@
       "hint": "1209分 · §1.1 基础",
       "categoryId": "data-structure",
       "order": 5,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -1135,7 +1135,7 @@
       "hint": "1548分 · §0.3 遍历对角线",
       "categoryId": "data-structure",
       "order": 12,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -1163,7 +1163,7 @@
       "hint": "1583分 · §0.2 枚举中间",
       "categoryId": "data-structure",
       "order": 14,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -1275,7 +1275,7 @@
       "hint": "1611分 · §1.2 前缀和与哈希表",
       "categoryId": "data-structure",
       "order": 22,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -1289,7 +1289,7 @@
       "hint": "1622分 · §0.1 枚举右，维护左",
       "categoryId": "data-structure",
       "order": 23,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -1317,7 +1317,7 @@
       "hint": "1644分 · §0.1 枚举右，维护左",
       "categoryId": "data-structure",
       "order": 25,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -1359,7 +1359,7 @@
       "hint": "1671分 · §1.6 二维前缀和",
       "categoryId": "data-structure",
       "order": 28,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -1401,7 +1401,7 @@
       "hint": "1676分 · §1.2 前缀和与哈希表",
       "categoryId": "data-structure",
       "order": 31,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -1485,7 +1485,7 @@
       "hint": "1697分 · §1.2 前缀和与哈希表",
       "categoryId": "data-structure",
       "order": 37,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -1541,7 +1541,7 @@
       "hint": "1793分 · §1.3 距离和",
       "categoryId": "data-structure",
       "order": 41,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -1555,7 +1555,7 @@
       "hint": "1848分 · §1.4 状态压缩前缀和",
       "categoryId": "data-structure",
       "order": 42,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -1653,7 +1653,7 @@
       "hint": "1557分 · §1.1 基础",
       "categoryId": "data-structure",
       "order": 49,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -1695,7 +1695,7 @@
       "hint": "1624分 · §0.1 枚举右，维护左",
       "categoryId": "data-structure",
       "order": 52,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -4452,5 +4452,5 @@
       "count": "—"
     }
   ],
-  "generatedAt": "2026-08-27T14:22:39.104Z"
+  "generatedAt": "2026-08-27T15:09:52.047Z"
 }

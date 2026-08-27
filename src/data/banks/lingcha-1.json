@@ -757,7 +757,7 @@
       "hint": "1697分 · §2.3 二分间接值",
       "categoryId": "binary-search",
       "order": 10,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -771,7 +771,7 @@
       "hint": "1702分 · §1.2 进阶",
       "categoryId": "binary-search",
       "order": 11,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -785,7 +785,7 @@
       "hint": "1724分 · §1.2 进阶",
       "categoryId": "binary-search",
       "order": 12,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -813,7 +813,7 @@
       "hint": "1768分 · §2.5 最大化最小值",
       "categoryId": "binary-search",
       "order": 14,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -827,7 +827,7 @@
       "hint": "1771分 · §1.2 进阶",
       "categoryId": "binary-search",
       "order": 15,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -841,7 +841,7 @@
       "hint": "1773分 · §2.2 求最大",
       "categoryId": "binary-search",
       "order": 16,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -855,7 +855,7 @@
       "hint": "1843分 · §2.2 求最大",
       "categoryId": "binary-search",
       "order": 17,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -869,7 +869,7 @@
       "hint": "1850分 · §2.1 求最小",
       "categoryId": "binary-search",
       "order": 18,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -883,7 +883,7 @@
       "hint": "1886分 · §2.4 最小化最大值",
       "categoryId": "binary-search",
       "order": 19,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -897,7 +897,7 @@
       "hint": "2039分 · §2.6 第 K 小/大",
       "categoryId": "binary-search",
       "order": 20,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -911,7 +911,7 @@
       "hint": "1531分 · §2.1 求最小",
       "categoryId": "binary-search",
       "order": 21,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -925,7 +925,7 @@
       "hint": "1735分 · §2.1 求最小",
       "categoryId": "binary-search",
       "order": 22,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -939,7 +939,7 @@
       "hint": "1851分 · §1.2 进阶",
       "categoryId": "binary-search",
       "order": 23,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -953,7 +953,7 @@
       "hint": "1827分 · 四、其他",
       "categoryId": "binary-search",
       "order": 24,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -967,7 +967,7 @@
       "hint": "1897分 · §2.6 第 K 小/大",
       "categoryId": "binary-search",
       "order": 25,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -4452,5 +4452,5 @@
       "count": "—"
     }
   ],
-  "generatedAt": "2026-08-27T01:22:04.412Z"
+  "generatedAt": "2026-08-27T14:22:39.104Z"
 }

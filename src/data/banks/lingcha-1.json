@@ -1009,7 +1009,7 @@
       "hint": "1173分 · §5.1 基础",
       "categoryId": "data-structure",
       "order": 3,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -1023,7 +1023,7 @@
       "hint": "1178分 · §5.1 基础",
       "categoryId": "data-structure",
       "order": 4,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -1247,7 +1247,7 @@
       "hint": "无评分 · §5.7 对顶堆（动态第 K 小/大）",
       "categoryId": "data-structure",
       "order": 20,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -1261,7 +1261,7 @@
       "hint": "1610分 · §4.2 设计",
       "categoryId": "data-structure",
       "order": 21,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -1373,7 +1373,7 @@
       "hint": "1672分 · §4.4 单调队列",
       "categoryId": "data-structure",
       "order": 29,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -1415,7 +1415,7 @@
       "hint": "1681分 · §5.4 重排元素",
       "categoryId": "data-structure",
       "order": 32,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -1429,7 +1429,7 @@
       "hint": "1686分 · §4.1 基础",
       "categoryId": "data-structure",
       "order": 33,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -1443,7 +1443,7 @@
       "hint": "1686分 · §5.1 基础",
       "categoryId": "data-structure",
       "order": 34,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -1471,7 +1471,7 @@
       "hint": "1695分 · §5.1 基础",
       "categoryId": "data-structure",
       "order": 36,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -1513,7 +1513,7 @@
       "hint": "1702分 · §5.4 重排元素",
       "categoryId": "data-structure",
       "order": 39,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -1583,7 +1583,7 @@
       "hint": "1962分 · §5.5 反悔堆",
       "categoryId": "data-structure",
       "order": 44,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -1625,7 +1625,7 @@
       "hint": "2169分 · §5.3 第 K 小/大",
       "categoryId": "data-structure",
       "order": 47,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -1751,7 +1751,7 @@
       "hint": "1700分 · §5.6 懒删除堆",
       "categoryId": "data-structure",
       "order": 56,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -1765,7 +1765,7 @@
       "hint": "1823分 · §5.2 进阶",
       "categoryId": "data-structure",
       "order": 57,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -1807,7 +1807,7 @@
       "hint": "1822分 · §5.2 进阶",
       "categoryId": "data-structure",
       "order": 60,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -4452,5 +4452,5 @@
       "count": "—"
     }
   ],
-  "generatedAt": "2026-08-28T01:12:16.137Z"
+  "generatedAt": "2026-08-28T14:38:51.498Z"
 }

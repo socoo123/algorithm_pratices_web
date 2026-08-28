@@ -1051,7 +1051,7 @@
       "hint": "无评分 · Part A",
       "categoryId": "data-structure",
       "order": 6,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -1107,7 +1107,7 @@
       "hint": "1408分 · §3.5 表达式解析",
       "categoryId": "data-structure",
       "order": 10,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -1121,7 +1121,7 @@
       "hint": "1542分 · §3.3 邻项消除",
       "categoryId": "data-structure",
       "order": 11,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -1149,7 +1149,7 @@
       "hint": "1583分 · §2.2 二维差分",
       "categoryId": "data-structure",
       "order": 13,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -1345,7 +1345,7 @@
       "hint": "1657分 · §3.4 合法括号字符串（RBS）",
       "categoryId": "data-structure",
       "order": 27,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -1457,7 +1457,7 @@
       "hint": "1689分 · §3.4 合法括号字符串（RBS）",
       "categoryId": "data-structure",
       "order": 35,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -1499,7 +1499,7 @@
       "hint": "1700分 · §3.4 合法括号字符串（RBS）",
       "categoryId": "data-structure",
       "order": 38,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -1527,7 +1527,7 @@
       "hint": "1772分 · §3.2 进阶",
       "categoryId": "data-structure",
       "order": 40,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -1667,7 +1667,7 @@
       "hint": "1578分 · §3.1 基础",
       "categoryId": "data-structure",
       "order": 50,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -1709,7 +1709,7 @@
       "hint": "1648分 · §1.5 进阶",
       "categoryId": "data-structure",
       "order": 53,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -1723,7 +1723,7 @@
       "hint": "1662分 · §2.1 一维差分",
       "categoryId": "data-structure",
       "order": 54,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -1821,7 +1821,7 @@
       "hint": "1835分 · §2.1 一维差分",
       "categoryId": "data-structure",
       "order": 61,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -1835,7 +1835,7 @@
       "hint": "1872分 · §2.1 一维差分",
       "categoryId": "data-structure",
       "order": 62,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -1849,7 +1849,7 @@
       "hint": "1880分 · §3.5 表达式解析",
       "categoryId": "data-structure",
       "order": 63,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -1863,7 +1863,7 @@
       "hint": "1912分 · §3.6 对顶栈",
       "categoryId": "data-structure",
       "order": 64,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -4452,5 +4452,5 @@
       "count": "—"
     }
   ],
-  "generatedAt": "2026-08-27T15:09:52.047Z"
+  "generatedAt": "2026-08-28T01:12:16.137Z"
 }

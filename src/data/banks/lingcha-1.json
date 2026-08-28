@@ -1065,7 +1065,7 @@
       "hint": "无评分 · §6.1 基础",
       "categoryId": "data-structure",
       "order": 7,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -1079,7 +1079,7 @@
       "hint": "无评分 · §7.6 带权并查集（边权并查集）",
       "categoryId": "data-structure",
       "order": 8,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -1093,7 +1093,7 @@
       "hint": "1638分 · §7.1 基础",
       "categoryId": "data-structure",
       "order": 9,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -1177,7 +1177,7 @@
       "hint": "无评分 · §6.2 进阶",
       "categoryId": "data-structure",
       "order": 15,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -1303,7 +1303,7 @@
       "hint": "1635分 · §7.2 进阶",
       "categoryId": "data-structure",
       "order": 24,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -1331,7 +1331,7 @@
       "hint": "1652分 · 专题：离线算法",
       "categoryId": "data-structure",
       "order": 26,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -1569,7 +1569,7 @@
       "hint": "1928分 · §7.4 数组上的并查集",
       "categoryId": "data-structure",
       "order": 43,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -1597,7 +1597,7 @@
       "hint": "2000分 · §6.4 0-1 字典树（异或字典树）",
       "categoryId": "data-structure",
       "order": 45,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -1611,7 +1611,7 @@
       "hint": "2035分 · §7.3 中介并查集",
       "categoryId": "data-structure",
       "order": 46,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -1793,7 +1793,7 @@
       "hint": "1725分 · §6.1 基础",
       "categoryId": "data-structure",
       "order": 59,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -1877,7 +1877,7 @@
       "hint": "947分 · §7.3 中介并查集",
       "categoryId": "data-structure",
       "order": 65,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -4452,5 +4452,5 @@
       "count": "—"
     }
   ],
-  "generatedAt": "2026-08-28T14:38:51.498Z"
+  "generatedAt": "2026-08-28T15:49:52.960Z"
 }

@@ -2843,7 +2843,7 @@
       "hint": "1148分 · §5.2 脑筋急转弯",
       "categoryId": "greedy",
       "order": 1,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -2857,7 +2857,7 @@
       "hint": "1167分 · 六、构造题",
       "categoryId": "greedy",
       "order": 2,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -2871,7 +2871,7 @@
       "hint": "1194分 · §3.1 字典序最小/最大",
       "categoryId": "greedy",
       "order": 3,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -2885,7 +2885,7 @@
       "hint": "1198分 · §1.1 从最小/最大开始贪心",
       "categoryId": "greedy",
       "order": 4,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -2927,7 +2927,7 @@
       "hint": "1569分 · §1.2 单序列配对",
       "categoryId": "greedy",
       "order": 7,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -2941,7 +2941,7 @@
       "hint": "1605分 · §1.5 划分型贪心",
       "categoryId": "greedy",
       "order": 8,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -2983,7 +2983,7 @@
       "hint": "1636分 · §3.2 回文串贪心",
       "categoryId": "greedy",
       "order": 11,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -2997,7 +2997,7 @@
       "hint": "1642分 · §3.1 字典序最小/最大",
       "categoryId": "greedy",
       "order": 12,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -3011,7 +3011,7 @@
       "hint": "1648分 · §1.3 双序列配对",
       "categoryId": "greedy",
       "order": 13,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -3025,7 +3025,7 @@
       "hint": "1649分 · §1.4 从最左/最右开始贪心",
       "categoryId": "greedy",
       "order": 14,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -3039,7 +3039,7 @@
       "hint": "1653分 · §1.1 从最小/最大开始贪心",
       "categoryId": "greedy",
       "order": 15,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -3123,7 +3123,7 @@
       "hint": "1748分 · §1.6 先枚举，再贪心",
       "categoryId": "greedy",
       "order": 21,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -3137,7 +3137,7 @@
       "hint": "1750分 · §1.8 相邻不同",
       "categoryId": "greedy",
       "order": 22,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -3179,7 +3179,7 @@
       "hint": "2424分 · §1.9 反悔贪心",
       "categoryId": "greedy",
       "order": 25,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -3221,7 +3221,7 @@
       "hint": "1704分 · §1.7 交换论证法",
       "categoryId": "greedy",
       "order": 28,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -4452,5 +4452,5 @@
       "count": "—"
     }
   ],
-  "generatedAt": "2026-08-28T17:09:19.695Z"
+  "generatedAt": "2026-08-29T02:44:05.407Z"
 }

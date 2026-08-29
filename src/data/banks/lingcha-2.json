@@ -2392,7 +2392,7 @@
       "hint": "1855分 · §3.2 全源最短路：Floyd 算法",
       "categoryId": "graph",
       "order": 33,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -2406,7 +2406,7 @@
       "hint": "无评分 · §1.3 图论建模 + BFS 最短路",
       "categoryId": "graph",
       "order": 34,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -2420,7 +2420,7 @@
       "hint": "1964分 · §1.2 广度优先搜索（BFS）",
       "categoryId": "graph",
       "order": 35,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -2434,7 +2434,7 @@
       "hint": "1810分 · §1.3 图论建模 + BFS 最短路",
       "categoryId": "graph",
       "order": 36,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -2448,7 +2448,7 @@
       "hint": "1811分 · §1.3 图论建模 + BFS 最短路",
       "categoryId": "graph",
       "order": 37,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -2462,7 +2462,7 @@
       "hint": "316分 · 四、最小字典序",
       "categoryId": "monotonic-stack",
       "order": 1,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -2476,7 +2476,7 @@
       "hint": "无评分 · §1.2 进阶",
       "categoryId": "monotonic-stack",
       "order": 2,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -2490,7 +2490,7 @@
       "hint": "无评分 · §1.1 基础",
       "categoryId": "monotonic-stack",
       "order": 3,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -2504,7 +2504,7 @@
       "hint": "无评分 · §1.2 进阶",
       "categoryId": "monotonic-stack",
       "order": 4,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -2518,7 +2518,7 @@
       "hint": "无评分 · 二、矩形",
       "categoryId": "monotonic-stack",
       "order": 5,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -2532,7 +2532,7 @@
       "hint": "无评分 · 二、矩形",
       "categoryId": "monotonic-stack",
       "order": 6,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -2546,7 +2546,7 @@
       "hint": "1908分 · §1.2 进阶",
       "categoryId": "monotonic-stack",
       "order": 7,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -2560,7 +2560,7 @@
       "hint": "1927分 · 二、矩形",
       "categoryId": "monotonic-stack",
       "order": 8,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -2574,7 +2574,7 @@
       "hint": "无评分 · 四、最小字典序",
       "categoryId": "monotonic-stack",
       "order": 9,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -2588,7 +2588,7 @@
       "hint": "无评分 · §1.2 进阶",
       "categoryId": "monotonic-stack",
       "order": 10,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -2602,7 +2602,7 @@
       "hint": "1220分 · §1.5 划分型贪心",
       "categoryId": "greedy",
       "order": 1,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -2616,7 +2616,7 @@
       "hint": "1243分 · §3.1 字典序最小/最大",
       "categoryId": "greedy",
       "order": 2,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -2630,7 +2630,7 @@
       "hint": "1249分 · §5.2 脑筋急转弯",
       "categoryId": "greedy",
       "order": 3,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -2644,7 +2644,7 @@
       "hint": "1250分 · §3.2 回文串贪心",
       "categoryId": "greedy",
       "order": 4,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -2658,7 +2658,7 @@
       "hint": "1261分 · §1.2 单序列配对",
       "categoryId": "greedy",
       "order": 5,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -4458,5 +4458,5 @@
       "count": "—"
     }
   ],
-  "generatedAt": "2026-08-29T08:25:06.499Z"
+  "generatedAt": "2026-08-29T08:44:37.572Z"
 }

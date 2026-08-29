@@ -1832,7 +1832,7 @@
       "hint": "无评分 · 二、网格图 BFS",
       "categoryId": "grid",
       "order": 6,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -1846,7 +1846,7 @@
       "hint": "无评分 · 一、网格图 DFS",
       "categoryId": "grid",
       "order": 7,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -1860,7 +1860,7 @@
       "hint": "无评分 · 三、网格图 0-1 BFS",
       "categoryId": "grid",
       "order": 8,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -1874,7 +1874,7 @@
       "hint": "无评分 · 三、网格图 0-1 BFS",
       "categoryId": "grid",
       "order": 9,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -1888,7 +1888,7 @@
       "hint": "2154分 · 二、网格图 BFS",
       "categoryId": "grid",
       "order": 10,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -1902,7 +1902,7 @@
       "hint": "2369分 · 五、综合应用",
       "categoryId": "grid",
       "order": 11,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -1916,7 +1916,7 @@
       "hint": "2036分 · 三、网格图 0-1 BFS",
       "categoryId": "grid",
       "order": 12,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -1930,7 +1930,7 @@
       "hint": "无评分 · 五、综合应用",
       "categoryId": "grid",
       "order": 13,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -1944,7 +1944,7 @@
       "hint": "无评分 · §1.1 深度优先搜索（DFS）",
       "categoryId": "graph",
       "order": 1,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -1958,7 +1958,7 @@
       "hint": "无评分 · §3.1 单源最短路：Dijkstra 算法",
       "categoryId": "graph",
       "order": 2,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -1972,7 +1972,7 @@
       "hint": "1625分 · 七、二分图染色",
       "categoryId": "graph",
       "order": 3,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -1986,7 +1986,7 @@
       "hint": "1633分 · §1.1 深度优先搜索（DFS）",
       "categoryId": "graph",
       "order": 4,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -2000,7 +2000,7 @@
       "hint": "1846分 · §3.1 单源最短路：Dijkstra 算法",
       "categoryId": "graph",
       "order": 5,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -2014,7 +2014,7 @@
       "hint": "1858分 · 四、最小生成树",
       "categoryId": "graph",
       "order": 6,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -2028,7 +2028,7 @@
       "hint": "1878分 · §1.3 图论建模 + BFS 最短路",
       "categoryId": "graph",
       "order": 7,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -2042,7 +2042,7 @@
       "hint": "1928分 · §3.1 单源最短路：Dijkstra 算法",
       "categoryId": "graph",
       "order": 8,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -2056,7 +2056,7 @@
       "hint": "1383分 · §1.1 深度优先搜索（DFS）",
       "categoryId": "graph",
       "order": 9,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -2070,7 +2070,7 @@
       "hint": "1397分 · §1.1 深度优先搜索（DFS）",
       "categoryId": "graph",
       "order": 10,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -2084,7 +2084,7 @@
       "hint": "1412分 · §1.1 深度优先搜索（DFS）",
       "categoryId": "graph",
       "order": 11,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -2098,7 +2098,7 @@
       "hint": "1568分 · §1.2 广度优先搜索（BFS）",
       "categoryId": "graph",
       "order": 12,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -4458,5 +4458,5 @@
       "count": "—"
     }
   ],
-  "generatedAt": "2026-08-29T07:33:24.581Z"
+  "generatedAt": "2026-08-29T08:08:44.605Z"
 }

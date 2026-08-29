@@ -1272,7 +1272,7 @@
       "hint": "1496分 · §1.3 距离和",
       "categoryId": "data-structure",
       "order": 36,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -1286,7 +1286,7 @@
       "hint": "无评分 · §3.4 合法括号字符串（RBS）",
       "categoryId": "data-structure",
       "order": 37,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -1300,7 +1300,7 @@
       "hint": "无评分 · §6.3 字典树优化 DP",
       "categoryId": "data-structure",
       "order": 38,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -1314,7 +1314,7 @@
       "hint": "无评分 · §6.2 进阶",
       "categoryId": "data-structure",
       "order": 39,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -1328,7 +1328,7 @@
       "hint": "无评分 · §3.5 表达式解析",
       "categoryId": "data-structure",
       "order": 40,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -1342,7 +1342,7 @@
       "hint": "无评分 · §2.2 自顶向下 DFS（先序遍历）",
       "categoryId": "linked-tree-backtrack",
       "order": 1,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -1356,7 +1356,7 @@
       "hint": "无评分 · §1.2 删除节点",
       "categoryId": "linked-tree-backtrack",
       "order": 2,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -1370,7 +1370,7 @@
       "hint": "无评分 · §2.7 回溯",
       "categoryId": "linked-tree-backtrack",
       "order": 3,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -1384,7 +1384,7 @@
       "hint": "无评分 · §2.1 遍历二叉树",
       "categoryId": "linked-tree-backtrack",
       "order": 4,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -1398,7 +1398,7 @@
       "hint": "无评分 · §1.6 快慢指针",
       "categoryId": "linked-tree-backtrack",
       "order": 5,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -1412,7 +1412,7 @@
       "hint": "无评分 · §2.13 二叉树 BFS",
       "categoryId": "linked-tree-backtrack",
       "order": 6,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -1426,7 +1426,7 @@
       "hint": "1732分 · §2.10 创建二叉树",
       "categoryId": "linked-tree-backtrack",
       "order": 7,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -1440,7 +1440,7 @@
       "hint": "538分 · §2.5 有递有归",
       "categoryId": "linked-tree-backtrack",
       "order": 8,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -1454,7 +1454,7 @@
       "hint": "1250分 · §2.13 二叉树 BFS",
       "categoryId": "linked-tree-backtrack",
       "order": 9,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -1468,7 +1468,7 @@
       "hint": "1353分 · §4.7 搜索",
       "categoryId": "linked-tree-backtrack",
       "order": 10,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -1482,7 +1482,7 @@
       "hint": "1360分 · §2.2 自顶向下 DFS（先序遍历）",
       "categoryId": "linked-tree-backtrack",
       "order": 11,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -1496,7 +1496,7 @@
       "hint": "1374分 · §2.13 二叉树 BFS",
       "categoryId": "linked-tree-backtrack",
       "order": 12,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -1510,7 +1510,7 @@
       "hint": "1375分 · §2.5 有递有归",
       "categoryId": "linked-tree-backtrack",
       "order": 13,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -1524,7 +1524,7 @@
       "hint": "1380分 · §2.4 自底向上 DFS：删点",
       "categoryId": "linked-tree-backtrack",
       "order": 14,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -1538,7 +1538,7 @@
       "hint": "1388分 · §2.13 二叉树 BFS",
       "categoryId": "linked-tree-backtrack",
       "order": 15,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -4458,5 +4458,5 @@
       "count": "—"
     }
   ],
-  "generatedAt": "2026-08-29T06:19:59.024Z"
+  "generatedAt": "2026-08-29T07:01:29.184Z"
 }

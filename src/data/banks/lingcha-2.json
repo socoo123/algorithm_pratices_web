@@ -992,7 +992,7 @@
       "hint": "1353分 · §1.1 基础",
       "categoryId": "data-structure",
       "order": 16,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -1006,7 +1006,7 @@
       "hint": "1365分 · §0.1 枚举右，维护左",
       "categoryId": "data-structure",
       "order": 17,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -1020,7 +1020,7 @@
       "hint": "1375分 · §5.1 基础",
       "categoryId": "data-structure",
       "order": 18,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -1034,7 +1034,7 @@
       "hint": "1386分 · §5.1 基础",
       "categoryId": "data-structure",
       "order": 19,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -1048,7 +1048,7 @@
       "hint": "1400分 · §5.1 基础",
       "categoryId": "data-structure",
       "order": 20,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -1062,7 +1062,7 @@
       "hint": "1419分 · §5.1 基础",
       "categoryId": "data-structure",
       "order": 21,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -1076,7 +1076,7 @@
       "hint": "1420分 · §5.1 基础",
       "categoryId": "data-structure",
       "order": 22,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -1090,7 +1090,7 @@
       "hint": "1427分 · §3.3 邻项消除",
       "categoryId": "data-structure",
       "order": 23,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -1104,7 +1104,7 @@
       "hint": "1429分 · §5.1 基础",
       "categoryId": "data-structure",
       "order": 24,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -1118,7 +1118,7 @@
       "hint": "1429分 · §0.3 遍历对角线",
       "categoryId": "data-structure",
       "order": 25,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -1132,7 +1132,7 @@
       "hint": "1435分 · §1.1 基础",
       "categoryId": "data-structure",
       "order": 26,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -1146,7 +1146,7 @@
       "hint": "1436分 · §0.1 枚举右，维护左",
       "categoryId": "data-structure",
       "order": 27,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -1160,7 +1160,7 @@
       "hint": "1438分 · §4.4 单调队列",
       "categoryId": "data-structure",
       "order": 28,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -1174,7 +1174,7 @@
       "hint": "1441分 · §2.1 一维差分",
       "categoryId": "data-structure",
       "order": 29,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -1188,7 +1188,7 @@
       "hint": "1454分 · §3.1 基础",
       "categoryId": "data-structure",
       "order": 30,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -1202,7 +1202,7 @@
       "hint": "1460分 · §1.1 基础",
       "categoryId": "data-structure",
       "order": 31,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -1216,7 +1216,7 @@
       "hint": "1474分 · §5.4 重排元素",
       "categoryId": "data-structure",
       "order": 32,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -1230,7 +1230,7 @@
       "hint": "1479分 · §0.2 枚举中间",
       "categoryId": "data-structure",
       "order": 33,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -1244,7 +1244,7 @@
       "hint": "1484分 · §1.6 二维前缀和",
       "categoryId": "data-structure",
       "order": 34,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -1258,7 +1258,7 @@
       "hint": "1486分 · §3.4 合法括号字符串（RBS）",
       "categoryId": "data-structure",
       "order": 35,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -4458,5 +4458,5 @@
       "count": "—"
     }
   ],
-  "generatedAt": "2026-08-29T05:54:53.490Z"
+  "generatedAt": "2026-08-29T06:19:59.024Z"
 }

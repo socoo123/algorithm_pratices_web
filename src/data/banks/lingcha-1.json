@@ -1191,7 +1191,7 @@
       "hint": "无评分 · §8.1 树状数组",
       "categoryId": "data-structure",
       "order": 16,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -1205,7 +1205,7 @@
       "hint": "无评分 · §8.5 动态开点线段树",
       "categoryId": "data-structure",
       "order": 17,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -1219,7 +1219,7 @@
       "hint": "无评分 · §8.2 逆序对",
       "categoryId": "data-structure",
       "order": 18,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -1233,7 +1233,7 @@
       "hint": "无评分 · §8.4 Lazy 线段树（有区间更新）",
       "categoryId": "data-structure",
       "order": 19,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -1387,7 +1387,7 @@
       "hint": "1673分 · §1.6 二维前缀和",
       "categoryId": "data-structure",
       "order": 30,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -1639,7 +1639,7 @@
       "hint": "2557分 · §10.4 其他",
       "categoryId": "data-structure",
       "order": 48,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -1681,7 +1681,7 @@
       "hint": "无评分 · §8.7 ST 表（Sparse Table）",
       "categoryId": "data-structure",
       "order": 51,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -1737,7 +1737,7 @@
       "hint": "1669分 · §0.1 枚举右，维护左",
       "categoryId": "data-structure",
       "order": 55,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -1779,7 +1779,7 @@
       "hint": "2178分 · §8.3 线段树（无区间更新）",
       "categoryId": "data-structure",
       "order": 58,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -4452,5 +4452,5 @@
       "count": "—"
     }
   ],
-  "generatedAt": "2026-08-28T15:49:52.960Z"
+  "generatedAt": "2026-08-28T17:09:19.695Z"
 }

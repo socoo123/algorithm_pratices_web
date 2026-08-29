@@ -1552,7 +1552,7 @@
       "hint": "1407分 · §2.4 自底向上 DFS：删点",
       "categoryId": "linked-tree-backtrack",
       "order": 16,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -1566,7 +1566,7 @@
       "hint": "1427分 · §2.2 自顶向下 DFS（先序遍历）",
       "categoryId": "linked-tree-backtrack",
       "order": 17,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -1580,7 +1580,7 @@
       "hint": "1429分 · §2.2 自顶向下 DFS（先序遍历）",
       "categoryId": "linked-tree-backtrack",
       "order": 18,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -1594,7 +1594,7 @@
       "hint": "1431分 · §2.13 二叉树 BFS",
       "categoryId": "linked-tree-backtrack",
       "order": 19,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -1608,7 +1608,7 @@
       "hint": "1433分 · §4.7 搜索",
       "categoryId": "linked-tree-backtrack",
       "order": 20,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -1622,7 +1622,7 @@
       "hint": "1438分 · §2.13 二叉树 BFS",
       "categoryId": "linked-tree-backtrack",
       "order": 21,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -1636,7 +1636,7 @@
       "hint": "1440分 · §2.16 其他",
       "categoryId": "linked-tree-backtrack",
       "order": 22,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -1650,7 +1650,7 @@
       "hint": "1446分 · §2.2 自顶向下 DFS（先序遍历）",
       "categoryId": "linked-tree-backtrack",
       "order": 23,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -1664,7 +1664,7 @@
       "hint": "1473分 · §2.3 自底向上 DFS（后序遍历）",
       "categoryId": "linked-tree-backtrack",
       "order": 24,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -1678,7 +1678,7 @@
       "hint": "1477分 · §3.1 遍历",
       "categoryId": "linked-tree-backtrack",
       "order": 25,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -1692,7 +1692,7 @@
       "hint": "1498分 · §2.10 创建二叉树",
       "categoryId": "linked-tree-backtrack",
       "order": 26,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -1706,7 +1706,7 @@
       "hint": "1545分 · §2.16 其他",
       "categoryId": "linked-tree-backtrack",
       "order": 27,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -1720,7 +1720,7 @@
       "hint": "无评分 · §4.4 组合型回溯",
       "categoryId": "linked-tree-backtrack",
       "order": 28,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -1734,7 +1734,7 @@
       "hint": "无评分 · §1.10 综合应用",
       "categoryId": "linked-tree-backtrack",
       "order": 29,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -1748,7 +1748,7 @@
       "hint": "1882分 · §4.2 子集型回溯",
       "categoryId": "linked-tree-backtrack",
       "order": 30,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -1762,7 +1762,7 @@
       "hint": "无评分 · 一、网格图 DFS",
       "categoryId": "grid",
       "order": 1,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -1776,7 +1776,7 @@
       "hint": "无评分 · 一、网格图 DFS",
       "categoryId": "grid",
       "order": 2,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -1790,7 +1790,7 @@
       "hint": "无评分 · 一、网格图 DFS",
       "categoryId": "grid",
       "order": 3,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -1804,7 +1804,7 @@
       "hint": "无评分 · 二、网格图 BFS",
       "categoryId": "grid",
       "order": 4,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -1818,7 +1818,7 @@
       "hint": "无评分 · 一、网格图 DFS",
       "categoryId": "grid",
       "order": 5,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -4458,5 +4458,5 @@
       "count": "—"
     }
   ],
-  "generatedAt": "2026-08-29T07:01:29.184Z"
+  "generatedAt": "2026-08-29T07:33:24.581Z"
 }

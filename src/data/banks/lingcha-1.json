@@ -2899,7 +2899,7 @@
       "hint": "1522分 · §4.1 基础",
       "categoryId": "greedy",
       "order": 5,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -2913,7 +2913,7 @@
       "hint": "1534分 · §4.3 排序不等式",
       "categoryId": "greedy",
       "order": 6,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -2955,7 +2955,7 @@
       "hint": "1605分 · §4.7 其他数学贪心",
       "categoryId": "greedy",
       "order": 9,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -2969,7 +2969,7 @@
       "hint": "1632分 · §2.5 合并区间",
       "categoryId": "greedy",
       "order": 10,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -3053,7 +3053,7 @@
       "hint": "1672分 · §4.5 中位数贪心",
       "categoryId": "greedy",
       "order": 16,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -3067,7 +3067,7 @@
       "hint": "1700分 · §2.3 区间选点",
       "categoryId": "greedy",
       "order": 17,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -3081,7 +3081,7 @@
       "hint": "1710分 · §4.2 乘积贪心",
       "categoryId": "greedy",
       "order": 18,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -3095,7 +3095,7 @@
       "hint": "1713分 · §2.2 区间分组",
       "categoryId": "greedy",
       "order": 19,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -3109,7 +3109,7 @@
       "hint": "1746分 · §2.4 区间覆盖",
       "categoryId": "greedy",
       "order": 20,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -3151,7 +3151,7 @@
       "hint": "1784分 · §4.6 归纳法",
       "categoryId": "greedy",
       "order": 23,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -3165,7 +3165,7 @@
       "hint": "1883分 · §2.6 其他区间贪心",
       "categoryId": "greedy",
       "order": 24,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -3193,7 +3193,7 @@
       "hint": "1520分 · §2.1 不相交区间",
       "categoryId": "greedy",
       "order": 26,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -3207,7 +3207,7 @@
       "hint": "1537分 · §4.4 均值不等式",
       "categoryId": "greedy",
       "order": 27,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -3235,7 +3235,7 @@
       "hint": "1679分 · §4.3 排序不等式",
       "categoryId": "greedy",
       "order": 29,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -3249,7 +3249,7 @@
       "hint": "1823分 · §3.1 字典序最小/最大",
       "categoryId": "greedy",
       "order": 30,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -4452,5 +4452,5 @@
       "count": "—"
     }
   ],
-  "generatedAt": "2026-08-29T02:44:05.407Z"
+  "generatedAt": "2026-08-29T03:30:15.431Z"
 }

@@ -1,0 +1,14 @@
+---
+description: 灵茶二期题解批次——清空会话后仍按 PLAN 执行下一批
+alwaysApply: true
+---
+
+# 灵茶二期题解批次
+
+用户说「灵茶二期 / lingcha-2 / 二期题解 / 下一批」（未点名一期）时：
+
+1. **先读** `PLAN-lingcha-2.md` 的「〇、当前指针」和该批 4 条 Lane 表，再动手。禁止凭聊天记忆写 slug。
+2. **下一批判定（防漂移）**：`solutions/lingcha-2/` 下 `.md` 个数 ÷ 20 = 已完成批次数；下一批序号 = 该数 + 1。必须与总表第一个 ⬜ 一致，否则先改 PLAN 再开跑。
+3. 按该文件「启动清单」执行：从 `src/data/banks/lingcha-2.json` 现查 20 个 slug → 预查新题题面 → **一条消息拉起 4 个 Task**（`generalPurpose`，各 5 题，任务书用 PLAN 第五节）→ `check_solutions.py` → `npm run data` → **立刻更新 PLAN 指针**（总表 ⬜→✅、「当前指针」、文首「最后更新」）。
+4. Worker 只新建 `solutions/lingcha-2/<slug>.md`；禁改一期 / base；用户说「执行本批」才 commit+push。
+5. 一期走 `PLAN-lingcha-1.md`，两期不要混在同一批。

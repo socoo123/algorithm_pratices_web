@@ -2451,7 +2451,7 @@
       "hint": "892分 · 一、网格图 DFS",
       "categoryId": "grid",
       "order": 1,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -2465,7 +2465,7 @@
       "hint": "1658分 · 二、网格图 BFS",
       "categoryId": "grid",
       "order": 2,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -2493,7 +2493,7 @@
       "hint": "1490分 · 一、网格图 DFS",
       "categoryId": "grid",
       "order": 4,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -2507,7 +2507,7 @@
       "hint": "1579分 · 一、网格图 DFS",
       "categoryId": "grid",
       "order": 5,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -2521,7 +2521,7 @@
       "hint": "1615分 · 一、网格图 DFS",
       "categoryId": "grid",
       "order": 6,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -2549,7 +2549,7 @@
       "hint": "1638分 · 二、网格图 BFS",
       "categoryId": "grid",
       "order": 8,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -2563,7 +2563,7 @@
       "hint": "1659分 · 一、网格图 DFS",
       "categoryId": "grid",
       "order": 9,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -2577,7 +2577,7 @@
       "hint": "1666分 · 二、网格图 BFS",
       "categoryId": "grid",
       "order": 10,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -2591,7 +2591,7 @@
       "hint": "1679分 · 一、网格图 DFS",
       "categoryId": "grid",
       "order": 11,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -2689,7 +2689,7 @@
       "hint": "1461分 · 一、网格图 DFS",
       "categoryId": "grid",
       "order": 18,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -2731,7 +2731,7 @@
       "hint": "1608分 · §1.2 进阶",
       "categoryId": "monotonic-stack",
       "order": 1,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -2745,7 +2745,7 @@
       "hint": "1709分 · §1.1 基础",
       "categoryId": "monotonic-stack",
       "order": 2,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -2759,7 +2759,7 @@
       "hint": "1800分 · 四、最小字典序",
       "categoryId": "monotonic-stack",
       "order": 3,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -2773,7 +2773,7 @@
       "hint": "1802分 · 四、最小字典序",
       "categoryId": "monotonic-stack",
       "order": 4,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -2801,7 +2801,7 @@
       "hint": "1848分 · §1.2 进阶",
       "categoryId": "monotonic-stack",
       "order": 6,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -4452,5 +4452,5 @@
       "count": "—"
     }
   ],
-  "generatedAt": "2026-08-29T03:30:15.431Z"
+  "generatedAt": "2026-08-30T14:16:27.882Z"
 }

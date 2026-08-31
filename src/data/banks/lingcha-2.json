@@ -2952,7 +2952,7 @@
       "hint": "1381分 · §3.1 字典序最小/最大",
       "categoryId": "greedy",
       "order": 26,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -2966,7 +2966,7 @@
       "hint": "1381分 · §1.3 双序列配对",
       "categoryId": "greedy",
       "order": 27,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -2980,7 +2980,7 @@
       "hint": "1384分 · §5.7 分类讨论",
       "categoryId": "greedy",
       "order": 28,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -2994,7 +2994,7 @@
       "hint": "1885分 · §2.4 区间覆盖",
       "categoryId": "greedy",
       "order": 29,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -3008,7 +3008,7 @@
       "hint": "1897分 · §5.4 逆向思维",
       "categoryId": "greedy",
       "order": 30,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -3022,7 +3022,7 @@
       "hint": "无评分 · 九、其他",
       "categoryId": "bit",
       "order": 1,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -3036,7 +3036,7 @@
       "hint": "1234分 · 三、与或（AND/OR）的性质",
       "categoryId": "bit",
       "order": 2,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -3050,7 +3050,7 @@
       "hint": "1247分 · 一、基础题",
       "categoryId": "bit",
       "order": 3,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -3064,7 +3064,7 @@
       "hint": "1258分 · 一、基础题",
       "categoryId": "bit",
       "order": 4,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -3078,7 +3078,7 @@
       "hint": "1367分 · 二、异或（XOR）的性质",
       "categoryId": "bit",
       "order": 5,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -3092,7 +3092,7 @@
       "hint": "1383分 · 三、与或（AND/OR）的性质",
       "categoryId": "bit",
       "order": 6,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -3106,7 +3106,7 @@
       "hint": "1496分 · 三、与或（AND/OR）的性质",
       "categoryId": "bit",
       "order": 7,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -3120,7 +3120,7 @@
       "hint": "1518分 · 二、异或（XOR）的性质",
       "categoryId": "bit",
       "order": 8,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -3134,7 +3134,7 @@
       "hint": "1523分 · 二、异或（XOR）的性质",
       "categoryId": "bit",
       "order": 9,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -3148,7 +3148,7 @@
       "hint": "1525分 · 二、异或（XOR）的性质",
       "categoryId": "bit",
       "order": 10,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -3162,7 +3162,7 @@
       "hint": "无评分 · AND/OR LogTrick",
       "categoryId": "bit",
       "order": 11,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -3176,7 +3176,7 @@
       "hint": "1184分 · §1.6 最大公约数（GCD）",
       "categoryId": "math",
       "order": 1,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -3190,7 +3190,7 @@
       "hint": "1204分 · §1.5 因子",
       "categoryId": "math",
       "order": 2,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -3204,7 +3204,7 @@
       "hint": "1247分 · §5.1 点、线",
       "categoryId": "math",
       "order": 3,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -3218,7 +3218,7 @@
       "hint": "无评分 · §6.1 随机数",
       "categoryId": "math",
       "order": 4,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -4458,5 +4458,5 @@
       "count": "—"
     }
   ],
-  "generatedAt": "2026-08-31T14:11:51.749Z"
+  "generatedAt": "2026-08-31T14:46:21.366Z"
 }

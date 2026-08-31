@@ -2672,7 +2672,7 @@
       "hint": "1443分 · §2.5 合并区间",
       "categoryId": "greedy",
       "order": 6,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -2686,7 +2686,7 @@
       "hint": "无评分 · §5.3 等价转化",
       "categoryId": "greedy",
       "order": 7,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -2700,7 +2700,7 @@
       "hint": "435分 · §2.1 不相交区间",
       "categoryId": "greedy",
       "order": 8,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -2714,7 +2714,7 @@
       "hint": "1249分 · §1.1 从最小/最大开始贪心",
       "categoryId": "greedy",
       "order": 9,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -2728,7 +2728,7 @@
       "hint": "1253分 · §1.1 从最小/最大开始贪心",
       "categoryId": "greedy",
       "order": 10,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -2742,7 +2742,7 @@
       "hint": "1284分 · §1.1 从最小/最大开始贪心",
       "categoryId": "greedy",
       "order": 11,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -2756,7 +2756,7 @@
       "hint": "1301分 · §1.2 单序列配对",
       "categoryId": "greedy",
       "order": 12,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -2770,7 +2770,7 @@
       "hint": "1302分 · 八、其他",
       "categoryId": "greedy",
       "order": 13,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -2784,7 +2784,7 @@
       "hint": "1303分 · §1.1 从最小/最大开始贪心",
       "categoryId": "greedy",
       "order": 14,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -2798,7 +2798,7 @@
       "hint": "1312分 · §1.4 从最左/最右开始贪心",
       "categoryId": "greedy",
       "order": 15,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -2812,7 +2812,7 @@
       "hint": "1326分 · §1.1 从最小/最大开始贪心",
       "categoryId": "greedy",
       "order": 16,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -2826,7 +2826,7 @@
       "hint": "1329分 · §5.2 脑筋急转弯",
       "categoryId": "greedy",
       "order": 17,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -2840,7 +2840,7 @@
       "hint": "1333分 · §1.1 从最小/最大开始贪心",
       "categoryId": "greedy",
       "order": 18,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -2854,7 +2854,7 @@
       "hint": "1335分 · §1.1 从最小/最大开始贪心",
       "categoryId": "greedy",
       "order": 19,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -2868,7 +2868,7 @@
       "hint": "1337分 · §1.1 从最小/最大开始贪心",
       "categoryId": "greedy",
       "order": 20,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -2882,7 +2882,7 @@
       "hint": "1352分 · §1.7 交换论证法",
       "categoryId": "greedy",
       "order": 21,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -2896,7 +2896,7 @@
       "hint": "1355分 · §5.2 脑筋急转弯",
       "categoryId": "greedy",
       "order": 22,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -2910,7 +2910,7 @@
       "hint": "1355分 · §1.5 划分型贪心",
       "categoryId": "greedy",
       "order": 23,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -2924,7 +2924,7 @@
       "hint": "1362分 · §5.7 分类讨论",
       "categoryId": "greedy",
       "order": 24,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -2938,7 +2938,7 @@
       "hint": "1372分 · §4.1 基础",
       "categoryId": "greedy",
       "order": 25,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -4458,5 +4458,5 @@
       "count": "—"
     }
   ],
-  "generatedAt": "2026-08-29T08:44:37.572Z"
+  "generatedAt": "2026-08-31T14:11:51.749Z"
 }

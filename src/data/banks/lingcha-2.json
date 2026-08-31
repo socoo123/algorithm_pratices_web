@@ -3232,7 +3232,7 @@
       "hint": "1232分 · §1.5 因子",
       "categoryId": "math",
       "order": 5,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -3246,7 +3246,7 @@
       "hint": "1294分 · §1.1 判断质数",
       "categoryId": "math",
       "order": 6,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -3260,7 +3260,7 @@
       "hint": "1347分 · §7.8 其他",
       "categoryId": "math",
       "order": 7,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -3274,7 +3274,7 @@
       "hint": "1356分 · §7.8 其他",
       "categoryId": "math",
       "order": 8,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -3288,7 +3288,7 @@
       "hint": "1400分 · §1.8 互质",
       "categoryId": "math",
       "order": 9,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -3302,7 +3302,7 @@
       "hint": "1409分 · §7.8 其他",
       "categoryId": "math",
       "order": 10,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -3316,7 +3316,7 @@
       "hint": "1413分 · §1.3 质因数分解",
       "categoryId": "math",
       "order": 11,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -3330,7 +3330,7 @@
       "hint": "1694分 · §1.5 因子",
       "categoryId": "math",
       "order": 12,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -3344,7 +3344,7 @@
       "hint": "无评分 · 一、KMP（前缀的后缀）",
       "categoryId": "string",
       "order": 1,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -3358,7 +3358,7 @@
       "hint": "无评分 · 四、字符串哈希",
       "categoryId": "string",
       "order": 2,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -3372,7 +3372,7 @@
       "hint": "无评分 · 四、字符串哈希",
       "categoryId": "string",
       "order": 3,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -3386,7 +3386,7 @@
       "hint": "无评分 · 四、字符串哈希",
       "categoryId": "string",
       "order": 4,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -3400,7 +3400,7 @@
       "hint": "无评分 · 五、最小表示法",
       "categoryId": "string",
       "order": 5,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -3414,7 +3414,7 @@
       "hint": "无评分 · 八、后缀数组/后缀自动机",
       "categoryId": "string",
       "order": 6,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -3428,7 +3428,7 @@
       "hint": "无评分 · 一、KMP（前缀的后缀）",
       "categoryId": "string",
       "order": 7,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -3442,7 +3442,7 @@
       "hint": "无评分 · 四、字符串哈希",
       "categoryId": "string",
       "order": 8,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -3456,7 +3456,7 @@
       "hint": "无评分 · 一、KMP（前缀的后缀）",
       "categoryId": "string",
       "order": 9,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -3470,7 +3470,7 @@
       "hint": "无评分 · 八、后缀数组/后缀自动机",
       "categoryId": "string",
       "order": 10,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -3484,7 +3484,7 @@
       "hint": "无评分 · 八、后缀数组/后缀自动机",
       "categoryId": "string",
       "order": 11,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -3498,7 +3498,7 @@
       "hint": "2200分 · 一、KMP（前缀的后缀）",
       "categoryId": "string",
       "order": 12,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -4458,5 +4458,5 @@
       "count": "—"
     }
   ],
-  "generatedAt": "2026-08-31T14:46:21.366Z"
+  "generatedAt": "2026-08-31T15:09:25.235Z"
 }

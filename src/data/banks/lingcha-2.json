@@ -3792,7 +3792,7 @@
       "hint": "1542分 · §1.3 最大子数组和（最大子段和）",
       "categoryId": "dp",
       "order": 16,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -3806,7 +3806,7 @@
       "hint": "1550分 · 专题：前后缀分解",
       "categoryId": "dp",
       "order": 17,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -3820,7 +3820,7 @@
       "hint": "1573分 · §2.1 基础",
       "categoryId": "dp",
       "order": 18,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -3834,7 +3834,7 @@
       "hint": "1590分 · 十四、博弈 DP",
       "categoryId": "dp",
       "order": 19,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -3848,7 +3848,7 @@
       "hint": "1590分 · 专题：前后缀分解",
       "categoryId": "dp",
       "order": 20,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -3862,7 +3862,7 @@
       "hint": "1597分 · §7.4 合法子序列 DP",
       "categoryId": "dp",
       "order": 21,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -3876,7 +3876,7 @@
       "hint": "无评分 · §4.1 最长公共子序列（LCS）",
       "categoryId": "dp",
       "order": 22,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -3890,7 +3890,7 @@
       "hint": "无评分 · §4.2 最长递增子序列（LIS）",
       "categoryId": "dp",
       "order": 23,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -3904,7 +3904,7 @@
       "hint": "无评分 · §6.2 基础",
       "categoryId": "dp",
       "order": 24,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -3918,7 +3918,7 @@
       "hint": "无评分 · 其他",
       "categoryId": "dp",
       "order": 25,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -3932,7 +3932,7 @@
       "hint": "无评分 · §9.7 其他状压 DP",
       "categoryId": "dp",
       "order": 26,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -3946,7 +3946,7 @@
       "hint": "无评分 · 十四、博弈 DP",
       "categoryId": "dp",
       "order": 27,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -3960,7 +3960,7 @@
       "hint": "无评分 · §7.6 多维 DP",
       "categoryId": "dp",
       "order": 28,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -3974,7 +3974,7 @@
       "hint": "无评分 · §7.6 多维 DP",
       "categoryId": "dp",
       "order": 29,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -3988,7 +3988,7 @@
       "hint": "无评分 · §4.2 最长递增子序列（LIS）",
       "categoryId": "dp",
       "order": 30,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -4002,7 +4002,7 @@
       "hint": "无评分 · 十五、概率 DP、期望 DP",
       "categoryId": "dp",
       "order": 31,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -4016,7 +4016,7 @@
       "hint": "无评分 · §9.7 其他状压 DP",
       "categoryId": "dp",
       "order": 32,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -4030,7 +4030,7 @@
       "hint": "无评分 · §4.1 最长公共子序列（LCS）",
       "categoryId": "dp",
       "order": 33,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -4044,7 +4044,7 @@
       "hint": "无评分 · §1.2 打家劫舍",
       "categoryId": "dp",
       "order": 34,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -4058,7 +4058,7 @@
       "hint": "无评分 · §10.1 统计合法元素的数目",
       "categoryId": "dp",
       "order": 35,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -4458,5 +4458,5 @@
       "count": "—"
     }
   ],
-  "generatedAt": "2026-09-01T00:19:57.496Z"
+  "generatedAt": "2026-09-01T00:36:15.737Z"
 }

@@ -4072,7 +4072,7 @@
       "hint": "无评分 · §11.6 矩阵快速幂优化 DP",
       "categoryId": "dp",
       "order": 36,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -4086,7 +4086,7 @@
       "hint": "无评分 · 专题：前后缀分解",
       "categoryId": "dp",
       "order": 37,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -4100,7 +4100,7 @@
       "hint": "无评分 · §3.1 0-1 背包",
       "categoryId": "dp",
       "order": 38,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -4114,7 +4114,7 @@
       "hint": "无评分 · §7.6 多维 DP",
       "categoryId": "dp",
       "order": 39,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -4128,7 +4128,7 @@
       "hint": "无评分 · §9.1 排列型状压 DP ① 相邻无关",
       "categoryId": "dp",
       "order": 40,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -4142,7 +4142,7 @@
       "hint": "无评分 · §11.1 前缀和优化 DP",
       "categoryId": "dp",
       "order": 41,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -4156,7 +4156,7 @@
       "hint": "无评分 · §7.1 一维 DP",
       "categoryId": "dp",
       "order": 42,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -4170,7 +4170,7 @@
       "hint": "无评分 · §11.4 树状数组/线段树优化 DP",
       "categoryId": "dp",
       "order": 43,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -4184,7 +4184,7 @@
       "hint": "无评分 · §9.1 排列型状压 DP ① 相邻无关",
       "categoryId": "dp",
       "order": 44,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -4198,7 +4198,7 @@
       "hint": "无评分 · §7.1 一维 DP",
       "categoryId": "dp",
       "order": 45,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -4212,7 +4212,7 @@
       "hint": "无评分 · §7.6 多维 DP",
       "categoryId": "dp",
       "order": 46,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -4226,7 +4226,7 @@
       "hint": "无评分 · 专题：前后缀分解",
       "categoryId": "dp",
       "order": 47,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -4240,7 +4240,7 @@
       "hint": "无评分 · §9.1 排列型状压 DP ① 相邻无关",
       "categoryId": "dp",
       "order": 48,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -4254,7 +4254,7 @@
       "hint": "1608分 · §1.2 打家劫舍",
       "categoryId": "dp",
       "order": 49,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -4268,7 +4268,7 @@
       "hint": "1853分 · §2.2 进阶",
       "categoryId": "dp",
       "order": 50,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -4282,7 +4282,7 @@
       "hint": "1854分 · §7.6 多维 DP",
       "categoryId": "dp",
       "order": 51,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -4296,7 +4296,7 @@
       "hint": "1898分 · §7.6 多维 DP",
       "categoryId": "dp",
       "order": 52,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -4310,7 +4310,7 @@
       "hint": "无评分 · §4.1 最长公共子序列（LCS）",
       "categoryId": "dp",
       "order": 53,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -4324,7 +4324,7 @@
       "hint": "无评分 · §4.1 最长公共子序列（LCS）",
       "categoryId": "dp",
       "order": 54,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -4338,7 +4338,7 @@
       "hint": "无评分 · §5.2 最优划分",
       "categoryId": "dp",
       "order": 55,
-      "hasSolution": false
+      "hasSolution": true
     }
   ],
   "dayPlan": [
@@ -4458,5 +4458,5 @@
       "count": "—"
     }
   ],
-  "generatedAt": "2026-09-01T00:36:15.737Z"
+  "generatedAt": "2026-09-01T00:55:12.834Z"
 }

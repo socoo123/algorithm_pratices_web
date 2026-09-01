@@ -3512,7 +3512,7 @@
       "hint": "2365分 · 二、Z 函数（后缀的前缀）",
       "categoryId": "string",
       "order": 13,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -3526,7 +3526,7 @@
       "hint": "无评分 · 五、最小表示法",
       "categoryId": "string",
       "order": 14,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -3540,7 +3540,7 @@
       "hint": "无评分 · 四、字符串哈希",
       "categoryId": "string",
       "order": 15,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -3554,7 +3554,7 @@
       "hint": "1864分 · 八、后缀数组/后缀自动机",
       "categoryId": "string",
       "order": 16,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -3568,7 +3568,7 @@
       "hint": "1876分 · 一、KMP（前缀的后缀）",
       "categoryId": "string",
       "order": 17,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -3582,7 +3582,7 @@
       "hint": "无评分 · §11.6 矩阵快速幂优化 DP",
       "categoryId": "dp",
       "order": 1,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -3596,7 +3596,7 @@
       "hint": "无评分 · 专题：前后缀分解",
       "categoryId": "dp",
       "order": 2,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -3610,7 +3610,7 @@
       "hint": "无评分 · 专题：前后缀分解",
       "categoryId": "dp",
       "order": 3,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -3624,7 +3624,7 @@
       "hint": "152分 · §6.2 基础",
       "categoryId": "dp",
       "order": 4,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -3638,7 +3638,7 @@
       "hint": "1334分 · 专题：前后缀分解",
       "categoryId": "dp",
       "order": 5,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -3652,7 +3652,7 @@
       "hint": "1395分 · 专题：前后缀分解",
       "categoryId": "dp",
       "order": 6,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -3666,7 +3666,7 @@
       "hint": "1422分 · §1.3 最大子数组和（最大子段和）",
       "categoryId": "dp",
       "order": 7,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -3680,7 +3680,7 @@
       "hint": "1460分 · §7.1 一维 DP",
       "categoryId": "dp",
       "order": 8,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -3694,7 +3694,7 @@
       "hint": "1468分 · 专题：前后缀分解",
       "categoryId": "dp",
       "order": 9,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -3708,7 +3708,7 @@
       "hint": "1480分 · §7.4 合法子序列 DP",
       "categoryId": "dp",
       "order": 10,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -3722,7 +3722,7 @@
       "hint": "1484分 · §6.2 基础",
       "categoryId": "dp",
       "order": 11,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -3736,7 +3736,7 @@
       "hint": "1495分 · 专题：前后缀分解",
       "categoryId": "dp",
       "order": 12,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -3750,7 +3750,7 @@
       "hint": "1500分 · 专题：前后缀分解",
       "categoryId": "dp",
       "order": 13,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -3764,7 +3764,7 @@
       "hint": "1507分 · 其他",
       "categoryId": "dp",
       "order": 14,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -3778,7 +3778,7 @@
       "hint": "1533分 · 专题：前后缀分解",
       "categoryId": "dp",
       "order": 15,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-2",
@@ -4458,5 +4458,5 @@
       "count": "—"
     }
   ],
-  "generatedAt": "2026-08-31T15:09:25.235Z"
+  "generatedAt": "2026-09-01T00:19:57.496Z"
 }

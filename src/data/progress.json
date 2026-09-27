@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-24T13:30:03.494Z",
+  "updatedAt": "2026-09-27T15:24:15.273Z",
   "problems": {
     "base/reverse-linked-list": {
       "rounds": [
@@ -426,6 +426,14 @@
         false
       ],
       "updatedAt": "2026-08-24T13:30:03.494Z"
+    },
+    "base/subtree-of-another-tree": {
+      "rounds": [
+        true,
+        false,
+        false
+      ],
+      "updatedAt": "2026-09-27T15:24:15.273Z"
     }
   }
 }

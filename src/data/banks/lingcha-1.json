@@ -1891,7 +1891,7 @@
       "hint": "530分 · §2.9 二叉搜索树",
       "categoryId": "linked-tree-backtrack",
       "order": 1,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -1905,7 +1905,7 @@
       "hint": "1178分 · §2.3 自底向上 DFS（后序遍历）",
       "categoryId": "linked-tree-backtrack",
       "order": 2,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -1919,7 +1919,7 @@
       "hint": "1288分 · §2.1 遍历二叉树",
       "categoryId": "linked-tree-backtrack",
       "order": 3,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -1933,7 +1933,7 @@
       "hint": "1288分 · §2.13 二叉树 BFS",
       "categoryId": "linked-tree-backtrack",
       "order": 4,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -1947,7 +1947,7 @@
       "hint": "1303分 · §2.9 二叉搜索树",
       "categoryId": "linked-tree-backtrack",
       "order": 5,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -1961,7 +1961,7 @@
       "hint": "无评分 · §3.6 树的拓扑排序",
       "categoryId": "linked-tree-backtrack",
       "order": 6,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -1975,7 +1975,7 @@
       "hint": "1405分 · §2.7 回溯",
       "categoryId": "linked-tree-backtrack",
       "order": 7,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -1989,7 +1989,7 @@
       "hint": "1511分 · §2.4 自底向上 DFS：删点",
       "categoryId": "linked-tree-backtrack",
       "order": 8,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -2003,7 +2003,7 @@
       "hint": "1534分 · §2.5 有递有归",
       "categoryId": "linked-tree-backtrack",
       "order": 9,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -2017,7 +2017,7 @@
       "hint": "1566分 · §3.3 自底向上 DFS",
       "categoryId": "linked-tree-backtrack",
       "order": 10,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -2031,7 +2031,7 @@
       "hint": "无评分 · §1.4 反转链表",
       "categoryId": "linked-tree-backtrack",
       "order": 11,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -2045,7 +2045,7 @@
       "hint": "无评分 · §1.5 前后指针",
       "categoryId": "linked-tree-backtrack",
       "order": 12,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -2059,7 +2059,7 @@
       "hint": "无评分 · §1.7 双指针",
       "categoryId": "linked-tree-backtrack",
       "order": 13,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -2073,7 +2073,7 @@
       "hint": "无评分 · §1.11 其他",
       "categoryId": "linked-tree-backtrack",
       "order": 14,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -2087,7 +2087,7 @@
       "hint": "无评分 · §2.15 N 叉树",
       "categoryId": "linked-tree-backtrack",
       "order": 15,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -2101,7 +2101,7 @@
       "hint": "无评分 · §2.11 插入/删除节点",
       "categoryId": "linked-tree-backtrack",
       "order": 16,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -2115,7 +2115,7 @@
       "hint": "无评分 · §1.10 综合应用",
       "categoryId": "linked-tree-backtrack",
       "order": 17,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -2129,7 +2129,7 @@
       "hint": "无评分 · §2.9 二叉搜索树",
       "categoryId": "linked-tree-backtrack",
       "order": 18,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -2143,7 +2143,7 @@
       "hint": "无评分 · §1.1 遍历链表",
       "categoryId": "linked-tree-backtrack",
       "order": 19,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -2157,7 +2157,7 @@
       "hint": "无评分 · §1.3 插入节点",
       "categoryId": "linked-tree-backtrack",
       "order": 20,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -2171,7 +2171,7 @@
       "hint": "无评分 · §1.8 合并链表",
       "categoryId": "linked-tree-backtrack",
       "order": 21,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -2185,7 +2185,7 @@
       "hint": "无评分 · §1.2 删除节点",
       "categoryId": "linked-tree-backtrack",
       "order": 22,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -2199,7 +2199,7 @@
       "hint": "无评分 · §3.11 点分治",
       "categoryId": "linked-tree-backtrack",
       "order": 23,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -2213,7 +2213,7 @@
       "hint": "1607分 · §2.8 最近公共祖先",
       "categoryId": "linked-tree-backtrack",
       "order": 24,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -2227,7 +2227,7 @@
       "hint": "1634分 · §3.1 遍历",
       "categoryId": "linked-tree-backtrack",
       "order": 25,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -2241,7 +2241,7 @@
       "hint": "1644分 · §2.10 创建二叉树",
       "categoryId": "linked-tree-backtrack",
       "order": 26,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -2255,7 +2255,7 @@
       "hint": "1650分 · §2.14 链表+二叉树",
       "categoryId": "linked-tree-backtrack",
       "order": 27,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -2269,7 +2269,7 @@
       "hint": "1675分 · §2.3 自底向上 DFS（后序遍历）",
       "categoryId": "linked-tree-backtrack",
       "order": 28,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -2283,7 +2283,7 @@
       "hint": "1677分 · §2.13 二叉树 BFS",
       "categoryId": "linked-tree-backtrack",
       "order": 29,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -2297,7 +2297,7 @@
       "hint": "1683分 · §3.2 自顶向下 DFS",
       "categoryId": "linked-tree-backtrack",
       "order": 30,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -2311,7 +2311,7 @@
       "hint": "1709分 · §2.16 其他",
       "categoryId": "linked-tree-backtrack",
       "order": 31,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -2325,7 +2325,7 @@
       "hint": "1711分 · §2.6 二叉树的直径",
       "categoryId": "linked-tree-backtrack",
       "order": 32,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -2339,7 +2339,7 @@
       "hint": "1713分 · §2.2 自顶向下 DFS（先序遍历）",
       "categoryId": "linked-tree-backtrack",
       "order": 33,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -2353,7 +2353,7 @@
       "hint": "1719分 · §4.2 子集型回溯",
       "categoryId": "linked-tree-backtrack",
       "order": 34,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -2367,7 +2367,7 @@
       "hint": "1015分 · §1.6 快慢指针",
       "categoryId": "linked-tree-backtrack",
       "order": 35,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -2381,7 +2381,7 @@
       "hint": "1959分 · §3.4 有递有归",
       "categoryId": "linked-tree-backtrack",
       "order": 36,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -2395,7 +2395,7 @@
       "hint": "1676分 · §2.16 其他",
       "categoryId": "linked-tree-backtrack",
       "order": 37,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -2409,7 +2409,7 @@
       "hint": "1797分 · §2.10 创建二叉树",
       "categoryId": "linked-tree-backtrack",
       "order": 38,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -2423,7 +2423,7 @@
       "hint": "1824分 · §3.2 自顶向下 DFS",
       "categoryId": "linked-tree-backtrack",
       "order": 39,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -2437,7 +2437,7 @@
       "hint": "1830分 · §4.7 搜索",
       "categoryId": "linked-tree-backtrack",
       "order": 40,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -2535,7 +2535,7 @@
       "hint": "1626分 · 一、网格图 DFS",
       "categoryId": "grid",
       "order": 7,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -2605,7 +2605,7 @@
       "hint": "1746分 · 一、网格图 DFS",
       "categoryId": "grid",
       "order": 12,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -2619,7 +2619,7 @@
       "hint": "1783分 · 二、网格图 BFS",
       "categoryId": "grid",
       "order": 13,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -2633,7 +2633,7 @@
       "hint": "1826分 · 二、网格图 BFS",
       "categoryId": "grid",
       "order": 14,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -2661,7 +2661,7 @@
       "hint": "1838分 · 一、网格图 DFS",
       "categoryId": "grid",
       "order": 16,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -2703,7 +2703,7 @@
       "hint": "1934分 · 一、网格图 DFS",
       "categoryId": "grid",
       "order": 19,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -3305,7 +3305,7 @@
       "hint": "无评分 · GCD LogTrick",
       "categoryId": "bit",
       "order": 4,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -3319,7 +3319,7 @@
       "hint": "1645分 · 四、拆位 / 贡献法",
       "categoryId": "bit",
       "order": 5,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -3333,7 +3333,7 @@
       "hint": "1891分 · AND/OR LogTrick",
       "categoryId": "bit",
       "order": 6,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -3347,7 +3347,7 @@
       "hint": "1825分 · 四、拆位 / 贡献法",
       "categoryId": "bit",
       "order": 7,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -3361,7 +3361,7 @@
       "hint": "1145分 · §1.7 最小公倍数（LCM）",
       "categoryId": "math",
       "order": 1,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -3375,7 +3375,7 @@
       "hint": "1162分 · §6.2 随机化技巧",
       "categoryId": "math",
       "order": 2,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -3389,7 +3389,7 @@
       "hint": "1172分 · §1.5 因子",
       "categoryId": "math",
       "order": 3,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -3403,7 +3403,7 @@
       "hint": "1500分 · §1.3 质因数分解",
       "categoryId": "math",
       "order": 4,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -3417,7 +3417,7 @@
       "hint": "无评分 · §1.4 阶乘分解",
       "categoryId": "math",
       "order": 5,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -3431,7 +3431,7 @@
       "hint": "1650分 · §1.2 预处理质数（筛质数）",
       "categoryId": "math",
       "order": 6,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -3445,7 +3445,7 @@
       "hint": "1737分 · §1.1 判断质数",
       "categoryId": "math",
       "order": 7,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -3459,7 +3459,7 @@
       "hint": "1929分 · §1.6 最大公约数（GCD）",
       "categoryId": "math",
       "order": 8,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -3473,7 +3473,7 @@
       "hint": "1731分 · §1.5 因子",
       "categoryId": "math",
       "order": 9,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -3487,7 +3487,7 @@
       "hint": "1641分 · §1.6 最大公约数（GCD）",
       "categoryId": "math",
       "order": 10,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -3501,7 +3501,7 @@
       "hint": "1695分 · 九、子序列自动机",
       "categoryId": "string",
       "order": 1,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -3515,7 +3515,7 @@
       "hint": "2107分 · 八、后缀数组/后缀自动机",
       "categoryId": "string",
       "order": 2,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -3529,7 +3529,7 @@
       "hint": "1990分 · 三、Manacher 算法（回文串）",
       "categoryId": "string",
       "order": 3,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -3543,7 +3543,7 @@
       "hint": "2105分 · 一、KMP（前缀的后缀）",
       "categoryId": "string",
       "order": 4,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -3557,7 +3557,7 @@
       "hint": "1837分 · 四、字符串哈希",
       "categoryId": "string",
       "order": 5,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -3571,7 +3571,7 @@
       "hint": "724分 · 专题：前后缀分解",
       "categoryId": "dp",
       "order": 1,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -3585,7 +3585,7 @@
       "hint": "1206分 · 专题：前后缀分解",
       "categoryId": "dp",
       "order": 2,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -3599,7 +3599,7 @@
       "hint": "1599分 · §7.4 合法子序列 DP",
       "categoryId": "dp",
       "order": 3,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -3613,7 +3613,7 @@
       "hint": "无评分 · §9.7 其他状压 DP",
       "categoryId": "dp",
       "order": 4,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -3627,7 +3627,7 @@
       "hint": "无评分 · §9.1 排列型状压 DP ① 相邻无关",
       "categoryId": "dp",
       "order": 5,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -3641,7 +3641,7 @@
       "hint": "无评分 · §12.1 树的直径",
       "categoryId": "dp",
       "order": 6,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -3655,7 +3655,7 @@
       "hint": "无评分 · §11.6 矩阵快速幂优化 DP",
       "categoryId": "dp",
       "order": 7,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -3669,7 +3669,7 @@
       "hint": "无评分 · §7.7 计数 DP",
       "categoryId": "dp",
       "order": 8,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -3683,7 +3683,7 @@
       "hint": "1654分 · §3.4 分组背包",
       "categoryId": "dp",
       "order": 9,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -3697,7 +3697,7 @@
       "hint": "1657分 · §6.2 基础",
       "categoryId": "dp",
       "order": 10,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -3711,7 +3711,7 @@
       "hint": "1658分 · §2.1 基础",
       "categoryId": "dp",
       "order": 11,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -3725,7 +3725,7 @@
       "hint": "1659分 · §3.1 0-1 背包",
       "categoryId": "dp",
       "order": 12,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -3739,7 +3739,7 @@
       "hint": "1692分 · §4.1 最长公共子序列（LCS）",
       "categoryId": "dp",
       "order": 13,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -3753,7 +3753,7 @@
       "hint": "1694分 · §1.1 爬楼梯",
       "categoryId": "dp",
       "order": 14,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -3767,7 +3767,7 @@
       "hint": "1709分 · §7.1 一维 DP",
       "categoryId": "dp",
       "order": 15,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -3781,7 +3781,7 @@
       "hint": "1709分 · §8.2 区间 DP",
       "categoryId": "dp",
       "order": 16,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -3795,7 +3795,7 @@
       "hint": "1721分 · §4.2 最长递增子序列（LIS）",
       "categoryId": "dp",
       "order": 17,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -3809,7 +3809,7 @@
       "hint": "1736分 · §5.2 最优划分",
       "categoryId": "dp",
       "order": 18,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -3823,7 +3823,7 @@
       "hint": "1748分 · §1.3 最大子数组和（最大子段和）",
       "categoryId": "dp",
       "order": 19,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -3837,7 +3837,7 @@
       "hint": "1751分 · §7.6 多维 DP",
       "categoryId": "dp",
       "order": 20,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -3851,7 +3851,7 @@
       "hint": "1780分 · §5.1 判定能否划分",
       "categoryId": "dp",
       "order": 21,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -3865,7 +3865,7 @@
       "hint": "1799分 · §7.3 子数组 DP",
       "categoryId": "dp",
       "order": 22,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -3879,7 +3879,7 @@
       "hint": "1807分 · §2.2 进阶",
       "categoryId": "dp",
       "order": 23,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -3893,7 +3893,7 @@
       "hint": "1820分 · §7.5 子矩形 DP",
       "categoryId": "dp",
       "order": 24,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -3907,7 +3907,7 @@
       "hint": "1851分 · §7.2 不相交区间",
       "categoryId": "dp",
       "order": 25,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -3921,7 +3921,7 @@
       "hint": "1887分 · §9.4 子集状压 DP",
       "categoryId": "dp",
       "order": 26,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -3935,7 +3935,7 @@
       "hint": "1896分 · §11.1 前缀和优化 DP",
       "categoryId": "dp",
       "order": 27,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -3949,7 +3949,7 @@
       "hint": "1937分 · §5.3 约束划分个数",
       "categoryId": "dp",
       "order": 28,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -3963,7 +3963,7 @@
       "hint": "1940分 · §12.5 其他树形 DP",
       "categoryId": "dp",
       "order": 29,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -3977,7 +3977,7 @@
       "hint": "1954分 · §11.3 单调队列优化 DP",
       "categoryId": "dp",
       "order": 30,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -3991,7 +3991,7 @@
       "hint": "1990分 · §9.5 轮廓线 DP",
       "categoryId": "dp",
       "order": 31,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -4005,7 +4005,7 @@
       "hint": "2021分 · §9.2 排列型状压 DP ② 相邻相关",
       "categoryId": "dp",
       "order": 32,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -4019,7 +4019,7 @@
       "hint": "2027分 · §11.4 树状数组/线段树优化 DP",
       "categoryId": "dp",
       "order": 33,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -4033,7 +4033,7 @@
       "hint": "2072分 · §11.2 单调栈优化 DP",
       "categoryId": "dp",
       "order": 34,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -4047,7 +4047,7 @@
       "hint": "2258分 · §10.2 统计合法元素的价值总和",
       "categoryId": "dp",
       "order": 35,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -4061,7 +4061,7 @@
       "hint": "无评分 · §3.3 多重背包（选做）",
       "categoryId": "dp",
       "order": 36,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -4075,7 +4075,7 @@
       "hint": "无评分 · §11.7 斜率优化 DP",
       "categoryId": "dp",
       "order": 37,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -4089,7 +4089,7 @@
       "hint": "1619分 · §1.2 打家劫舍",
       "categoryId": "dp",
       "order": 38,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -4103,7 +4103,7 @@
       "hint": "1639分 · §2.1 基础",
       "categoryId": "dp",
       "order": 39,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -4117,7 +4117,7 @@
       "hint": "1649分 · 专题：前后缀分解",
       "categoryId": "dp",
       "order": 40,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -4131,7 +4131,7 @@
       "hint": "1655分 · 专题：前后缀分解",
       "categoryId": "dp",
       "order": 41,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -4145,7 +4145,7 @@
       "hint": "1701分 · §3.2 完全背包",
       "categoryId": "dp",
       "order": 42,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -4159,7 +4159,7 @@
       "hint": "1754分 · §6.3 进阶",
       "categoryId": "dp",
       "order": 43,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -4173,7 +4173,7 @@
       "hint": "1777分 · §6.1 买卖股票",
       "categoryId": "dp",
       "order": 44,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -4187,7 +4187,7 @@
       "hint": "1848分 · §10.1 统计合法元素的数目",
       "categoryId": "dp",
       "order": 45,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -4201,7 +4201,7 @@
       "hint": "1884分 · §8.1 最长回文子序列",
       "categoryId": "dp",
       "order": 46,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -4215,7 +4215,7 @@
       "hint": "2039分 · §11.9 其他优化 DP",
       "categoryId": "dp",
       "order": 47,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -4229,7 +4229,7 @@
       "hint": "2143分 · §9.3 旅行商问题（TSP）",
       "categoryId": "dp",
       "order": 48,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -4243,7 +4243,7 @@
       "hint": "2234分 · §9.6 SOS DP",
       "categoryId": "dp",
       "order": 49,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -4257,7 +4257,7 @@
       "hint": "1107分 · §8.2 区间 DP",
       "categoryId": "dp",
       "order": 50,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -4271,7 +4271,7 @@
       "hint": "1697分 · §2.1 基础",
       "categoryId": "dp",
       "order": 51,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -4285,7 +4285,7 @@
       "hint": "1787分 · §8.1 最长回文子序列",
       "categoryId": "dp",
       "order": 52,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -4299,7 +4299,7 @@
       "hint": "1787分 · 十四、博弈 DP",
       "categoryId": "dp",
       "order": 53,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -4313,7 +4313,7 @@
       "hint": "1791分 · §1.3 最大子数组和（最大子段和）",
       "categoryId": "dp",
       "order": 54,
-      "hasSolution": false
+      "hasSolution": true
     },
     {
       "bankId": "lingcha-1",
@@ -4327,7 +4327,7 @@
       "hint": "1824分 · §4.1 最长公共子序列（LCS）",
       "categoryId": "dp",
       "order": 55,
-      "hasSolution": false
+      "hasSolution": true
     }
   ],
   "dayPlan": [
@@ -4452,5 +4452,5 @@
       "count": "—"
     }
   ],
-  "generatedAt": "2026-08-31T14:46:21.359Z"
+  "generatedAt": "2026-09-10T16:25:06.934Z"
 }

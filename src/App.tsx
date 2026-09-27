@@ -37,7 +37,7 @@ class AppErrorBoundary extends Component<{ children: ReactNode }, { error: Error
       return (
         <main className="mx-auto max-w-lg px-4 py-24 text-center">
           <p className="text-dracula-orange">页面出错：{this.state.error.message}</p>
-          <a href="/" className="mt-4 inline-block text-dracula-cyan">
+          <a href={import.meta.env.BASE_URL} className="mt-4 inline-block text-dracula-cyan">
             返回首页
           </a>
         </main>
@@ -75,9 +75,14 @@ function AppShell() {
   );
 }
 
+function routerBasename(): string {
+  const base = import.meta.env.BASE_URL;
+  return base.endsWith('/') ? base.slice(0, -1) : base;
+}
+
 export default function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={routerBasename()}>
       <ProgressProvider>
         <AppShell />
       </ProgressProvider>

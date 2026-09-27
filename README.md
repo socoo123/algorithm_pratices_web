@@ -8,6 +8,8 @@
 
 核心能力：表格化刷题打卡（第 1/2/3 遍）、每题备注、AI 题解挂链、**进度保存在仓库文件里，换电脑 clone 仓库即可恢复**。
 
+本地继续用 `npm run dev`。部署到 GitHub Pages 之后，勾选会用你自己的令牌提交到同一个文件，见文末「部署」。
+
 ---
 
 ## 快速开始
@@ -120,9 +122,32 @@ git commit -m "刷题进度更新"
 若要从源头 `algorithm-journey` 仓库重新同步，跑 `npm run sync:content`
 （会自动应用「移除会员题/剑指题」的替换规则，不会把已替换的题带回来）。
 
+**Q：网页上勾选了，GitHub 上的 progress.json 没变？**
+`npm run dev` 只会写你电脑上的文件，还要自己 `git commit`。GitHub Pages 上的站点不会写本地文件：没粘贴令牌时进度只在这台浏览器；粘贴之后大约 2 秒会提交。只改进度不会重新构建整站。见「部署」。
+
 **Q：灵茶题单从哪来？**
 一期、二期的题单 markdown 在 `content/banks/lingcha-1/` 和 `content/banks/lingcha-2/`。
 源头是 `algorithm-journey/灵茶problems/`。若要按最新灵茶题单重抽二期，跑 `npm run generate:lingcha` 再 `npm run data`。
 
 **Q：还想加第四阶段题库？**
 在 `content/banks/` 下新建目录放 md → 在 `scripts/build-data.ts` 里注册 → 首页会自动出现新卡片。
+
+---
+
+## 部署
+
+线上地址：<https://socoo123.github.io/algorithm_pratices_web/>
+
+推到 `main` 后，GitHub Actions（`.github/workflows/pages.yml`）会构建并发布。**只改 `src/data/progress.json` 的提交不会重建站点**（题解很多，整站构建很重）。页面运行时直接读仓库里的这份 JSON，所以别的设备刷新就能看到新进度，不用等 Pages 重新部署。
+
+### 需要你做的一次手工
+
+Pages 的 Source 使用 **GitHub Actions**（仓库设置里选这一项；已经选过就不用再改）。
+
+1. 建一个 Fine-grained personal access token，在网站顶栏粘贴一次：
+   1. GitHub → Settings → Developer settings → Personal access tokens → Fine-grained tokens → Generate new token。
+   2. Repository access 选 **Only select repositories**，只勾选 `socoo123/algorithm_pratices_web`。Permissions → Repository permissions → **Contents** 设为 **Read and write**。
+   3. 生成后复制令牌，打开网站，顶栏点「连接 GitHub」，粘贴并「校验并保存」。
+2. 令牌只存在这台浏览器的 localStorage（键名 `sft-github-token`），不要写进仓库。顶栏可以「清除令牌」。
+
+没粘贴令牌时，Pages 上的勾选只留在这台浏览器，顶栏会提示。粘贴之后，勾选或改备注会先更新界面，大约 2 秒后提交到 `main` 上的 `src/data/progress.json`，提交说明是「刷题进度更新」。本地 `npm run dev` 仍写本机文件，不走这套令牌。

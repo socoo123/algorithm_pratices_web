@@ -9,6 +9,7 @@ import { defineConfig } from 'vite';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const progressPath = path.join(__dirname, 'src/data/progress.json');
+const pagesBase = process.env.GITHUB_PAGES === 'true';
 
 function solutionApi(): Plugin {
   return {
@@ -241,8 +242,24 @@ function dataWatcher(): Plugin {
   };
 }
 
+function copy404Html(): Plugin {
+  return {
+    name: 'copy-404-html',
+    apply: 'build',
+    writeBundle(options) {
+      const dir = options.dir ?? path.join(__dirname, 'dist');
+      const indexPath = path.join(dir, 'index.html');
+      if (!fs.existsSync(indexPath)) return;
+      fs.copyFileSync(indexPath, path.join(dir, '404.html'));
+    },
+  };
+}
+
 export default defineConfig({
-  plugins: [react(), tailwindcss(), solutionApi(), progressSaver(), dataWatcher()],
+  // Local `npm run dev` / plain `npm run build` stay at `/`.
+  // GitHub Actions sets GITHUB_PAGES=true so Pages is served from /algorithm_pratices_web/.
+  base: pagesBase ? '/algorithm_pratices_web/' : '/',
+  plugins: [react(), tailwindcss(), solutionApi(), progressSaver(), dataWatcher(), copy404Html()],
   server: {
     port: 5800,
     strictPort: true,

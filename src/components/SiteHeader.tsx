@@ -3,7 +3,7 @@ import { Link, useLocation, useMatch } from 'react-router-dom';
 import { countDirtyKeys, downloadProgress, parseImportedProgress } from '../lib/progress-store';
 import { useProgress } from '../hooks/useProgress';
 import { useTheme } from '../hooks/useTheme';
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import { getBankFile } from '../lib/banks';
 import { getClrsChapter, getClrsIndex } from '../lib/clrs';
 import { getEssay, getEssayIndex } from '../lib/essays';
@@ -83,14 +83,118 @@ function useBreadcrumbs(): Crumb[] {
   return crumbs;
 }
 
+function GithubTokenPanel({
+  connected,
+  onConnect,
+  onDisconnect,
+}: {
+  connected: boolean;
+  onConnect: (token: string) => Promise<{ ok: boolean; message: string }>;
+  onDisconnect: () => void;
+}) {
+  const [token, setToken] = useState('');
+  const [busy, setBusy] = useState(false);
+  const [feedback, setFeedback] = useState('');
+  const [feedbackOk, setFeedbackOk] = useState(false);
+
+  return (
+    <form
+      className="border-b border-dracula-current/80 bg-dracula-bg px-4 py-3 sm:px-6"
+      onSubmit={(e) => {
+        e.preventDefault();
+        setBusy(true);
+        void onConnect(token).then((result) => {
+          setBusy(false);
+          setFeedback(result.message);
+          setFeedbackOk(result.ok);
+          if (result.ok) setToken('');
+        });
+      }}
+    >
+      <p className="text-sm font-medium text-dracula-fg">用 Fine-grained PAT 把进度提交到 GitHub</p>
+      <ol className="mt-2 list-decimal space-y-1 pl-4 text-xs leading-5 text-dracula-comment">
+        <li>
+          打开 GitHub → Settings → Developer settings → Personal access tokens → Fine-grained tokens →
+          Generate new token。
+        </li>
+        <li>
+          Repository access 选 Only select repositories，只勾选{' '}
+          <span className="text-dracula-fg">socoo123/algorithm_pratices_web</span>。Permissions →
+          Repository permissions → Contents 设为 Read and write。
+        </li>
+        <li>生成后把令牌粘贴到下面。令牌只留在这台浏览器，不会写进仓库。</li>
+      </ol>
+      <div className="mt-3 flex flex-wrap items-center gap-2">
+        <input
+          type="password"
+          value={token}
+          autoComplete="off"
+          spellCheck={false}
+          aria-label="GitHub 令牌"
+          placeholder="github_pat_…"
+          onChange={(e) => setToken(e.target.value)}
+          className="min-w-0 flex-1 rounded-lg border border-dracula-current bg-dracula-bg-dark px-3 py-1.5 text-xs text-dracula-fg outline-none focus:border-dracula-purple/60 sm:max-w-md"
+        />
+        <button
+          type="submit"
+          disabled={busy}
+          className="rounded-lg border border-dracula-current bg-dracula-bg-dark px-3 py-1.5 text-xs text-dracula-fg transition hover:border-dracula-purple/50 disabled:opacity-60"
+        >
+          {busy ? '校验中…' : '校验并保存'}
+        </button>
+        <button
+          type="button"
+          onClick={() => {
+            onDisconnect();
+            setToken('');
+            setFeedback('已清除这台浏览器上的令牌');
+            setFeedbackOk(true);
+          }}
+          className="rounded-lg border border-dracula-current bg-dracula-bg-dark px-3 py-1.5 text-xs text-dracula-fg transition hover:border-dracula-purple/50"
+        >
+          清除令牌
+        </button>
+        {connected && <span className="text-xs text-dracula-green">已连接</span>}
+      </div>
+      {feedback && (
+        <p className={`mt-2 text-xs ${feedbackOk ? 'text-dracula-green' : 'text-dracula-orange'}`}>
+          {feedback}
+        </p>
+      )}
+    </form>
+  );
+}
+
 export function SiteHeader({ subtitle }: { subtitle?: string }) {
-  const { progress, bundled, importProgress } = useProgress();
+  const {
+    progress,
+    bundled,
+    importProgress,
+    githubConnected,
+    githubPhase,
+    githubMessage,
+    connectGithub,
+    disconnectGithub,
+  } = useProgress();
   const { theme, setTheme } = useTheme();
   const dirty = countDirtyKeys(bundled, progress);
   const fileRef = useRef<HTMLInputElement>(null);
   const crumbs = useBreadcrumbs();
+  const pages = !import.meta.env.DEV;
+  const [tokenOpen, setTokenOpen] = useState(false);
+
+  const pagesStatus = !githubConnected
+    ? ''
+    : githubPhase === 'error'
+      ? '提交到 GitHub 失败'
+      : githubPhase === 'pending' || dirty > 0
+        ? dirty > 0
+          ? `有 ${dirty} 题进度未提交到 GitHub`
+          : '正在提交到 GitHub…'
+        : '进度已提交到 GitHub';
 
   return (
+    <>
     <header className="sticky top-0 z-50 border-b border-dracula-current/80 bg-dracula-bg/85 backdrop-blur-xl">
       <div className="mx-auto flex max-w-[1600px] flex-wrap items-center justify-between gap-3 px-4 py-3 sm:px-6">
         <div className="flex min-w-0 items-baseline gap-2">
@@ -107,14 +211,37 @@ export function SiteHeader({ subtitle }: { subtitle?: string }) {
             </>
           )}
         </div>
-        <div className="flex items-center gap-2">
-          {dirty > 0 && (
+        <div className="flex flex-wrap items-center justify-end gap-2">
+          {!pages && dirty > 0 && (
             <span
               className="hidden text-xs text-dracula-orange sm:inline"
               title="浏览器进度与仓库里的 progress.json 不一致。用 npm run dev 勾选会自动写回文件，然后 git commit 该文件即可。"
             >
               有 {dirty} 题进度未写入 progress.json
             </span>
+          )}
+          {pages && githubConnected && pagesStatus && (
+            <span
+              className={`max-w-[11rem] truncate text-xs sm:max-w-none ${
+                githubPhase === 'error' || dirty > 0 || githubPhase === 'pending'
+                  ? 'text-dracula-orange'
+                  : 'text-dracula-comment'
+              }`}
+              title={githubPhase === 'error' ? githubMessage : pagesStatus}
+              aria-live="polite"
+            >
+              {pagesStatus}
+            </span>
+          )}
+          {pages && (
+            <button
+              type="button"
+              aria-expanded={tokenOpen}
+              onClick={() => setTokenOpen((open) => !open)}
+              className="inline-flex items-center gap-1.5 rounded-lg border border-dracula-current bg-dracula-bg-dark px-3 py-1.5 text-xs text-dracula-fg transition hover:border-dracula-purple/50 hover:bg-dracula-current/40"
+            >
+              {githubConnected ? 'GitHub 已连接' : '连接 GitHub'}
+            </button>
           )}
           <div
             className="inline-flex items-center rounded-lg border border-dracula-current bg-dracula-bg-dark p-0.5"
@@ -226,5 +353,30 @@ export function SiteHeader({ subtitle }: { subtitle?: string }) {
         </nav>
       )}
     </header>
+    {pages && !githubConnected && (
+      <div className="border-b border-dracula-orange/30 bg-dracula-orange/10 px-4 py-2 text-xs text-dracula-orange sm:px-6">
+        进度只在这台浏览器，粘贴令牌后才会提交到 GitHub。
+        <button
+          type="button"
+          className="ml-2 underline decoration-dracula-orange/60 underline-offset-2"
+          onClick={() => setTokenOpen(true)}
+        >
+          粘贴令牌
+        </button>
+      </div>
+    )}
+    {pages && githubPhase === 'error' && githubMessage && (
+      <div className="border-b border-dracula-orange/30 bg-dracula-orange/10 px-4 py-2 text-xs text-dracula-orange sm:px-6">
+        {githubMessage}
+      </div>
+    )}
+    {pages && tokenOpen && (
+      <GithubTokenPanel
+        connected={githubConnected}
+        onConnect={connectGithub}
+        onDisconnect={disconnectGithub}
+      />
+    )}
+    </>
   );
 }

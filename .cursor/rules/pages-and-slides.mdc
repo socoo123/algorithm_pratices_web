@@ -1,0 +1,14 @@
+---
+description: Pages 部署与灵茶题解幻灯片——清空会话后按 PLAN 执行
+alwaysApply: true
+---
+
+# Pages 与幻灯片
+
+用户说「执行 Pages 计划」或「执行幻灯片计划」时：
+
+1. **先读** `PLAN-pages-and-slides.md` 的「〇、当前指针」和对应启动清单，再动手。方案以该文件为准。
+2. 只做触发词点名的那一项。幻灯片：播放器没完成就只做播放器（灵茶题解页 + `/clrs/:slug`，不改 `content/clrs`）；完成了就用文内脚本现查下一批，**一条消息拉起 5 个** `generalPurpose` Task（各 5 题）。只给 Hard 和 Medium ★≥4 写 `### 幻灯片步骤`。一次触发只跑一批。算法导论不进这 5 个 agent。
+3. 做完立刻改文首「最后更新」和指针表。
+4. 用户只问进度、或没说「执行」：汇报指针，不改代码。
+5. 不主动 git commit / push。不把 GitHub PAT 写进仓库。slug 以脚本输出为准，禁止凭记忆。

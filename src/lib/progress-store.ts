@@ -85,8 +85,9 @@ export function saveToLocalStorage(file: ProgressFile): void {
   localStorage.setItem(STORAGE_KEY, JSON.stringify(file));
 }
 
-/** Read on-disk progress.json via dev API (null outside `npm run dev`). */
+/** Read on-disk progress.json via dev API. Production uses the GitHub raw file instead. */
 export async function fetchServerProgress(): Promise<ProgressFile | null> {
+  if (!import.meta.env.DEV) return null;
   try {
     const res = await fetch('/api/progress');
     if (!res.ok) return null;
@@ -98,8 +99,12 @@ export async function fetchServerProgress(): Promise<ProgressFile | null> {
   }
 }
 
-/** @returns true when the file was written (dev `/api/progress`). */
+/**
+ * Dev only: POST `/api/progress`, which writes `src/data/progress.json`.
+ * Production returns false immediately — the Pages build commits via GitHub instead.
+ */
 export async function persistToServer(file: ProgressFile): Promise<boolean> {
+  if (!import.meta.env.DEV) return false;
   try {
     const res = await fetch('/api/progress', {
       method: 'POST',
